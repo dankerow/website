@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/alert";
+
+.alert {
+	border: 1px solid transparent;
+	border-radius: .375rem;
+	margin-bottom: 1rem;
+	padding: 1rem 1.5rem;
+}
+
+.alert-heading {
+	color: inherit;
+}
+
+.alert-link {
+	font-weight: 600;
+}
+
+.alert-dismissible {
+	padding-right: 4.5rem;
+
+	.btn-close {
+		color: inherit;
+		padding: 1rem 1.5rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}

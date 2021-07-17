@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/reboot";
+
+html {
+	min-height: 100vh;
+	overflow-y: auto;
+}
+
+body {
+	font-family: "Rubik", -apple-system, system-ui, sans-serif;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $primary;
+		border: 4px solid $primary;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $body-bg;
+	}
+}
+
+::selection {
+	background: $primary;
+	color: $white;
+}
+
+a {
+	transition: color 300ms linear;
+}

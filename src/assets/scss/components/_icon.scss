@@ -1,0 +1,144 @@
+.icon {
+	height: 3rem;
+	width: 3rem;
+
+	svg {
+		font-size: 2.25rem;
+	}
+
+	+ .icon-text {
+		padding-left: 1rem;
+		width: calc(100% - 3rem - 1);
+	}
+}
+
+.icon-xl {
+	height: 5rem;
+	width: 5rem;
+
+	svg {
+		font-size: 4.25rem;
+	}
+
+	+ .icon-text {
+		width: calc(100% - 5rem - 1);
+	}
+}
+
+.icon-lg {
+	height: 4rem;
+	width: 4rem;
+
+	svg {
+		font-size: 3.25rem;
+	}
+}
+
+.icon-sm {
+	height: 2rem;
+	width: 2rem;
+
+	svg {
+		font-size: 1.25rem;
+	}
+}
+
+.icon-xs {
+	height: 1.25rem;
+	width: 1.25rem;
+
+	svg {
+		font-size: .5rem;
+	}
+
+	+ .icon-text {
+		width: calc(100% - 1);
+	}
+}
+
+.icon-shape {
+	align-items: center;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	padding: 12px;
+	text-align: center;
+
+	svg {
+		height: 1.25rem;
+		width: 1.25rem;
+	}
+
+	&.icon-lg svg {
+		font-size: 1.625rem;
+	}
+
+	&.icon-sm svg {
+		font-size: .875rem;
+	}
+
+	&.icon-xs svg {
+		font-size: .6rem;
+	}
+
+}
+
+.icon-shape-primary {
+	background-color: rgba(138, 152, 235, .5);
+	color: #2643e9;
+}
+
+.icon-shape-secondary {
+	background-color: rgba(255, 255, 255, .5);
+	color: #cfe3f1;
+}
+
+.icon-shape-success {
+	background-color: rgba(84, 218, 161, .5);
+	color: #1aae6f;
+}
+
+.icon-shape-info {
+	background-color: rgba(65, 215, 242, .5);
+	color: #03acca;
+}
+
+.icon-shape-warning {
+	background-color: rgba(252, 140, 114, .5);
+	color: #ff3709;
+}
+
+.icon-shape-danger {
+	background-color: rgba(247, 103, 131, .5);
+	color: #f80031;
+}
+
+.icon-shape-light {
+	background-color: rgba(201, 207, 212, .5);
+	color: #879cb0;
+}
+
+.icon-shape-dark {
+	background-color: rgba(56, 63, 69, .5);
+	color: #090c0e;
+}
+
+.icon-shape-default {
+	background-color: rgba(35, 65, 116, .5);
+	color: #091428;
+}
+
+.icon-shape-white {
+	background-color: rgba(255, 255, 255, .5);
+	color: #e8e3e3;
+}
+
+.icon-shape-neutral {
+	background-color: rgba(255, 255, 255, .5);
+	color: #e8e3e3;
+}
+
+.icon-shape-darker {
+	background-color: rgba(26, 26, 26, .5);
+	color: black;
+}
