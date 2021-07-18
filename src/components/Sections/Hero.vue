@@ -3,21 +3,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="fw-normal mb-0" style="font-size: 1rem;">
+					<h1 class="header-heading-1">
 						Hi, my name is
 					</h1>
 
-					<h2 class="subheader-2 mb-1" style="font-size: 4.35rem;font-weight: 600">
+					<h2 class="header-heading-2">
 						<span style="text-shadow: 0 2px rgba(146, 164, 184, 0.45);-webkit-text-stroke-color: #161e2e; color: rgb(146, 164, 184);">D</span>an
 						<span style="text-shadow: 0 2px rgba(146, 164, 184, 0.45);-webkit-text-stroke-color: #161e2e; color: rgb(146, 164, 184)">M</span>utombo.
 					</h2>
 
-					<h3 class="subheader-3 text-start mb-0" style="color: rgb(114,133,152);font-size: 2.65rem;font-weight: 600;">
-						I make everything you can imagine, real.
-					</h3>
-
-					<p class="mt-5" style="color: rgb(87,97,113);font-size: 18px; max-width: 800px;">
-						A junior web developer living in Canada, currently enrolled at <a href="https://www.columbiacollege.ca/">Columbia College</a>, completing an Associate Degree in Computer Science.
+					<p class="header-short-description">
+						A junior web developer living in Canada, currently enrolled at <a href="https://www.columbiacollege.ca/" target="_blank" rel="noreferrer">Columbia College</a>, completing an Associate Degree in Computer Science.
 					</p>
 
 					<div class="social-links">
@@ -56,32 +52,26 @@ export default {
 	position: relative;
 	height: 700px;
 
-	.hero-logo svg {
-		width: 400px;
-		height: auto;
+	.header-heading-1 {
+		font-size: 1rem;
+		font-weight: 300;
 	}
 
-	.subheader-2 {
+	.header-heading-2 {
 		color: #fff;
+		font-size: 4.35rem;
+		font-weight: 600;
 	}
 
-	.subheader-3 {
-		&:before {
-			font-weight: 300;
-			content: '[';
-			color: #fff;
-		}
-
-		&:after {
-			font-weight: 300;
-			content: ']';
-			color: #fff;
-		}
+	.header-short-description {
+		color: rgb(87,97,113);
+		font-size: 1.125rem;
+		max-width: 800px;
 	}
 
 	.social-links {
 		svg {
-			width: 18px;
+			width: 1.125rem;
 			height: auto;
 		}
 
