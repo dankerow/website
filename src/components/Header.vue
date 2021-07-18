@@ -3,7 +3,7 @@
 		<nav class="navbar navbar-expand-md">
 			<div class="container">
 				<NuxtLink class="navbar-brand" to="/">
-					<span class="text">DAN</span><span class="highlight">KER</span>
+					<span class="text">DAN</span><span class="highlight">M</span>
 				</NuxtLink>
 				<div id="navbarCollapse" class="collapse navbar-collapse">
 					<ul class="navbar-nav ms-auto">
@@ -117,7 +117,7 @@ header {
 			.dropdown-menu {
 				box-shadow: -1px 2px 19px 3px rgba(14, 0, 40, 0.1);
 				transform: translateY(20px);
-				transition: all 0.3s ease-in-out;
+				transition: opacity 0.3s ease-in-out;
 				opacity: 0;
 				visibility: hidden;
 				display: block;
