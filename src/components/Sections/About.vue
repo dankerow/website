@@ -12,7 +12,7 @@
 			<div class="row gy-5 row-cols-1 row-cols-lg-2">
 				<div class="col">
 					<div class="biography">
-						<p style="font-size: 16px;">
+						<p>
 							Hi, I'm Dan, a junior web developer living in Canada. I like to express my creativity in many ways, such as creating websites and graphic designs. I started to get interested in web development and graphic design in late 2015. Since then I have continued to learn and practice each of these areas.
 							<br>
 							I am by nature very curious, I like to discover new things, and I easily integrate into a team.
@@ -20,7 +20,7 @@
 							I speak several languages such as French, English, and Italian, and I am learning Spanish which I already understand quite well.
 						</p>
 
-						<p style="font-size: 16px;">
+						<p>
 							I don't have any projects to show at the moment, that's why I am looking for opportunities to apply the skills I have acquired on my own over the last 3 years.
 						</p>
 					</div>
@@ -33,14 +33,14 @@
 				</div>
 
 				<div class="col">
-					<div class="card float-end" style="height:100%;min-height: 350px;max-width: 500px;width: 100%;">
-						<div class="card-header text-center text-uppercase">
-							<h1 class="mb-0" style="letter-spacing: 26px;color: rgb(195, 212, 232);text-shadow: 0 2px 0 rgba(146, 164, 184, 0.43);">
+					<div class="card skills-card float-end">
+						<div class="card-header">
+							<h1 class="card-title text-center text-uppercase mb-0">
 								Skills
 							</h1>
 						</div>
-						<div class="card-header" style="background-color: #161a1e;">
-							<ul class="nav nav-pills justify-content-around" role="tablist">
+						<div class="card-header card-sub-header">
+							<ul class="nav nav-pills nav-justified card-header-pills" role="tablist">
 								<li class="nav-item" role="presentation">
 									<button
 										id="skills-pills-frontend-tab"
@@ -89,52 +89,58 @@
 						<div class="card-body">
 							<div id="skills-pills-tabContent" class="tab-content">
 								<div id="skills-pills-frontend" class="tab-pane fade show active" role="tabpanel" aria-labelledby="skills-pills-frontend-tab">
-									<div>
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Languages:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											HTML, CSS, JavaScript (ES6+)
 										</p>
+									</div>
 
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Frameworks:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											Bootstrap, Bulma, Vue
 										</p>
+									</div>
 
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Tools:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											jQuery, SCSS
 										</p>
 									</div>
 								</div>
 								<div id="skills-pills-backend" class="tab-pane fade" role="tabpanel" aria-labelledby="skills-pills-backend-tab">
-									<div>
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Languages:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											Node.js
 										</p>
+									</div>
 
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Tools:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											MongoDB, Redis
 										</p>
 									</div>
 								</div>
 								<div id="skills-pills-design" class="tab-pane fade" role="tabpanel" aria-labelledby="skills-pills-design-tab">
-									<div>
-										<h1 class="d-inline-block h5 text-uppercase px-2 py-1 rounded-1" style="background-color: rgba(22,26,30,0.6);color: rgb(195, 212, 232);">
+									<div class="skill-category">
+										<h1 class="skill-category-title">
 											Software:
 										</h1>
-										<p style="font-size: 14px;">
+										<p class="skill-category-content">
 											Adobe Photoshop, Adobe Illustrator
 										</p>
 									</div>
@@ -147,3 +153,39 @@
 		</div>
 	</section>
 </template>
+
+<style lang="scss" scoped>
+.skills-card {
+	height:100%;
+	min-height: 340px;
+	max-width: 500px;
+	width: 100%;
+
+	.card-sub-header {
+		background-color: #161a1e;
+	}
+
+	.card-title {
+		color: rgb(195, 212, 232);
+		letter-spacing: 26px;
+		text-shadow: 0 2px 0 rgba(146, 164, 184, 0.43);
+	}
+}
+
+.skill-category {
+	.skill-category-title {
+		border-radius: .15rem;
+		background-color: rgba(22,26,30,0.6);
+		color: rgb(195, 212, 232);
+		display: inline-block;
+		font-size: 0.825rem;
+		padding: 0.25rem 0.5rem;
+		text-transform: uppercase;
+	}
+
+	.skill-category-content {
+		color: #C7D2DB;
+		font-size: 0.875rem;
+	}
+}
+</style>
