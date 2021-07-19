@@ -10,6 +10,7 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
+  "author": "Dan Mutombo",
   "dependencies": {
     "@nuxtjs/google-fonts": "^1.3.0",
     "@nuxtjs/pwa": "^3.3.5",
@@ -32,6 +33,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.13.0",
     "fibers": "^5.0.0",
+    "nuxt-purgecss": "^1.0.0",
     "sass": "^1.35.2",
     "sass-loader": "10"
   }
