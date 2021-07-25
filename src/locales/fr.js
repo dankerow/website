@@ -7,9 +7,9 @@ export default {
 	about: {
 		index: 'À propos',
 		paragraphOne: [
-			'Bonjour, je suis Dan, un développeur web en herbe vivant au Canada. J\'aime exprimer ma créativité de plusieurs façons, notamment en créant des sites web et des designs graphiques. J\'ai commencé à m\'intéresser au développement web et au graphisme fin 2015. Depuis, j\'ai continué à apprendre et à pratiquer chacun de ces domaines.',
-			'Je suis de nature très curieuse, j\'aime découvrir de nouvelles choses, et je m\'intègre facilement dans une équipe.',
-			'Je parle plusieurs langues tel que le français, l\'anglais et l\'italien, et j\'apprends l\'espagnol que je comprends déjà très bien.'
+			'Bonjour, je m\'appelle Dan et je suis un développeur web en herbe vivant au Canada. J\'aime exprimer ma créativité de diverses manières, notamment en développant des sites web et des designs graphiques. Fin 2015, j\'ai développé un intérêt pour le développement web et le design graphique. Depuis, j\'ai continué à apprendre et à m\'exercer dans chacun de ces domaines.',
+			'D\'un naturel curieux et aimant apprendre de nouvelles choses, je m\'adapte bien à mon entourage.',
+			'Parlant couramment de nombreuses langues, dont le français, l\'anglais et l\'italien, et apprenant actuellement l\'espagnol, que je comprends déjà très bien.'
 		],
 		skillsCard: {
 			cardTitle: 'Compétences'
@@ -25,6 +25,7 @@ export default {
 		]
 	},
 	projects: {
-		index: 'Projets'
+		index: 'Projets',
+		tempMessage: 'Je suis encore en train de préparer, revenez plus tard. Ce sera bientôt prêt. 😉'
 	}
 }
