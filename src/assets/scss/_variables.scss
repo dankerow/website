@@ -101,7 +101,7 @@ $spacers: (
 // Settings for the `<body>` element.
 
 $body-bg:                   rgb(28, 33, 37) !default;
-$body-color:                rgb(146,164,184) !default;
+$body-color:                rgb(146, 164, 184) !default;
 $body-text-align:           null !default;
 
 // Links
@@ -128,7 +128,7 @@ $border-widths: (
 	5: 5px
 ) !default;
 
-$border-color:                $gray-300 !default;
+$border-color:                $gray-700 !default;
 
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
@@ -434,13 +434,11 @@ $navbar-brand-margin-end:           1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
 $navbar-toggler-padding-x:          .75rem !default;
-$navbar-toggler-font-size:          $font-size-lg !default;
+$navbar-toggler-font-size:          $font-size-sm !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
-// scss-docs-end navbar-variables
 
-// scss-docs-start navbar-theme-variables
 $navbar-dark-color:                 rgba($white, .55) !default;
 $navbar-dark-hover-color:           rgba($white, .75) !default;
 $navbar-dark-active-color:          $white !default;
@@ -470,7 +468,7 @@ $dropdown-padding-y:                .25rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-sm  !default;
 $dropdown-color:                    $body-color !default;
-$dropdown-bg:                       $white !default;
+$dropdown-bg:                       $primary !default;
 $dropdown-border-color:             rgba($black, .05) !default;
 $dropdown-border-radius:            $border-radius-lg !default;
 $dropdown-border-width:             $border-width !default;
@@ -495,7 +493,7 @@ $dropdown-header-color:             $gray-600 !default;
 $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
 
 $dropdown-dark-color:               $gray-300 !default;
-$dropdown-dark-bg:                  $gray-800 !default;
+$dropdown-dark-bg:                  rgb(22, 26, 30) !default;
 $dropdown-dark-border-color:        $dropdown-border-color !default;
 $dropdown-dark-divider-bg:          $dropdown-divider-bg !default;
 $dropdown-dark-box-shadow:          null !default;
@@ -524,5 +522,75 @@ $card-height:                       null !default;
 $card-color:                        null !default;
 $card-bg:                           $primary !default;
 $card-img-overlay-padding:          $spacer !default;
+
+// Modals
+
+$modal-inner-padding:               $spacer !default;
+
+$modal-footer-margin-between:       .5rem !default;
+
+$modal-dialog-margin:               1rem !default;
+$modal-dialog-margin-y-sm-up:       1.75rem !default;
+
+$modal-title-line-height:           $line-height-base !default;
+
+$modal-content-color:               null !default;
+$modal-content-bg:                  $dark !default;
+$modal-content-border-color:        rgba($primary, .2) !default;
+$modal-content-border-width:        $border-width !default;
+$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
+$modal-content-box-shadow-xs:       $box-shadow-sm !default;
+$modal-content-box-shadow-sm-up:    $box-shadow !default;
+
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .5 !default;
+$modal-header-border-color:         $border-color !default;
+$modal-footer-border-color:         $modal-header-border-color !default;
+$modal-header-border-width:         $modal-content-border-width !default;
+$modal-footer-border-width:         $modal-header-border-width !default;
+$modal-header-padding-y:            $modal-inner-padding !default;
+$modal-header-padding-x:            $modal-inner-padding !default;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+
+$modal-sm:                          300px !default;
+$modal-md:                          500px !default;
+$modal-lg:                          800px !default;
+$modal-xl:                          1140px !default;
+
+$modal-fade-transform:              translate(0, -50px) !default;
+$modal-show-transform:              none !default;
+$modal-transition:                  transform .3s ease-out !default;
+$modal-scale-transform:             scale(1.02) !default;
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:               $spacer !default;
+$alert-padding-x:               $spacer !default;
+$alert-margin-bottom:           1rem !default;
+$alert-border-radius:           $border-radius !default;
+$alert-link-font-weight:        $font-weight-bold !default;
+$alert-border-width:            $border-width !default;
+$alert-bg-scale:                -80% !default;
+$alert-border-scale:            -70% !default;
+$alert-color-scale:             40% !default;
+$alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
+
+// Close
+
+$btn-close-width:            none !default;
+$btn-close-height:           $btn-close-width !default;
+$btn-close-padding-x:        0 !default;
+$btn-close-padding-y:        $btn-close-padding-x !default;
+$btn-close-color:            $body-color !default;
+$btn-close-bg:               none !default;
+$btn-close-focus-shadow:     none !default;
+$btn-close-opacity:          .5 !default;
+$btn-close-hover-opacity:    .95 !default;
+$btn-close-focus-opacity:    1 !default;
+$btn-close-disabled-opacity: .25 !default;
+$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
 
 @import "~bootstrap/scss/variables";
