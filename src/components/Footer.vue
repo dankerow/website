@@ -1,7 +1,7 @@
 <template>
 	<footer>
 		<div class="footer-social py-3 text-center">
-			<a href="https://www.linkedin.com/in/dan-mutombo-3655281b1/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+			<a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
 				<LinkedInLogo />
 			</a>
 			<a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-	background-color: #191e21;
+	background-color: rgb(25, 30, 33);
 
 	.footer-social {
 		background-color: #161a1e;
