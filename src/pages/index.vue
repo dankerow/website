@@ -17,9 +17,7 @@
 	text-shadow: 0 2px 0 rgb(146 164 184 / 43%);
 
 	&:before {
-		content: '#';
-		left: -1.5rem;
-		position: absolute;
+		content: './';
 	}
 
 	.highlight {
