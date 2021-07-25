@@ -1,15 +1,15 @@
 <template>
-	<section class="hero d-flex align-items-center">
+	<section class="hero">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<h1 class="header-heading-1">
-						Hi, my name is
+						{{ $t('hero.headingOne') }}
 					</h1>
 
 					<h2 class="header-heading-2">
-						<span style="text-shadow: 0 2px rgba(146, 164, 184, 0.45);-webkit-text-stroke-color: #161e2e; color: rgb(146, 164, 184);">D</span>an
-						<span style="text-shadow: 0 2px rgba(146, 164, 184, 0.45);-webkit-text-stroke-color: #161e2e; color: rgb(146, 164, 184)">M</span>utombo.
+						<span class="special-letter">D</span>an
+						<span class="special-letter">M</span>utombo.
 					</h2>
 
 					<p class="header-short-description">
@@ -49,6 +49,8 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
+	align-items: center;
+	display: flex;
 	position: relative;
 	height: 700px;
 
@@ -61,10 +63,15 @@ export default {
 		color: #fff;
 		font-size: 4.35rem;
 		font-weight: 600;
+
+		.special-letter {
+			color: rgb(146, 164, 184);
+			text-shadow: 0 2px rgba(146, 164, 184, 0.45);
+		}
 	}
 
 	.header-short-description {
-		color: rgb(87,97,113);
+		color: rgb(103, 114, 131);
 		font-size: 1.125rem;
 		max-width: 800px;
 	}
