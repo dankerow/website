@@ -13,7 +13,6 @@
 @import "components/icon";
 @import "components/buttons";
 @import "~bootstrap/scss/transitions";
-@import "components/animations";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/nav";
@@ -23,7 +22,8 @@
 @import "~bootstrap/scss/pagination";
 @import "components/alert";
 @import "~bootstrap/scss/list-group";
-@import "~bootstrap/scss/close";
+@import "components/close";
+@import "~bootstrap/scss/modal";
 
 @import "~bootstrap/scss/helpers";
 
