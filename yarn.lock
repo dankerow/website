@@ -8145,10 +8145,10 @@ sass-migrator@^1.5.1:
   resolved "https://registry.yarnpkg.com/sass-migrator/-/sass-migrator-1.5.1.tgz#cc4908d547bf43d9b62ca623923a410117be507d"
   integrity sha512-kEEodbgVazNxHfPnEsgV2RT3xGWJK89k4SC4WMsBLz0ErjFpceCtqpSGzE9IOHNl3dgdTRp2nA5SfPiJ8ACB3g==
 
-sass@^1.35.2:
-  version "1.35.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.2.tgz#b732314fcdaf7ef8d0f1698698adc378043cb821"
-  integrity sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==
+sass@^1.36.0:
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.36.0.tgz#5912ef9d5d16714171ba11cb17edb274c4bbc07e"
+  integrity sha512-fQzEjipfOv5kh930nu3Imzq3ie/sGDc/4KtQMJlt7RRdrkQSfe37Bwi/Rf/gfuYHsIuE1fIlDMvpyMcEwjnPvg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
