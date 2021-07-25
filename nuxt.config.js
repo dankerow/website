@@ -1,4 +1,4 @@
-const baseURL = process.env.NODE_ENV === 'production' ? 'https://danker.com' : 'http://localhost:6350'
+const baseURL = process.env.NODE_ENV === 'production' ? 'https://danmutombo.com' : 'http://localhost:6350'
 
 export default {
 	rootDir: './',
@@ -12,10 +12,11 @@ export default {
 		meta: [
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'robots', content: 'noydir,noodp,noarchive,nocache,notranslate,follow,imageindex,index' },
-			{ name: 'google', content: 'notranslate' }
+			{ name: 'google', content: 'notranslate' },
+			{ hid: 'description', name: 'description', content: 'A junior web developer living in Canada, currently enrolled at Columbia College, completing an Associate Degree in Computer Science.' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		],
 		script: [
 			{
@@ -38,13 +39,16 @@ export default {
 	buildModules: [
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/google-fonts',
-		'@nuxtjs/svg'
+		'@nuxtjs/google-gtag',
+		'@nuxtjs/pwa',
+		'@nuxtjs/svg',
+		'cookie-universal-nuxt'
 	],
 
 	modules: [
 		'nuxt-helmet',
-		'@nuxtjs/pwa',
 		'nuxt-i18n',
+		'nuxt-purgecss',
 		['vue-scrollto/nuxt', {
 			easing: 'ease'
 		}],
@@ -53,11 +57,21 @@ export default {
 
 	googleFonts: {
 		families: {
-			'Rubik': {
+			Rubik: {
 				wght: [300, 400, 500, 600, 700, 800, 900]
+			},
+			'Roboto Mono': {
+				wght: [400]
 			}
 		},
 		display: 'swap'
+	},
+
+	'google-gtag': {
+		id: 'G-28NM2EX8B5',
+		config: {
+			anonymize_ip: true
+		}
 	},
 
 	helmet: {
@@ -65,10 +79,13 @@ export default {
 	},
 
 	i18n: {
+		strategy: 'prefix_and_default',
 		baseUrl: baseURL,
 		locales: [
 			{ code: 'en', iso: 'en-US', name: 'English', file: 'en.js' },
-			{ code: 'fr', iso: 'fr-FR', name: 'Français', file: 'fr.js' }
+			{ code: 'es', iso: 'es-ES', name: 'Español', file: 'es.js' },
+			{ code: 'fr', iso: 'fr-FR', name: 'Français', file: 'fr.js' },
+			{ code: 'it', iso: 'it-IT', name: 'Italiano', file: 'it.js' }
 		],
 		defaultLocale: 'en',
 		lazy: true,
@@ -76,14 +93,21 @@ export default {
 		detectBrowserLanguage: {
 			onlyOnRoot: true
 		},
-		seo: false
+		vueI18n: {
+			fallbackLocale: 'en'
+		}
+	},
+
+	purgeCSS: {
+		variables: true,
+		whitelist: ['svg']
 	},
 
 	pwa: {
 		meta: {
 			mobileApp: true,
 			name: 'Dan Mutombo',
-			appleStatusBarStyle: '#92A4B8FF'
+			appleStatusBarStyle: '#92a4b8'
 		},
 		manifest: {
 			name: 'Dan Mutombo',
@@ -94,9 +118,9 @@ export default {
 			lang: 'en',
 			display: 'fullscreen',
 			// eslint-disable-next-line camelcase
-			background_color: '#1C2125FF',
+			background_color: '#1c2125',
 			// eslint-disable-next-line camelcase
-			theme_color: '#92A4B8FF'
+			theme_color: '#92a4b8'
 		},
 		workbox: {
 			enabled: false
