@@ -7,6 +7,7 @@
 			data-bs-toggle="dropdown"
 			aria-haspopup="true"
 			aria-expanded="false"
+			aria-label="Language Selector"
 		>
 			<LanguageIcon />
 		</a>
