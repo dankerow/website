@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/close";
+
+.btn-close {
+	background: unset;
+	font-size: 1.5rem;
+	font-weight: $font-weight-light;
+	line-height: 1;
+	float: right;
+	opacity: .5;
+}
