@@ -7,9 +7,9 @@ export default {
 	about: {
 		index: 'About',
 		paragraphOne: [
-			'Hi, I\'m Dan, a junior web developer living in Canada. I like to express my creativity in many ways, such as creating websites and graphic designs. I started to get interested in web development and graphic design in late 2015. Since then I have continued to learn and practice each of these areas.',
-			'I am by nature very curious, I like to discover new things, and I easily integrate into a team.',
-			'I speak several languages such as French, English, and Italian, and I am learning Spanish which I already understand quite well.'
+			'Hello, my name is Dan and I\'m a junior web developer from Canada. I enjoy expressing my creativity in a variety of ways, such as through developing websites and graphic designs. In late 2015, I developed an interest in web development and graphic design. Since then, I\'ve continued to learn and practice in each of these areas.',
+			'Naturally inquisitive and enjoying learning new things, I fit in well with others.',
+			'Fluent in numerous languages, including French, English, and Italian, and currently learning Spanish, which I already comprehend very well.'
 		],
 		skillsCard: {
 			cardTitle: 'Skills'
@@ -25,6 +25,7 @@ export default {
 		]
 	},
 	projects: {
-		index: 'Projects'
+		index: 'Projects',
+		tempMessage: 'I\'m still cooking, please come back later. It should be ready soon. 😉'
 	}
 }
