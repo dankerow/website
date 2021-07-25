@@ -1,10 +1,10 @@
 <template>
-	<section id="about" class="py-12" style="background: #191e21;">
+	<section id="about" class="py-12">
 		<div class="container">
-			<div class="row row-cols-2 mb-5">
+			<div class="mb-5">
 				<div class="col">
 					<h1 class="section-heading">
-						<span class="highlight">ABO</span><span class="highlight inverse">U</span><span class="highlight">T</span> Me.
+						<span class="highlight">ABO</span><span class="highlight inverse">U</span><span class="highlight">T</span> Me
 					</h1>
 				</div>
 			</div>
@@ -13,30 +13,25 @@
 				<div class="col">
 					<div class="biography">
 						<p>
-							Hi, I'm Dan, a junior web developer living in Canada. I like to express my creativity in many ways, such as creating websites and graphic designs. I started to get interested in web development and graphic design in late 2015. Since then I have continued to learn and practice each of these areas.
-							<br>
-							I am by nature very curious, I like to discover new things, and I easily integrate into a team.
-							<br>
-							I speak several languages such as French, English, and Italian, and I am learning Spanish which I already understand quite well.
-						</p>
-
-						<p>
-							I don't have any projects to show at the moment, that's why I am looking for opportunities to apply the skills I have acquired on my own over the last 3 years.
+							<span v-for="(sentence, index) in $t('about.paragraphOne')" :key="index">
+								{{ sentence }}
+								<br v-if="index !== $t('about.paragraphOne').length - 1">
+							</span>
 						</p>
 					</div>
 
 					<div class="actions">
-						<button class="btn btn-primary">
+						<a href="/files/Resume.pdf" target="_blank" class="btn btn-primary" type="button">
 							Download Resume
-						</button>
+						</a>
 					</div>
 				</div>
 
 				<div class="col">
-					<div class="card skills-card float-end">
+					<div class="card skills-card mx-auto me-lg-0">
 						<div class="card-header">
 							<h1 class="card-title text-center text-uppercase mb-0">
-								Skills
+								{{ $t('about.skillsCard.cardTitle') }}
 							</h1>
 						</div>
 						<div class="card-header card-sub-header">
@@ -94,16 +89,16 @@
 											Languages:
 										</h1>
 										<p class="skill-category-content">
-											HTML, CSS, JavaScript (ES6+)
+											HTML, CSS/SCSS, JavaScript (ES6+)
 										</p>
 									</div>
 
 									<div class="skill-category">
 										<h1 class="skill-category-title">
-											Frameworks:
+											Frameworks / Libraries:
 										</h1>
 										<p class="skill-category-content">
-											Bootstrap, Bulma, Vue
+											Node.js, Express, Vue, Nuxt.js, jQuery, Bootstrap, Bulma
 										</p>
 									</div>
 
@@ -112,7 +107,7 @@
 											Tools:
 										</h1>
 										<p class="skill-category-content">
-											jQuery, SCSS
+											Git/GitHub
 										</p>
 									</div>
 								</div>
@@ -131,7 +126,7 @@
 											Tools:
 										</h1>
 										<p class="skill-category-content">
-											MongoDB, Redis
+											Git/GitHub, MongoDB, Redis
 										</p>
 									</div>
 								</div>
@@ -155,6 +150,10 @@
 </template>
 
 <style lang="scss" scoped>
+#about {
+   background: rgb(25, 30, 33);
+}
+
 .skills-card {
 	height:100%;
 	min-height: 340px;
@@ -162,12 +161,12 @@
 	width: 100%;
 
 	.card-sub-header {
-		background-color: #161a1e;
+		background-color: rgb(22, 26, 30);
 	}
 
 	.card-title {
 		color: rgb(195, 212, 232);
-		letter-spacing: 26px;
+		letter-spacing: 10px;
 		text-shadow: 0 2px 0 rgba(146, 164, 184, 0.43);
 	}
 }
