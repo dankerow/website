@@ -1,26 +1,40 @@
 <template>
 	<header>
-		<nav class="navbar navbar-expand-md">
+		<nav class="navbar navbar-dark navbar-expand-md">
 			<div class="container">
 				<NuxtLink class="navbar-brand" to="/">
 					<span class="text">DAN</span><span class="highlight">M</span>
 				</NuxtLink>
-				<div id="navbarCollapse" class="collapse navbar-collapse">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					Menu
+				</button>
+				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
 							<a v-scroll-to="'#about'" href="#about" class="nav-link">
-								About
+								{{ $t('about.index') }}
 							</a>
 						</li>
 						<li class="nav-item">
 							<a v-scroll-to="'#experience'" href="#experience" class="nav-link">
-								Experience
+								{{ $t('experience.index') }}
 							</a>
 						</li>
 						<li class="nav-item">
 							<a v-scroll-to="'#projects'" href="#projects" class="nav-link">
-								Projects
+								{{ $t('projects.index') }}
 							</a>
+						</li>
+						<li class="nav-item">
+							<LanguageSelector />
 						</li>
 					</ul>
 				</div>
@@ -103,28 +117,6 @@ header {
 
 				&.nuxt-link-exact-active {
 					color: rgb(146, 164, 184);
-				}
-			}
-
-			&.dropdown {
-				&:hover > .dropdown-menu {
-					opacity: 1;
-					transform: translateY(0);
-					visibility: visible;
-				}
-			}
-
-			.dropdown-menu {
-				box-shadow: -1px 2px 19px 3px rgba(14, 0, 40, 0.1);
-				transform: translateY(20px);
-				transition: opacity 0.3s ease-in-out;
-				opacity: 0;
-				visibility: hidden;
-				display: block;
-
-				.dropdown-item {
-					display: inline-block;
-					transition: color 0.3s ease-in-out;
 				}
 			}
 		}
