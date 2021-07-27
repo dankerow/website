@@ -137,8 +137,8 @@ export default {
 <style lang="scss" scoped>
 .alert {
 	animation: slide-in-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	background: rgba(22, 26, 30, 0.8);
-	backdrop-filter: blur(12px);
+	background: rgba(146, 164, 184, 0.2);
+	backdrop-filter: blur(8px);
 	font-size: 0.875rem;
 }
 
