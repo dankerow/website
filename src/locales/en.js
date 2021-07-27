@@ -1,8 +1,9 @@
 export default {
 	shortDescription: 'A junior web developer, looking for more challenges.',
 	hero: {
-		headingOne: 'Hi, my name is',
-		shortDescription: 'A junior web developer living in Canada, currently enrolled at Columbia College, completing an Associate Degree in Computer Science.'
+		headingOne: 'Greetings!',
+		shortDescription: 'A junior web developer living in Canada, currently enrolled at {college}, completing an Associate Degree in Computer Science.',
+		college: 'Columbia College'
 	},
 	about: {
 		index: 'About',
@@ -19,8 +20,23 @@ export default {
 		index: 'Experience',
 		jobs: [
 			{
+				organizationName: 'UNICEF',
+				jobTitle: 'Web Developer',
+				jobType: 'Internship',
+				timePeriod: {
+					start: 'June 2020',
+					end: 'March 2021'
+				},
+				description: [
+					'Individually built web application to manage inventory of the company utilizing Express.js, Bootstrap & MongoDB.',
+					'Improved efficiency for up to 5 IT department staff; transferred from MS Access to a web application available on mobile + computer devices.'
+				]
+			},
+			{
 				organizationName: 'Work with me',
-				description: 'I don\'t have any work experience yet, that\'s why I am looking for opportunities to apply the skills I have acquired on my own over the last 3 years.'
+				jobTitle: 'Work with me',
+				jobType: 'Waiting for you',
+				description: 'I don\'t have much work experience yet, that\'s why I am looking for opportunities to apply the skills I have acquired on my own over the last 3 years.'
 			}
 		]
 	},
