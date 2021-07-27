@@ -1,8 +1,9 @@
 export default {
 	shortDescription: 'Uno sviluppatore web junior, in cerca di nuove avventure.',
 	hero: {
-		headingOne: 'Ciao, mi chiamo',
-		shortDescription: 'Uno sviluppatore web junior residente in Canada, attualmente studente in Columbia College, che sta completando una laurea associata in scienze informatiche.'
+		headingOne: 'Ciao!',
+		shortDescription: 'Uno sviluppatore web junior residente in Canada, attualmente studente in {college}, che sta completando una laurea associata in scienze informatiche.',
+		college: 'Columbia College'
 	},
 	about: {
 		index: 'Chi sono',
@@ -19,7 +20,22 @@ export default {
 		index: 'Esperienza',
 		jobs: [
 			{
+				organizationName: 'UNICEF',
+				jobTitle: 'Web Developer',
+				jobType: 'Internship',
+				timePeriod: {
+					start: 'June 2020',
+					end: 'March 2021'
+				},
+				description: [
+					'Applicazione web costruita per gestire l\'inventario della compagnia utilizzando Express.js, Bootstrap e MongoDB.',
+					'Improved efficiency for up to 5 IT department staff; transferred from MS Access to a web application available on mobile + computer devices'
+				]
+			},
+			{
 				organizationName: 'Lavora con me',
+				jobTitle: 'Lavora con me',
+				jobType: 'Waiting for you',
 				description: 'Non ho ancora nessuna esperienza professionale, è per questo che sto cercando opportunità per applicare le competenze che ho acquisito per conto mio negli ultimi 3 anni.'
 			}
 		]
