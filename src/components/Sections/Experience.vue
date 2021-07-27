@@ -7,38 +7,52 @@
 				</h1>
 			</div>
 
-			<div class="row gy-2 row-cols-1 row-cols-sm-2">
-				<div class="col col-lg-4">
-					<div class="experience-pills float-end">
-						<div id="experience-pills-tab" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-							<button
-								v-for="(work, index) in $t('experience.jobs')"
-								:id="`experience-pills-${index}-tab`"
-								:key="index"
-								class="nav-link active"
-								data-bs-toggle="pill"
-								:data-bs-target="`#experience-pills-${index}`"
-								type="button"
-								role="tab"
-								:aria-controls="`experience-pills-${index}`"
-								aria-selected="true"
-							>
-								{{ work.organizationName }}
-							</button>
-						</div>
+			<div class="row">
+				<div class="experience-pills mx-auto d-flex align-items-start">
+					<div id="experience-pills-tab" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+						<button
+							v-for="(work, index) in $t('experience.jobs')"
+							:id="`experience-pills-${index}-tab`"
+							:key="index"
+							:class="`nav-link text-start ${index === 0 ? 'active' : ''}`"
+							data-bs-toggle="pill"
+							:data-bs-target="`#experience-pills-${index}`"
+							type="button"
+							role="tab"
+							:aria-controls="`experience-pills-${index}`"
+							:aria-selected="index === 0"
+						>
+							{{ work.organizationName }}
+						</button>
 					</div>
-				</div>
-				<div class="col">
 					<div id="experience-pills-tabContent" class="tab-content">
 						<div
 							v-for="(work, index) in $t('experience.jobs')"
 							:id="`experience-pills-${index}`"
 							:key="index"
-							class="tab-pane fade show active"
+							:class="`tab-pane fade show ${index === 0 ? 'active' : ''}`"
 							role="tabpanel"
 							:aria-labelledby="`experience-pills-${index}-tab`"
 						>
-							<p>
+							<h1 v-if="work.jobTitle" class="h2 mb-1">
+								{{ work.jobTitle }}
+							</h1>
+							<h2 v-if="work.jobType || work.timePeriod" class="h5 mb-4 text-muted">
+								<span v-if="work.jobType">
+									{{ work.jobType }}
+								</span>
+								<span v-if="work.timePeriod">
+									| {{ work.timePeriod.start }} - {{ work.timePeriod.end }}
+								</span>
+							</h2>
+
+							<div v-if="typeof work.description === 'object'">
+								<ul v-for="(line, lineIndex) in work.description" :key="`${work.organizationName.toLowerCase()}-description-line-${lineIndex}`" style="padding-left: 1rem; list-style-type: square;">
+									<li>{{ line }}</li>
+								</ul>
+							</div>
+
+							<p v-else>
 								{{ work.description }}
 							</p>
 						</div>
@@ -51,13 +65,12 @@
 
 <style lang="scss" scoped>
 .experience-pills {
-	width: 45%;
+	max-width: 1000px;
+	min-height: 240px;
 }
 
-@media (max-width: 768px) {
-	.experience-pills {
-		width: 100%;
-	}
+#experience-pills-tab {
+	width: max-content;
 }
 
 .nav {
@@ -68,7 +81,8 @@
 .nav-link {
 	border-left: 3px solid rgb(28, 33, 37);
 	border-radius: 0;
-	padding: 0.475rem 0;
+	padding: 0.475rem 0.875rem;
+	white-space: nowrap;
 
 	&:before {
 		counter-increment: nav-link;
@@ -84,6 +98,7 @@
 }
 
 .tab-content {
+	width: 100%;
 	padding-left: 1rem;
 }
 </style>
