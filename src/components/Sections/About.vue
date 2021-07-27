@@ -22,7 +22,7 @@
 
 					<div class="actions">
 						<a href="/files/Resume.pdf" target="_blank" class="btn btn-primary" type="button">
-							Download Resume
+							Resume
 						</a>
 					</div>
 				</div>
