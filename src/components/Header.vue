@@ -46,7 +46,7 @@
 <style lang="scss" scoped>
 header {
 	left: 0;
-	position: sticky;
+	position: fixed;
 	right: 0;
 	top: 0;
 	width: 100%;
