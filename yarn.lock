@@ -7078,9 +7078,9 @@ sass-migrator@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/sass-migrator/-/sass-migrator-1.5.1.tgz#cc4908d547bf43d9b62ca623923a410117be507d"
 
-sass@^1.36.0:
-  version "1.37.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.37.0.tgz#f1b03a9d072ee9053a29d125c8130c78e92827c2"
+sass@^1.37.2:
+  version "1.37.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.37.2.tgz#eb87c01a1e6ec12e50fa69571b69628ea043a372"
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
