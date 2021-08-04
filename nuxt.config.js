@@ -47,7 +47,7 @@ export default {
 
 	modules: [
 		'nuxt-helmet',
-		'nuxt-i18n',
+		'@nuxtjs/i18n',
 		'nuxt-purgecss',
 		['vue-scrollto/nuxt', {
 			easing: 'ease'
@@ -90,9 +90,6 @@ export default {
 		defaultLocale: 'en',
 		lazy: true,
 		langDir: 'locales/',
-		detectBrowserLanguage: {
-			onlyOnRoot: true
-		},
 		vueI18n: {
 			fallbackLocale: 'en'
 		}
