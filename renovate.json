@@ -12,7 +12,7 @@
       "matchPackagePatterns": ["eslint"],
       "labels": ["linting"]
     }
-  ]
+  ],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 30,
   "prHourlyLimit": 0,
