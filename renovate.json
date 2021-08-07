@@ -1,5 +1,5 @@
 {
-  "commitMessagePrefix": "🔼"
+  "commitMessagePrefix": "🔼",
   "commitMessageAction": "Bump",
   "commitMessageExtra": "to {{newValue}}",
   "commitMessageTopic": "{{depName}}",
