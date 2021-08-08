@@ -3480,12 +3480,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "bootstrap@npm:5.0.2"
+"bootstrap@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "bootstrap@npm:5.1.0"
   peerDependencies:
-    "@popperjs/core": ^2.9.2
-  checksum: be9ddb109bb18db5aa4bb6899016282b9430185241d60876fbb00a76dd725a1efcc61398d81081030f93f6db1c9f245baddaaefbdf1ac1ea69a7c169cb2ace7b
+    "@popperjs/core": ^2.9.3
+  checksum: 1e556b71c47b55f6411f789e6d43986f6a3646875f1bef47ee8b1bc16e5d395e75b275d207d6bda7d9752d0573eb4ee5faecb03ebea17dca6259ac8dd68a6aea
   languageName: node
   linkType: hard
 
@@ -4821,7 +4821,7 @@ __metadata:
     "@nuxtjs/sitemap": ^2.4.0
     "@nuxtjs/svg": ^0.1.12
     babel-eslint: ^10.1.0
-    bootstrap: ^5.0.2
+    bootstrap: ^5.1.0
     cookie-universal-nuxt: ^2.1.5
     core-js: ^3.16.0
     eslint: ^7.32.0
