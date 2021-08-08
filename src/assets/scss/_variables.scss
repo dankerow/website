@@ -77,8 +77,17 @@ $theme-colors: (
 	"darker":     $darker
 ) !default;
 
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+
+$min-contrast-ratio:   4.5 !default;
+
+$color-contrast-dark:      $black !default;
+$color-contrast-light:     $white !default;
+
 $enable-negative-margins: true !default;
 $enable-shadows:          true !default;
+
+$variable-prefix:             bs- !default;
 
 $spacer: 1rem !default;
 $spacers: (
