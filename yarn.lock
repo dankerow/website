@@ -3310,7 +3310,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-eslint@npm:^10.1.0":
+"babel-eslint@npm:10.1.0":
   version: 10.1.0
   resolution: "babel-eslint@npm:10.1.0"
   dependencies:
@@ -4820,7 +4820,7 @@ __metadata:
     "@nuxtjs/pwa": ^3.3.5
     "@nuxtjs/sitemap": ^2.4.0
     "@nuxtjs/svg": ^0.1.12
-    babel-eslint: ^10.1.0
+    babel-eslint: 10.1.0
     bootstrap: ^5.1.0
     cookie-universal-nuxt: ^2.1.5
     core-js: ^3.16.0
