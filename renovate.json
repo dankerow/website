@@ -14,8 +14,9 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"]
+      "labels": ["dependencies", "linting"]
     }
   ],
-  "prConcurrentLimit": 30
+  "prConcurrentLimit": 30,
+  "rangeStrategy": "bump"
 }
