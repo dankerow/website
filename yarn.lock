@@ -4826,7 +4826,7 @@ __metadata:
     core-js: ^3.16.1
     eslint: ^7.32.0
     eslint-plugin-nuxt: ^2.0.0
-    eslint-plugin-vue: ^7.15.1
+    eslint-plugin-vue: ^7.16.0
     fibers: ^5.0.0
     nuxt: ^2.15.7
     nuxt-helmet: ^2.0.1
@@ -5594,9 +5594,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^7.15.1":
-  version: 7.15.1
-  resolution: "eslint-plugin-vue@npm:7.15.1"
+"eslint-plugin-vue@npm:^7.16.0":
+  version: 7.16.0
+  resolution: "eslint-plugin-vue@npm:7.16.0"
   dependencies:
     eslint-utils: ^2.1.0
     natural-compare: ^1.4.0
@@ -5604,7 +5604,7 @@ __metadata:
     vue-eslint-parser: ^7.10.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0
-  checksum: 8b5845a9f9d2e35d733cb944a2b210e02042139f47d680034acb3017b1bebdb2793aab4c5c6c98c0588d3bac53330b0aada5f429a57cd2deb0e9ed88236915a3
+  checksum: b60ed545eaa2f84c41cc09ed2213e698af2d81be4672c34d82a725fecb709f279b5868cc879194b7bf93dd7c19e1cba3f429b2756ac213f50aa2488b33d5765d
   languageName: node
   linkType: hard
 
