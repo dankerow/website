@@ -20,12 +20,12 @@
     "@nuxtjs/svg": "^0.1.12",
     "bootstrap": "^5.1.0",
     "cookie-universal-nuxt": "^2.1.5",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-helmet": "^2.0.1",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.7",
+    "@nuxt/types": "^2.15.8",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.1.0",
