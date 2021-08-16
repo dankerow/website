@@ -78,14 +78,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.14.9":
-  version: 7.14.9
-  resolution: "@babel/generator@npm:7.14.9"
+"@babel/generator@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/generator@npm:7.15.0"
   dependencies:
-    "@babel/types": ^7.14.9
+    "@babel/types": ^7.15.0
     jsesc: ^2.5.1
     source-map: ^0.5.0
-  checksum: 7dd6188f5e7bb1232cc92b527713820ce403e61f80408495eb91e61df38539462ec27df5231b4d07578dbddf3ff8f38437c548469c214820db8c2cfdf22af68f
+  checksum: ef227c4c39ab810616b1d76cf9fa7b452b3a36ae1f26d52c2a7c68edcba29d6dd3cd3e88c58f6e3969a58dadee7b73016d3cabbd6f0040ff832f686db4679628
   languageName: node
   linkType: hard
 
@@ -377,7 +377,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.14.9, @babel/parser@npm:^7.9.6":
+"@babel/parser@npm:^7.15.0, @babel/parser@npm:^7.15.3":
+  version: 7.15.3
+  resolution: "@babel/parser@npm:7.15.3"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 4b9ba7e8ffe0a3d0dd8c61dee975c79863f7744177de677cb7d12f96549eb5c8b9ffc70ca2b1b2488b06e056da99a6273e2d7d68fc31f498d01483dfac149e13
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.9.6":
   version: 7.14.9
   resolution: "@babel/parser@npm:7.14.9"
   bin:
@@ -1303,20 +1312,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.14.9":
-  version: 7.14.9
-  resolution: "@babel/traverse@npm:7.14.9"
+"@babel/traverse@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/traverse@npm:7.15.0"
   dependencies:
     "@babel/code-frame": ^7.14.5
-    "@babel/generator": ^7.14.9
+    "@babel/generator": ^7.15.0
     "@babel/helper-function-name": ^7.14.5
     "@babel/helper-hoist-variables": ^7.14.5
     "@babel/helper-split-export-declaration": ^7.14.5
-    "@babel/parser": ^7.14.9
-    "@babel/types": ^7.14.9
+    "@babel/parser": ^7.15.0
+    "@babel/types": ^7.15.0
     debug: ^4.1.0
     globals: ^11.1.0
-  checksum: e172fa40f8656e41417e731128865f077d2e1a57a6e4ff23ab292288348e0e20c54b70c14ef3b3c51d90e425c325a77c4742682db9bfa4ff8470a0c0ae18d943
+  checksum: e13056690a2a4a4dd699e241b89d4f7cf701ceef2f4ee0efc32a8cc4e07e1bbd397423868ecfec8aa98a769486f7d08778420d48f981b4f5dbb1b2f211daf656
   languageName: node
   linkType: hard
 
@@ -1330,13 +1339,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.14.9":
-  version: 7.14.9
-  resolution: "@babel/types@npm:7.14.9"
+"@babel/types@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/types@npm:7.15.0"
   dependencies:
     "@babel/helper-validator-identifier": ^7.14.9
     to-fast-properties: ^2.0.0
-  checksum: 472d5b61de1c8cabce2318469738aa97aff2aa8a50a76ebdd467213c2efd3a2db664f3a42abcf52936eaebc1d47fc402f037b81830e51ad148035488463fe7d1
+  checksum: 6d6bcdfce94b5446520a24087c6dede453e28425af092965b304d4028e9bca79712fd691cdad031e3570c7667bf3206e5f642bcccbfccb33d42ca4a8203587f9
   languageName: node
   linkType: hard
 
@@ -1901,12 +1910,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/i18n@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@nuxtjs/i18n@npm:7.0.1"
+"@nuxtjs/i18n@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "@nuxtjs/i18n@npm:7.0.2"
   dependencies:
-    "@babel/parser": ^7.14.9
-    "@babel/traverse": ^7.14.9
+    "@babel/parser": ^7.15.3
+    "@babel/traverse": ^7.15.0
     "@intlify/vue-i18n-extensions": ^1.0.2
     "@intlify/vue-i18n-loader": ^1.1.0
     cookie: ^0.4.1
@@ -1917,7 +1926,7 @@ __metadata:
     lodash.merge: ^4.6.2
     ufo: ^0.7.7
     vue-i18n: ^8.25.0
-  checksum: 222a1c3f3a331e786d082260820692f10b5e3399c737e332bc9e68f0b0bef72c8dd62c03485cc1563adcf5226587d5e3b2bec1fed95dd1ceba9ac0d50e9eaa56
+  checksum: aab0de4259da86e41a7fae57f34834f4f2a47bbc14c51319bf6b211d931360b584240dde95b3df0bf5b294c8ea16b606aed61fcef01897b48f4b761317129197
   languageName: node
   linkType: hard
 
@@ -4816,7 +4825,7 @@ __metadata:
     "@nuxtjs/eslint-module": ^3.0.2
     "@nuxtjs/google-fonts": ^1.3.0
     "@nuxtjs/google-gtag": ^1.0.4
-    "@nuxtjs/i18n": ^7.0.1
+    "@nuxtjs/i18n": ^7.0.2
     "@nuxtjs/pwa": ^3.3.5
     "@nuxtjs/sitemap": ^2.4.0
     "@nuxtjs/svg": ^0.1.12
