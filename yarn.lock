@@ -4440,10 +4440,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.16.2":
-  version: 3.16.2
-  resolution: "core-js@npm:3.16.2"
-  checksum: f48b988ab6d144aad1a7c09a73174946f797ec050b4566dee9bf0227560296cdd0f714b37f0ee065303eccf0e7fb8115ccca52ab3e80db12e0dcc20a88219483
+"core-js@npm:^3.16.4":
+  version: 3.16.4
+  resolution: "core-js@npm:3.16.4"
+  checksum: 6f1b82b0b9ef5bc818133b9f5f5e83cdd15f83a2fd56f9ee7edc9a29f183e74c00413e84febe07c2e2f04f55edc031b8ed7c1188f9540e97abd9bc7a20f7a9de
   languageName: node
   linkType: hard
 
@@ -4832,7 +4832,7 @@ __metadata:
     babel-eslint: ^10.1.0
     bootstrap: ^5.1.0
     cookie-universal-nuxt: ^2.1.5
-    core-js: ^3.16.2
+    core-js: ^3.16.4
     eslint: ^7.32.0
     eslint-plugin-nuxt: ^2.0.0
     eslint-plugin-vue: ^7.17.0
