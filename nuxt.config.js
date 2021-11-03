@@ -11,16 +11,17 @@ export default {
 		title: 'Dan Mutombo',
 		meta: [
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ name: 'robots', content: 'noydir,noodp,noarchive,nocache,notranslate,follow,imageindex,index' },
+			{ hid: 'description', name: 'description', content: 'A junior web developer living in Canada, currently enrolled at Columbia College, completing an Associate Degree in Computer Science.' },
+			{ name: 'format-detection', content: 'telephone=no' },
 			{ name: 'google', content: 'notranslate' },
-			{ hid: 'description', name: 'description', content: 'A junior web developer living in Canada, currently enrolled at Columbia College, completing an Associate Degree in Computer Science.' }
+			{ name: 'robots', content: 'noydir,noodp,noarchive,nocache,notranslate,follow,imageindex,index' }
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		],
 		script: [
 			{
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.bundle.min.js',
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js',
 				type: 'text/javascript',
 				defer: true
 			}
