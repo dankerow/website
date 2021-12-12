@@ -36,5 +36,6 @@
     "nuxt-purgecss": "^1.0.0",
     "sass": "^1.43.5",
     "sass-loader": "10"
-  }
+  },
+  "packageManager": "yarn@3.1.0"
 }
