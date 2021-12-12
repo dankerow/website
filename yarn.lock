@@ -4920,7 +4920,7 @@ __metadata:
     cookie-universal-nuxt: ^2.1.5
     core-js: ^3.19.1
     eslint: 8.3.0
-    eslint-plugin-nuxt: ^3.0.0
+    eslint-plugin-nuxt: ^3.1.0
     eslint-plugin-vue: ^8.1.1
     nuxt: ^2.15.8
     nuxt-helmet: ^2.0.1
@@ -5670,14 +5670,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-nuxt@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "eslint-plugin-nuxt@npm:3.0.0"
+"eslint-plugin-nuxt@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "eslint-plugin-nuxt@npm:3.1.0"
   dependencies:
-    eslint-plugin-vue: ^7.20.0
+    eslint-plugin-vue: ^8.1.1
     semver: ^7.3.5
-    vue-eslint-parser: ^8.0.0
-  checksum: e4b1fd2230585e3fc59c3f77f4ff15b4afd782bb566a0e29b6565ab41e883948062132ab8953398909ba4af22557e631c19718fcd90df7605178f907438bd715
+    vue-eslint-parser: ^8.0.1
+  checksum: 3fb602115309faa8c0a9799f4c0c0a6755884a831687526ed13cffab43a2369e27c1b922b3f55094f2fc6bfe7ed65bfe3175fda0e2e6a11b87f1bbf876fb3e24
   languageName: node
   linkType: hard
 
@@ -13156,7 +13156,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^8.0.0, vue-eslint-parser@npm:^8.0.1":
+"vue-eslint-parser@npm:^8.0.1":
   version: 8.0.1
   resolution: "vue-eslint-parser@npm:8.0.1"
   dependencies:
