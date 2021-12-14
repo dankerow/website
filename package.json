@@ -25,7 +25,7 @@
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-parser": "^7.16.5",
     "@nuxt/types": "^2.15.8",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
