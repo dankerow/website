@@ -4924,7 +4924,7 @@ __metadata:
     eslint-plugin-nuxt: ^3.1.0
     eslint-plugin-vue: ^8.2.0
     nuxt: ^2.15.8
-    nuxt-helmet: ^2.0.1
+    nuxt-helmet: ^3.0.0
     nuxt-purgecss: ^1.0.0
     sass: ^1.45.1
     sass-loader: 10
@@ -6946,10 +6946,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"helmet@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "helmet@npm:4.6.0"
-  checksum: 139ad678d1cab207b043c206f50f6744eff2ef1f463e4626d36718b45b337485c77d10260ef9d89d292fa678da5153d86b08172b3b365cc8e680241015ed3a49
+"helmet@npm:^5.0.1":
+  version: 5.0.2
+  resolution: "helmet@npm:5.0.2"
+  checksum: 3fe107f3f73fb6a79173e5599f87a016c69f1c7cc46bcde1c60043ea36e64f893434592890d3c0be68f1d35731f2f2f22094a1cfd70438f9d35740861071dcf3
   languageName: node
   linkType: hard
 
@@ -9142,13 +9142,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nuxt-helmet@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "nuxt-helmet@npm:2.0.1"
+"nuxt-helmet@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "nuxt-helmet@npm:3.0.0"
   dependencies:
     consola: ^2.11.3
-    helmet: ^4.6.0
-  checksum: 10bc82c64503d593ac14a848bb44333f81d3dced3694ddfba6b65e21735008cdd45ba8ecd09205dc4e394a14bf980a41aff192c482e89504b7326367d988e5a4
+    helmet: ^5.0.1
+  checksum: 0b24389c32b016925c1c1160118f8bc3880af6b989988a49420d8ce27c052ed398ee70f372cc26aea6abb569541a50b21eba38c18d7c59072b449c7c26856b2a
   languageName: node
   linkType: hard
 
