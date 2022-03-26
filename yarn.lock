@@ -4921,7 +4921,7 @@ __metadata:
     cookie-universal-nuxt: ^2.1.5
     core-js: ^3.20.1
     eslint: 8.5.0
-    eslint-plugin-nuxt: ^3.1.0
+    eslint-plugin-nuxt: ^3.2.0
     eslint-plugin-vue: ^8.2.0
     nuxt: ^2.15.8
     nuxt-helmet: ^2.0.1
@@ -5673,14 +5673,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-nuxt@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "eslint-plugin-nuxt@npm:3.1.0"
+"eslint-plugin-nuxt@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "eslint-plugin-nuxt@npm:3.2.0"
   dependencies:
-    eslint-plugin-vue: ^8.1.1
+    eslint-plugin-vue: ^8.5.0
     semver: ^7.3.5
-    vue-eslint-parser: ^8.0.1
-  checksum: 3fb602115309faa8c0a9799f4c0c0a6755884a831687526ed13cffab43a2369e27c1b922b3f55094f2fc6bfe7ed65bfe3175fda0e2e6a11b87f1bbf876fb3e24
+    vue-eslint-parser: ^8.3.0
+  checksum: 45fca390ec702e889e2f16e3f2fd2e8df81b6b1e47b1170e9b0cadc50246494057e32f84d30964e6cc3b733aefc31cb45d0c9a6b6b8cfa9961ada05b472e8040
   languageName: node
   linkType: hard
 
@@ -5746,6 +5746,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-vue@npm:^8.5.0":
+  version: 8.5.0
+  resolution: "eslint-plugin-vue@npm:8.5.0"
+  dependencies:
+    eslint-utils: ^3.0.0
+    natural-compare: ^1.4.0
+    semver: ^7.3.5
+    vue-eslint-parser: ^8.0.1
+  peerDependencies:
+    eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
+  checksum: 2edc956debe3bf22d0daab04b5d59609185799c76dc24ce0c899035ecf64de07a526accc96e8622bccd368b6848f185980e9d6e395d4d14068e89a77e0010119
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:^4.0.3":
   version: 4.0.3
   resolution: "eslint-scope@npm:4.0.3"
@@ -5773,6 +5787,16 @@ __metadata:
     esrecurse: ^4.3.0
     estraverse: ^5.2.0
   checksum: 3f1b3578f288c3820f68ad2aae102300e546be8a98a958f515405dc20cc2fe64fda583d364977628bb14fe3d4f96f37de5e9bc5d6eb26bc310da33ba2a677dc3
+  languageName: node
+  linkType: hard
+
+"eslint-scope@npm:^7.0.0":
+  version: 7.1.1
+  resolution: "eslint-scope@npm:7.1.1"
+  dependencies:
+    esrecurse: ^4.3.0
+    estraverse: ^5.2.0
+  checksum: 9f6e974ab2db641ca8ab13508c405b7b859e72afe9f254e8131ff154d2f40c99ad4545ce326fd9fde3212ff29707102562a4834f1c48617b35d98c71a97fbf3e
   languageName: node
   linkType: hard
 
@@ -13152,6 +13176,23 @@ fsevents@~2.3.1:
   peerDependencies:
     eslint: ">=6.0.0"
   checksum: 9c40558975ef0aecb5cf8977d59d39ffde58108c652b8fd66524aec0cc828fe63e2146c0a95b2ccb52fbd97c1b1d3e5936919920c12d4de4be4c5a752dbc4e53
+  languageName: node
+  linkType: hard
+
+"vue-eslint-parser@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "vue-eslint-parser@npm:8.3.0"
+  dependencies:
+    debug: ^4.3.2
+    eslint-scope: ^7.0.0
+    eslint-visitor-keys: ^3.1.0
+    espree: ^9.0.0
+    esquery: ^1.4.0
+    lodash: ^4.17.21
+    semver: ^7.3.5
+  peerDependencies:
+    eslint: ">=6.0.0"
+  checksum: 8cc751e9fc2bfba93664ad8945732ab1c97791f9123e703de8669b65670d1e01906d80436bf4932d7ee6fa6174ed4545e8abb059206c88f4bd71957ca6cf7ba8
   languageName: node
   linkType: hard
 
