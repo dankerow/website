@@ -67,9 +67,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.17.0":
-  version: 7.17.0
-  resolution: "@babel/eslint-parser@npm:7.17.0"
+"@babel/eslint-parser@npm:^7.18.9":
+  version: 7.18.9
+  resolution: "@babel/eslint-parser@npm:7.18.9"
   dependencies:
     eslint-scope: ^5.1.1
     eslint-visitor-keys: ^2.1.0
@@ -77,7 +77,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ">=7.11.0"
     eslint: ^7.5.0 || ^8.0.0
-  checksum: 1cedd9998dd89f779bbc5496531e3ef1b43d6f4fb7209ed5088938292b81287302cb47c0923ce074e84e83aa41b236b09bfecacdf20770f4cbfade2de9519c10
+  checksum: ddbe0f9425c61a23069280948c0ad9cd4d6d46087cbc6386dd407a3ae6365c62e20f401ea42608aba21fcc2142b8d3d0878eb2f2192a7e5adbe355bdbc215aad
   languageName: node
   linkType: hard
 
@@ -4911,7 +4911,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "danmutombo.com@workspace:."
   dependencies:
-    "@babel/eslint-parser": ^7.17.0
+    "@babel/eslint-parser": ^7.18.9
     "@nuxt/types": ^2.15.8
     "@nuxtjs/eslint-config": ^8.0.0
     "@nuxtjs/eslint-module": ^3.1.0
