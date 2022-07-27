@@ -13,7 +13,65 @@ export default {
 			'Parlant couramment de nombreuses langues, dont le français, l\'anglais et l\'italien, et apprenant actuellement l\'espagnol, que je comprends déjà très bien.'
 		],
 		skillsCard: {
-			cardTitle: 'Compétences'
+			cardTitle: 'Compétences',
+			categories: [
+				{
+					name: 'front-end',
+					tag: 'front-end',
+					active: true,
+					skills: [
+						{
+							title: 'Langages',
+							content: ['HTML', 'CSS/SCSS', 'JavaScript (ES6+)']
+						},
+						{
+							title: 'Frameworks / Bibliothèques',
+							content: ['Node.js', 'Express', 'Vue', 'Nuxt.js', 'jQuery', 'Bootstrap', 'Bulma']
+						},
+						{
+							title: 'Outils',
+							content: ['Git/GitHub']
+						}
+					]
+				},
+				{
+					name: 'back-end',
+					tag: 'back-end',
+					active: false,
+					skills: [
+						{
+							title: 'Langages',
+							content: ['Node.js']
+						},
+						{
+							title: 'Outils',
+							content: ['Git/GitHub', 'MongoDB', 'Redis']
+						}
+					]
+				},
+				{
+					name: 'design graphique',
+					tag: 'graphic-design',
+					active: false,
+					skills: [
+						{
+							title: 'Logiciels',
+							content: ['Adobe Photoshop', 'Adobe Illustrator']
+						}
+					]
+				},
+				{
+					name: 'photographie',
+					tag: 'photography',
+					active: false,
+					skills: [
+						{
+							title: 'Logiciels',
+							content: ['Adobe Lightroom', 'Adobe Photoshop']
+						}
+					]
+				}
+			]
 		}
 	},
 	experience: {
@@ -43,5 +101,10 @@ export default {
 	projects: {
 		index: 'Projets',
 		tempMessage: 'Je suis encore en train de préparer, revenez plus tard. Ce sera bientôt prêt. 😉'
+	},
+	footer: {
+		copyright: {
+			text: 'Tous droits réservés. Conçu et développé par Dan Mutombo.'
+		}
 	}
 }
