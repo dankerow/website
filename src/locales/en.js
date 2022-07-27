@@ -13,7 +13,65 @@ export default {
 			'Fluent in numerous languages, including French, English, and Italian, and currently learning Spanish, which I already comprehend very well.'
 		],
 		skillsCard: {
-			cardTitle: 'Skills'
+			cardTitle: 'Skills',
+			categories: [
+				{
+					name: 'front-end',
+					tag: 'front-end',
+					active: true,
+					skills: [
+						{
+							title: 'Languages',
+							content: ['HTML', 'CSS/SCSS', 'JavaScript (ES6+)']
+						},
+						{
+							title: 'Frameworks / Libraries',
+							content: ['Node.js', 'Express', 'Vue', 'Nuxt.js', 'jQuery', 'Bootstrap', 'Bulma']
+						},
+						{
+							title: 'Tools',
+							content: ['Git/GitHub']
+						}
+					]
+				},
+				{
+					name: 'back-end',
+					tag: 'back-end',
+					active: false,
+					skills: [
+						{
+							title: 'Languages',
+							content: ['Node.js']
+						},
+						{
+							title: 'Tools',
+							content: ['Git/GitHub', 'MongoDB', 'Redis']
+						}
+					]
+				},
+				{
+					name: 'graphic design',
+					tag: 'graphic-design',
+					active: false,
+					skills: [
+						{
+							title: 'Software',
+							content: ['Adobe Photoshop', 'Adobe Illustrator']
+						}
+					]
+				},
+				{
+					name: 'photography',
+					tag: 'photography',
+					active: false,
+					skills: [
+						{
+							title: 'Software',
+							content: ['Adobe Lightroom', 'Adobe Photoshop']
+						}
+					]
+				}
+			]
 		}
 	},
 	experience: {
@@ -43,5 +101,16 @@ export default {
 	projects: {
 		index: 'Projects',
 		tempMessage: 'I\'m still cooking, please come back later. It should be ready soon. 😉'
+	},
+	footer: {
+		copyright: {
+			text: 'All rights reserved. Designed and developed by Dan Mutombo.'
+		}
+	},
+	cookieBanner: {
+		text: 'I use cookies to provide and improve this website. By using my site, you consent to cookies (By Scrolling you consent to cookies). For more information, please see the {cookiePolicy}.'
+	},
+	cookiePolicy: {
+		title: 'Cookie Policy'
 	}
 }
