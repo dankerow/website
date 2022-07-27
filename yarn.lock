@@ -4991,7 +4991,7 @@ __metadata:
     nuxt-purgecss: ^1.0.0
     prism-themes: ^1.9.0
     sass: ^1.54.0
-    sass-loader: 10.2.1
+    sass-loader: 10.3.1
     vue-scrollto: ^2.20.0
   languageName: unknown
   linkType: soft
@@ -11575,9 +11575,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:10.2.1":
-  version: 10.2.1
-  resolution: "sass-loader@npm:10.2.1"
+"sass-loader@npm:10.3.1":
+  version: 10.3.1
+  resolution: "sass-loader@npm:10.3.1"
   dependencies:
     klona: ^2.0.4
     loader-utils: ^2.0.0
@@ -11586,7 +11586,7 @@ fsevents@~2.3.1:
     semver: ^7.3.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
     sass: ^1.3.0
     webpack: ^4.36.0 || ^5.0.0
   peerDependenciesMeta:
@@ -11596,7 +11596,7 @@ fsevents@~2.3.1:
       optional: true
     sass:
       optional: true
-  checksum: e5bc4a230bfb9103dbd05f72e936e9e31cb35d09922fe90541ad71d0a64abce238b54069cfe51e67c045870093a8e9a218aff63d66468e36dc1cc3d5db4ee83b
+  checksum: ab73a41a8aae1a8b4ae607b3ab661e23e12629ea2d05904727625b201e238083e37d7686f613ddd459a1f243a1146b93cd10c9a339a4f6d11871e70c914965c4
   languageName: node
   linkType: hard
 
