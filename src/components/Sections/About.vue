@@ -36,46 +36,18 @@
 						</div>
 						<div class="card-header card-sub-header">
 							<ul class="nav nav-pills nav-justified card-header-pills" role="tablist">
-								<li class="nav-item" role="presentation">
+								<li v-for="category in $t('about.skillsCard.categories')" :key="category.name" class="nav-item" role="presentation">
 									<button
-										id="skills-pills-frontend-tab"
-										class="nav-link active"
+										:id="`skills-pills-${category.tag}-tab`"
+										:class="`nav-link ${category.active ? 'active' : '' } text-capitalize`"
 										data-bs-toggle="pill"
-										data-bs-target="#skills-pills-frontend"
+										:data-bs-target="`#skills-pills-${category.tag}`"
 										type="button"
 										role="tab"
-										aria-controls="skills-pills-frontend"
+										:aria-controls="`skills-pills-${category.tag}`"
 										aria-selected="true"
 									>
-										Front-End
-									</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button
-										id="skills-pills-backend-tab"
-										class="nav-link"
-										data-bs-toggle="pill"
-										data-bs-target="#skills-pills-backend"
-										type="button"
-										role="tab"
-										aria-controls="skills-pills-backend"
-										aria-selected="false"
-									>
-										Back-End
-									</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button
-										id="skills-pills-design-tab"
-										class="nav-link"
-										data-bs-toggle="pill"
-										data-bs-target="#skills-pills-design"
-										type="button"
-										role="tab"
-										aria-controls="skills-pills-design"
-										aria-selected="false"
-									>
-										Design
+										{{ category.name }}
 									</button>
 								</li>
 							</ul>
@@ -83,60 +55,20 @@
 
 						<div class="card-body">
 							<div id="skills-pills-tabContent" class="tab-content">
-								<div id="skills-pills-frontend" class="tab-pane fade show active" role="tabpanel" aria-labelledby="skills-pills-frontend-tab">
-									<div class="skill-category">
+								<div
+									v-for="category in $t('about.skillsCard.categories')"
+									:id="`skills-pills-${category.tag}`"
+									:key="`tab-content-${category.name}`"
+									:class="`tab-pane fade ${category.active ? 'show active' : ''}`"
+									role="tabpanel"
+									:aria-labelledby="`skills-pills-${category.tag}-tab`"
+								>
+									<div v-for="skill in category.skills" :key="`${category.name}-${skill.title}`" class="skill-category">
 										<h1 class="skill-category-title">
-											Languages:
+											{{ skill.title }}:
 										</h1>
 										<p class="skill-category-content">
-											HTML, CSS/SCSS, JavaScript (ES6+)
-										</p>
-									</div>
-
-									<div class="skill-category">
-										<h1 class="skill-category-title">
-											Frameworks / Libraries:
-										</h1>
-										<p class="skill-category-content">
-											Node.js, Express, Vue, Nuxt.js, jQuery, Bootstrap, Bulma
-										</p>
-									</div>
-
-									<div class="skill-category">
-										<h1 class="skill-category-title">
-											Tools:
-										</h1>
-										<p class="skill-category-content">
-											Git/GitHub
-										</p>
-									</div>
-								</div>
-								<div id="skills-pills-backend" class="tab-pane fade" role="tabpanel" aria-labelledby="skills-pills-backend-tab">
-									<div class="skill-category">
-										<h1 class="skill-category-title">
-											Languages:
-										</h1>
-										<p class="skill-category-content">
-											Node.js
-										</p>
-									</div>
-
-									<div class="skill-category">
-										<h1 class="skill-category-title">
-											Tools:
-										</h1>
-										<p class="skill-category-content">
-											Git/GitHub, MongoDB, Redis
-										</p>
-									</div>
-								</div>
-								<div id="skills-pills-design" class="tab-pane fade" role="tabpanel" aria-labelledby="skills-pills-design-tab">
-									<div class="skill-category">
-										<h1 class="skill-category-title">
-											Software:
-										</h1>
-										<p class="skill-category-content">
-											Adobe Photoshop, Adobe Illustrator
+											{{ skill.content.join(', ') }}
 										</p>
 									</div>
 								</div>
@@ -157,8 +89,6 @@
 .skills-card {
 	height:100%;
 	min-height: 340px;
-	max-width: 500px;
-	width: 100%;
 
 	.card-sub-header {
 		background-color: rgb(22, 26, 30);
