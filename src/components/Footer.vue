@@ -20,7 +20,7 @@
 				<div class="row gy-4 gy-sm-0 row-cols-1 row-cols-md-2 row-cols-lg-2 text-center">
 					<div class="col">
 						<p class="d-inline-block mb-0 float-md-start">
-							© 2021 All rights reserved. Designed and developed by Dan Mutombo.
+							© 2021 {{ $t('footer.copyright.text') }}
 						</p>
 					</div>
 				</div>
