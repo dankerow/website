@@ -1,11 +1,11 @@
-const baseURL = process.env.NODE_ENV === 'production' ? 'https://danmutombo.com' : 'http://localhost:6350'
+const hostname = process.env.NODE_ENV !== 'production' ? `http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}` : process.env.HOSTNAME
 
 export default {
 	rootDir: './',
 	srcDir: 'src',
 	target: 'static',
 	server: {
-		port: 6350
+		port: process.env.SERVER_PORT
 	},
 	head: {
 		title: 'Dan Mutombo',
@@ -81,7 +81,7 @@ export default {
 
 	i18n: {
 		strategy: 'prefix_and_default',
-		baseUrl: baseURL,
+		baseUrl: hostname,
 		locales: [
 			{ code: 'en', iso: 'en-US', name: 'English', file: 'en.js' },
 			{ code: 'es', iso: 'es-ES', name: 'Español', file: 'es.js' },
@@ -126,7 +126,8 @@ export default {
 	},
 
 	sitemap: {
-		hostname: baseURL,
+		hostname,
+		gzip: true,
 		i18n: true
 	},
 
