@@ -1,6 +1,4 @@
-const hostname = process.env.NODE_ENV !== 'production' ? `http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}` : process.env.HOSTNAME
-
-console.log(process.env.HOSTN)
+const hostname = process.env.NODE_ENV !== 'production' ? `http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}` : process.env.BASE_URL
 
 export default {
 	rootDir: './',
