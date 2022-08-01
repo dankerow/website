@@ -1,11 +1,12 @@
-const baseURL = process.env.NODE_ENV === 'production' ? 'https://danmutombo.com' : 'http://localhost:6350'
+const hostname = process.env.NODE_ENV !== 'production' ? `http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}` : process.env.BASE_URL
 
 export default {
 	rootDir: './',
 	srcDir: 'src',
 	target: 'static',
+	modern: process.env.NODE_ENV === 'production',
 	server: {
-		port: 6350
+		port: process.env.SERVER_PORT
 	},
 	head: {
 		title: 'Dan Mutombo',
@@ -21,7 +22,7 @@ export default {
 		],
 		script: [
 			{
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js',
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js',
 				type: 'text/javascript',
 				defer: true
 			}
@@ -81,7 +82,7 @@ export default {
 
 	i18n: {
 		strategy: 'prefix_and_default',
-		baseUrl: baseURL,
+		baseUrl: hostname,
 		locales: [
 			{ code: 'en', iso: 'en-US', name: 'English', file: 'en.js' },
 			{ code: 'es', iso: 'es-ES', name: 'Español', file: 'es.js' },
@@ -126,7 +127,8 @@ export default {
 	},
 
 	sitemap: {
-		hostname: baseURL,
+		hostname,
+		gzip: true,
 		i18n: true
 	},
 

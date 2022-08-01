@@ -16,6 +16,7 @@
 				>
 					Menu
 				</button>
+
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
@@ -92,15 +93,15 @@ header {
 				color: #fff;
 
 				&:before {
-					font-weight: 500;
 					content: './ ';
 					color: rgb(146, 164, 184);
+					font-weight: 500;
 				}
 
 				&:after {
-					font-weight: 500;
 					content: '/';
 					color: rgb(146, 164, 184);
+					font-weight: 500;
 					opacity: 0;
 					position: absolute;
 					transition: opacity 0.5s ease;

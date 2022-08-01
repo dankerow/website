@@ -6,34 +6,38 @@
 					<img class="img-fluid" src="~assets/img/avatar.png" alt="" draggable="false">
 				</div>
 				<div class="col col-lg-7">
-					<h1 class="header-heading-1">
-						{{ $t('hero.headingOne') }}
-					</h1>
+					<div class="row row-cols-1">
+						<div class="col mb-5">
+							<h1 class="header-heading-1">
+								{{ $t('hero.headingOne') }}
+							</h1>
 
-					<h2 class="header-heading-2">
-						<span class="special-letter">D</span>an
-						<span class="special-letter">M</span>utombo.
-					</h2>
+							<h2 class="header-heading-2">
+								<span class="special-letter">D</span>an
+								<span class="special-letter">M</span>utombo.
+							</h2>
 
-					<i18n path="hero.shortDescription" tag="p" class="header-short-description">
-						<template #college>
-							<a href="https://www.columbiacollege.ca/" target="_blank" rel="noreferrer">{{ $t('hero.college') }}</a>
-						</template>
-					</i18n>
+							<i18n path="hero.shortDescription" tag="p" class="header-short-description">
+								<template #college>
+									<a href="https://www.columbiacollege.ca/" target="_blank" rel="noreferrer">{{ $t('hero.college') }}</a>
+								</template>
+							</i18n>
 
-					<div class="social-links">
-						<a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
-							<LinkedInLogo />
-						</a>
-						<a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
-							<GithubLogo />
-						</a>
-						<a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank" rel="noreferrer">
-							<TwitterLogo />
-						</a>
-						<a href="https://instagram.com/dankerow" aria-label="Instagram" target="_blank" rel="noreferrer">
-							<InstagramLogo />
-						</a>
+							<div class="social-links">
+								<a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+									<LinkedInLogo />
+								</a>
+								<a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
+									<GithubLogo />
+								</a>
+								<a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank" rel="noreferrer">
+									<TwitterLogo />
+								</a>
+								<a href="https://instagram.com/dankerow" aria-label="Instagram" target="_blank" rel="noreferrer">
+									<InstagramLogo />
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -129,6 +133,23 @@ export default {
 			}
 		}
 	}
+
+	.quotes {
+		background-color: #121518;
+		border-radius: 0.25rem;
+		padding: 0.45rem 0.65rem;
+		text-align: center;
+		width: 100%;
+
+		.text {
+			margin-bottom: 0.15rem;
+		}
+
+		.author {
+			color: #343a40;
+			margin: 0;
+		}
+	}
 }
 
 @media (max-width: 768px) {
@@ -139,5 +160,4 @@ export default {
 		background-repeat: no-repeat;
 	}
 }
-
 </style>

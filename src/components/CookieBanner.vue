@@ -3,10 +3,14 @@
 		<div class="fixed-bottom">
 			<div class="container">
 				<div id="cookie-consent-banner" class="alert alert-dismissible fade d-none mx-sm-0 mx-md-2 text-center" role="alert">
-					I use cookies to provide and improve this website. By using my site, you consent to cookies (By Scrolling you consent to cookies). For more information, please see the
-					<a class="text-decoration-underline" href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-						Cookie Policy
-					</a>.
+					<i18n path="cookieBanner.text" tag="p" class="mb-0">
+						<template #cookiePolicy>
+							<a class="text-decoration-underline" href="#" type="button" data-bs-toggle="modal" data-bs-target="#cookiePolicyModal">
+								{{ $t('cookiePolicy.title') }}
+							</a>
+						</template>
+					</i18n>
+
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="cookieConsent">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -14,7 +18,7 @@
 			</div>
 		</div>
 
-		<div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div id="cookiePolicyModal" class="modal fade" tabindex="-1" aria-labelledby="Cookie Policy Modal" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-body">
