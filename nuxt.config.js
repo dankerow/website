@@ -1,6 +1,6 @@
 const hostname = process.env.NODE_ENV !== 'production' ? `http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}` : process.env.HOSTNAME
 
-console.log(process.env.HOSTNAME)
+console.log(process.env.HOSTN)
 
 export default {
 	rootDir: './',
