@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<nav class="navbar navbar-expand-md">
+		<nav class="navbar navbar-dark navbar-expand-md">
 			<div class="container">
 				<NuxtLink class="navbar-brand" to="/">
 					<span class="text">DAN</span><span class="highlight">M</span>
