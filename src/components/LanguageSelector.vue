@@ -19,7 +19,6 @@
 			<span
 				v-for="locale in availableLocales"
 				:key="locale.code"
-				:to="switchLocalePath(locale.code)"
 				class="dropdown-item"
 				@click="changeLocale(locale.code)"
 			>
@@ -57,7 +56,6 @@ export default {
 .nav-link {
 	svg {
 		width: 1.8rem;
-		margin-right: 5px;
 	}
 }
 
