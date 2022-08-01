@@ -3957,9 +3957,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001219, caniuse-lite@npm:^1.0.30001228":
-  version: 1.0.30001316
-  resolution: "caniuse-lite@npm:1.0.30001316"
-  checksum: 8a96ee89f5e64f42f684475905c73c67f995abd6d9b111ab8a9d2e0a5d3b871f1a600ff42e4ffe7f7f3498d0243beeafc11cf7b4dbe3e022a2e5cdf639564152
+  version: 1.0.30001373
+  resolution: "caniuse-lite@npm:1.0.30001373"
+  checksum: cd2f027e2fcf66ed3b0e3eccec89df871f951f2e7600944fae2c3f6f1c37ac82392e573c279e15bf851b75f9696472e38d33fd52d964819ffb8af7af4078ceba
   languageName: node
   linkType: hard
 
@@ -4916,7 +4916,6 @@ __metadata:
     nuxt: ^2.15.8
     nuxt-helmet: ^2.1.1
     nuxt-purgecss: ^1.0.0
-    prism-themes: ^1.9.0
     sass: ^1.54.0
     sass-loader: 10.3.1
     vue-scrollto: ^2.20.0
@@ -10731,13 +10730,6 @@ fsevents@~2.3.1:
   version: 1.1.0
   resolution: "pretty-time@npm:1.1.0"
   checksum: a319e7009aadbc6cfedbd8b66861327d3a0c68bd3e8794bf5b86f62b40b01b9479c5a70c76bb368ad454acce52a1216daee460cc825766e2442c04f3a84a02c9
-  languageName: node
-  linkType: hard
-
-"prism-themes@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "prism-themes@npm:1.9.0"
-  checksum: ddbadb8d83fc23e428409d7dd1d62dde6033a3afabd721d292e2d251f5693e3eccb7f9641704374f3df3dde59c0e2c8a3c069a7aa72990c4a00acb57f2af81f8
   languageName: node
   linkType: hard
 
