@@ -4,6 +4,7 @@ export default {
 	rootDir: './',
 	srcDir: 'src',
 	target: 'static',
+	modern: process.env.NODE_ENV === 'production',
 	server: {
 		port: process.env.SERVER_PORT
 	},
