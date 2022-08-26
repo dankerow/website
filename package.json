@@ -37,5 +37,5 @@
     "sass": "^1.54.5",
     "sass-loader": "10.3.1"
   },
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.3"
 }
