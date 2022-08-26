@@ -4914,7 +4914,7 @@ __metadata:
     nuxt: ^2.15.8
     nuxt-helmet: ^2.1.1
     nuxt-purgecss: ^1.0.0
-    sass: ^1.54.0
+    sass: ^1.54.5
     sass-loader: 10.3.1
     vue-scrollto: ^2.20.0
   languageName: unknown
@@ -11608,16 +11608,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.54.0":
-  version: 1.54.0
-  resolution: "sass@npm:1.54.0"
+"sass@npm:^1.54.5":
+  version: 1.54.5
+  resolution: "sass@npm:1.54.5"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 7d3acf124d771e8811fce876ad37f786faafa9edce64b20dcf32bf6aed5116802c863d3311fd79e7e7682fcccc4dc684960be1365cffa7dad045be7251c40d70
+  checksum: ba7a65aa7508419468547c8de4d59e537bec874f52823f501663dc98d80dfd2d374e8ea73a31200db7f510b8816c925edf89728c9b36889f4e6673d3e94ec100
   languageName: node
   linkType: hard
 
