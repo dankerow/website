@@ -4436,23 +4436,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie-universal-nuxt@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "cookie-universal-nuxt@npm:2.2.1"
+"cookie-universal-nuxt@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "cookie-universal-nuxt@npm:2.2.2"
   dependencies:
     "@types/cookie": ^0.3.3
-    cookie-universal: ^2.2.1
-  checksum: 9ead55f585b789215beaa5f6e9c2857a8666bc33a23ebd1070c22fb203e662d8b7eb47b81889e8c2a2dee82bdc93847fd3c9608118374caa3a4153ae30f7825f
+    cookie-universal: ^2.2.2
+  checksum: ce811f9adbe1e50afb84ac7f659069d19cc4b21b5cf52b2a530b97a5d4c037b43a4c260fb05acc239eb9e00d80f0b965300a2739112f7fde7d2dcf3a5317771b
   languageName: node
   linkType: hard
 
-"cookie-universal@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "cookie-universal@npm:2.2.1"
+"cookie-universal@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "cookie-universal@npm:2.2.2"
   dependencies:
     "@types/cookie": ^0.3.3
     cookie: ^0.4.0
-  checksum: 52b9651a45697458ab17b23484401e42fa4d9df4b07c024411098d1cb7652dc2dce8f7d578525815763a75908324e106e1722c1c22e2853f3a2659dd6f93b898
+  checksum: deda97bf2da282075172956279720cd18a8995a8844ab74e489588f0b6ac40de8ee7152ab84a753ddef65ea7b7feef1abe28736593bba337cefd7f6975f89fcd
   languageName: node
   linkType: hard
 
@@ -4906,7 +4906,7 @@ __metadata:
     "@nuxtjs/sitemap": ^2.4.0
     "@nuxtjs/svg": ^0.4.0
     bootstrap: ^5.2.0
-    cookie-universal-nuxt: ^2.2.1
+    cookie-universal-nuxt: ^2.2.2
     core-js: ^3.24.1
     eslint: 8.21.0
     eslint-plugin-nuxt: ^3.2.0
