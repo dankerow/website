@@ -4937,7 +4937,7 @@ __metadata:
     core-js: ^3.25.1
     eslint: 8.22.0
     eslint-plugin-nuxt: ^4.0.0
-    eslint-plugin-vue: ^9.4.0
+    eslint-plugin-vue: ^9.5.1
     nuxt: ^2.15.8
     nuxt-helmet: ^2.1.1
     nuxt-purgecss: ^1.0.0
@@ -5768,6 +5768,23 @@ __metadata:
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
   checksum: 1eb085e7d52285eff05e4a3f0f4d65619e943eb7e976b0ef59c3adc75bf4a089df8e8cdba223cf27e2623c0fc6b306e3b1ca460d0ce27cc421ca91b7880eb0d8
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-vue@npm:^9.5.1":
+  version: 9.5.1
+  resolution: "eslint-plugin-vue@npm:9.5.1"
+  dependencies:
+    eslint-utils: ^3.0.0
+    natural-compare: ^1.4.0
+    nth-check: ^2.0.1
+    postcss-selector-parser: ^6.0.9
+    semver: ^7.3.5
+    vue-eslint-parser: ^9.0.1
+    xml-name-validator: ^4.0.0
+  peerDependencies:
+    eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
+  checksum: 36433328710c241bf363291859b6caf1c74dd18d75b1b1fe5bac9706e4d612e3dea79eef5acccf06b2df9d9b3faf9343c1b3e1d9edbf6465fd9752f3c0a87ee4
   languageName: node
   linkType: hard
 
