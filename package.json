@@ -32,7 +32,7 @@
     "core-js": "^3.25.1",
     "eslint": "8.22.0",
     "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.4.0",
+    "eslint-plugin-vue": "^9.5.1",
     "nuxt-purgecss": "^1.0.0",
     "sass": "^1.54.9",
     "sass-loader": "10.3.1"
