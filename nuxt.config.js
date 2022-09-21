@@ -134,6 +134,7 @@ export default {
 
 	build: {
 		devtools: true,
+		extractCSS: process.env.NODE_ENV === 'production',
 		html: {
 			minify: {
 				collapseBooleanAttributes: true,
