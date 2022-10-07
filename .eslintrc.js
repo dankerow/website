@@ -17,6 +17,7 @@ module.exports = {
 	plugins: [],
 	rules: {
 		'vue/html-indent': ['error', 'tab'],
+		'vue/multi-word-component-names': 'off',
 		'brace-style': [
 			'error',
 			'1tbs',
