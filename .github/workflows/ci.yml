@@ -32,13 +32,13 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: 🔠 Lint project
-        run: yarn lint
+        run: pnpm lint
 
   build:
     runs-on: ${{ matrix.os }}
@@ -63,10 +63,10 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: 🛠 Build project
-        run: yarn generate
+        run: pnpm generate
