@@ -6,7 +6,7 @@ module.exports = {
 	},
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 12
+		ecmaVersion: 'latest'
 	},
 	extends: [
 		'@nuxtjs',
