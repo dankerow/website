@@ -22,7 +22,7 @@ export default {
 		],
 		script: [
 			{
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/js/bootstrap.bundle.min.js',
+				src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js',
 				type: 'text/javascript',
 				defer: true
 			}
@@ -110,15 +110,11 @@ export default {
 		},
 		manifest: {
 			name: 'Dan Mutombo',
-			// eslint-disable-next-line camelcase
 			start_url: '/',
-			// eslint-disable-next-line camelcase
 			short_name: 'Dan M.',
 			lang: 'en',
 			display: 'fullscreen',
-			// eslint-disable-next-line camelcase
 			background_color: '#1c2125',
-			// eslint-disable-next-line camelcase
 			theme_color: '#92a4b8'
 		},
 		workbox: {
