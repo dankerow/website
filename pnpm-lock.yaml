@@ -15,7 +15,7 @@ specifiers:
   core-js: ^3.26.1
   eslint: 8.29.0
   eslint-plugin-nuxt: ^4.0.0
-  eslint-plugin-vue: ^9.8.0
+  eslint-plugin-vue: ^9.9.0
   nuxt: ^2.15.8
   nuxt-helmet: ^2.1.1
   nuxt-purgecss: ^1.0.0
@@ -43,7 +43,7 @@ devDependencies:
   core-js: 3.26.1
   eslint: 8.29.0
   eslint-plugin-nuxt: 4.0.0_eslint@8.29.0
-  eslint-plugin-vue: 9.8.0_eslint@8.29.0
+  eslint-plugin-vue: 9.9.0_eslint@8.29.0
   nuxt-purgecss: 1.0.0
   sass: 1.56.2
   sass-loader: 10.4.1_sass@1.56.2
@@ -1887,7 +1887,7 @@ packages:
       eslint-plugin-node: 11.1.0_eslint@8.29.0
       eslint-plugin-promise: 6.1.1_eslint@8.29.0
       eslint-plugin-unicorn: 44.0.2_eslint@8.29.0
-      eslint-plugin-vue: 9.8.0_eslint@8.29.0
+      eslint-plugin-vue: 9.9.0_eslint@8.29.0
       local-pkg: 0.4.2
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -4636,7 +4636,7 @@ packages:
   /eslint-plugin-nuxt/4.0.0_eslint@8.29.0:
     resolution: {integrity: sha512-v3Vwdk8YKe52bAz8eSIDqQuTtfL/T1r9dSl1uhC5SyR5pgLxgKkQdxXVf/Bf6Ax7uyd9rHqiAuYVdqqDb7ILdA==}
     dependencies:
-      eslint-plugin-vue: 9.8.0_eslint@8.29.0
+      eslint-plugin-vue: 9.9.0_eslint@8.29.0
       semver: 7.3.8
       vue-eslint-parser: 9.1.0_eslint@8.29.0
     transitivePeerDependencies:
@@ -4676,8 +4676,8 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
-  /eslint-plugin-vue/9.8.0_eslint@8.29.0:
-    resolution: {integrity: sha512-E/AXwcTzunyzM83C2QqDHxepMzvI2y6x+mmeYHbVDQlKFqmKYvRrhaVixEeeG27uI44p9oKDFiyCRw4XxgtfHA==}
+  /eslint-plugin-vue/9.9.0_eslint@8.29.0:
+    resolution: {integrity: sha512-YbubS7eK0J7DCf0U2LxvVP7LMfs6rC6UltihIgval3azO3gyDwEGVgsCMe1TmDiEkl6GdMKfRpaME6QxIYtzDQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
