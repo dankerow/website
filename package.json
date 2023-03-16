@@ -12,7 +12,7 @@
   },
   "author": "Dan Mutombo",
   "dependencies": {
-    "@nuxtjs/google-fonts": "^2.0.0",
+    "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/i18n": "^7.3.0",
     "@nuxtjs/pwa": "^3.3.5",
