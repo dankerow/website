@@ -18,8 +18,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node_version:
-          - 14
-          - 16
+          - 18
         architecture:
           - x64
 
@@ -49,8 +48,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
         node_version:
-          - 14
-          - 16
+          - 18
         architecture:
           - x64
 
@@ -69,4 +67,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: 🛠 Build project
-        run: pnpm generate
+        run: pnpm builld
