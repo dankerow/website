@@ -33,7 +33,7 @@
     "nuxt-security": "^0.12.0",
     "nuxt-simple-sitemap": "^2.1.7",
     "sass": "^1.59.3",
-    "sass-loader": "13.2.0",
+    "sass-loader": "13.2.1",
     "typescript": "^4.9.5",
     "vue-gtag-next": "^1.14.0"
   },
