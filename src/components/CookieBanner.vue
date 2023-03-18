@@ -1,15 +1,47 @@
+<script setup lang="ts">
+import { useSettingsStore } from '@/stores/settings'
+
+const settingsStore = useSettingsStore()
+
+onMounted(() => {
+	const cookieConsentBanner = document.getElementById('cookie-consent-banner') as HTMLElement
+
+	if (!settingsStore.cookieConsent) {
+		const cookieConsentBannerAlert = new window.bootstrap.Alert(cookieConsentBanner)
+		cookieConsentBanner.classList.remove('d-none')
+		cookieConsentBanner.classList.add('d-block')
+
+		window.addEventListener('scroll', () => {
+			const windowScroll = document.body.scrollTop || document.documentElement.scrollTop
+			const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+			const scrolled = (windowScroll / documentHeight) * 100
+
+			if (scrolled > 50 && !settingsStore.cookieConsent) {
+				settingsStore.setCookiePreference(true)
+
+				cookieConsentBannerAlert.close()
+			}
+		})
+	}
+})
+
+const cookieConsent = () => {
+	settingsStore.setCookiePreference(true)
+}
+</script>
+
 <template>
 	<div class="container">
 		<div class="fixed-bottom">
 			<div class="container">
-				<div id="cookie-consent-banner" class="alert alert-dismissible fade d-none mx-sm-0 mx-md-2 text-center" role="alert">
-					<i18n path="cookieBanner.text" tag="p" class="mb-0">
+				<div id="cookie-consent-banner" class="alert alert-dismissible d-none fade mx-sm-0 mx-md-2 text-center" role="alert">
+					<i18n-t scope="global" keypath="cookieBanner.text" tag="p" class="mb-0">
 						<template #cookiePolicy>
 							<a class="text-decoration-underline" href="#" type="button" data-bs-toggle="modal" data-bs-target="#cookiePolicyModal">
 								{{ $t('cookiePolicy.title') }}
 							</a>
 						</template>
-					</i18n>
+					</i18n-t>
 
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="cookieConsent">
 						<span aria-hidden="true">&times;</span>
@@ -107,36 +139,6 @@
 		</div>
 	</div>
 </template>
-
-<script>
-export default {
-	mounted() {
-		const cookieConsentBanner = document.getElementById('cookie-consent-banner')
-
-		if (!this.$store.getters.getCookieConsent) {
-			const cookieConsentBannerAlert = new bootstrap.Alert(cookieConsentBanner)
-			cookieConsentBanner.classList.remove('d-none')
-			cookieConsentBanner.classList.add('d-block')
-
-			window.addEventListener('scroll', () => {
-				const windowScroll = document.body.scrollTop || document.documentElement.scrollTop
-				const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-				const scrolled = (windowScroll / documentHeight) * 100
-
-				if (scrolled > 50 && !this.$store.getters.getCookieConsent) {
-					this.$store.dispatch('cookieConsent', { consented: true })
-					cookieConsentBannerAlert.close()
-				}
-			})
-		}
-	},
-	methods: {
-		cookieConsent(event) {
-			this.$store.dispatch('cookieConsent', { consented: true })
-		}
-	}
-}
-</script>
 
 <style lang="scss" scoped>
 .alert {

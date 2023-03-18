@@ -1,3 +1,20 @@
+<script setup lang="ts">
+definePageMeta({
+	script: [
+		{
+			type: 'application/ld+json',
+			json: {
+				'@context': 'https://schema.org/',
+				'@type': 'Person',
+				name: 'Dan Mutombo',
+				jobTitle: 'Web Developer',
+				url: 'https://danmutombo.com/'
+			}
+		}
+	]
+})
+</script>
+
 <template>
 	<div>
 		<SectionsHero />
@@ -9,27 +26,6 @@
 		<SectionsProjects />
 	</div>
 </template>
-
-<script>
-export default {
-	head() {
-		return {
-			script: [
-				{
-					type: 'application/ld+json',
-					json: {
-						'@context': 'https://schema.org/',
-						'@type': 'Person',
-						name: 'Dan Mutombo',
-						jobTitle: 'Web Developer',
-						url: 'https://danmutombo.com/'
-					}
-				}
-			]
-		}
-	}
-}
-</script>
 
 <style lang="scss">
 .section-heading {

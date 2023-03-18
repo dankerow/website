@@ -1,5 +1,13 @@
+<script setup lang="ts">
+const { locale, locales, setLocale } = useI18n()
+
+const availableLocales = computed(() => {
+	return (locales.value).filter((l: { code: any; value: any; }) => l.code !== locale.value)
+})
+</script>
+
 <template>
-	<div class="dropdown">
+	<li class="nav-item dropdown">
 		<a
 			class="nav-link"
 			href="#"
@@ -9,54 +17,30 @@
 			aria-expanded="false"
 			aria-label="Language Selector"
 		>
-			<LanguageIcon />
+			<Icon name="ph:globe-simple-duotone" size="1.5em" />
 		</a>
 
 		<div class="dropdown-menu dropdown-menu-dark">
 			<span class="dropdown-item active">
-				{{ $i18n.locales.find(locale => locale.code === $i18n.locale).name }}
+				{{ locales.find(l => l.code === locale).name }}
 			</span>
 			<span
 				v-for="locale in availableLocales"
 				:key="locale.code"
 				class="dropdown-item"
-				@click="changeLocale(locale.code)"
+				@click="setLocale(locale.code)"
 			>
 				{{ locale.name }}
 			</span>
 		</div>
-	</div>
+	</li>
 </template>
-
-<script>
-export default {
-	components: {
-		LanguageIcon: () => import('~/assets/icons/language.svg?inline')
-	},
-	computed: {
-		availableLocales() {
-			return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)
-		}
-	},
-	methods: {
-		changeLocale(locale) {
-			return this.$i18n.setLocale(locale)
-		}
-	}
-}
-</script>
 
 <style lang="scss" scoped>
 .dropdown:hover > .dropdown-menu {
 	opacity: 1;
 	transform: translateY(0);
 	visibility: visible;
-}
-
-.nav-link {
-	svg {
-		width: 1.8rem;
-	}
 }
 
 .dropdown-menu {

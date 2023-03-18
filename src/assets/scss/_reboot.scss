@@ -1,12 +1,8 @@
-@import "~bootstrap/scss/reboot";
+@import "bootstrap/scss/reboot";
 
 html {
 	min-height: 100vh;
 	overflow-y: auto;
-}
-
-body {
-	font-family: "Rubik", -apple-system, system-ui, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -29,5 +25,5 @@ body {
 }
 
 a {
-	transition: color 300ms linear;
+	transition: color 0.3s ease-in-out;
 }

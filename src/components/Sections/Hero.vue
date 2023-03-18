@@ -3,8 +3,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 d-none d-lg-block">
-					<img class="img-fluid" src="~assets/img/avatar.png" alt="" draggable="false">
+					<nuxt-img class="img-fluid" src="/images/avatar.png" alt="" format="webp" draggable="false" />
 				</div>
+
 				<div class="col col-lg-7">
 					<div class="row row-cols-1">
 						<div class="col mb-5">
@@ -17,24 +18,23 @@
 								<span class="special-letter">M</span>utombo.
 							</h2>
 
-							<i18n path="hero.shortDescription" tag="p" class="header-short-description">
+							<i18n-t scope="global" keypath="hero.shortDescription" tag="p" class="header-short-description">
 								<template #college>
 									<a href="https://www.columbiacollege.ca/" target="_blank" rel="noreferrer">{{ $t('hero.college') }}</a>
 								</template>
-							</i18n>
+							</i18n-t>
 
 							<div class="social-links">
 								<a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
-									<LinkedInLogo />
+									<Icon name="ph:linkedin-logo-duotone" />
 								</a>
+
 								<a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
-									<GithubLogo />
+									<Icon name="line-md:github-twotone" />
 								</a>
+
 								<a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank" rel="noreferrer">
-									<TwitterLogo />
-								</a>
-								<a href="https://instagram.com/dankerow" aria-label="Instagram" target="_blank" rel="noreferrer">
-									<InstagramLogo />
+									<Icon name="ph:twitter-logo-duotone" />
 								</a>
 							</div>
 						</div>
@@ -44,17 +44,6 @@
 		</div>
 	</section>
 </template>
-
-<script>
-export default {
-	components: {
-		GithubLogo: () => import('~/assets/icons/github-brands.svg?inline'),
-		InstagramLogo: () => import('~/assets/icons/instagram.svg?inline'),
-		LinkedInLogo: () => import('~/assets/icons/linkedin-brands.svg?inline'),
-		TwitterLogo: () => import('~/assets/icons/twitter.svg?inline')
-	}
-}
-</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -66,10 +55,9 @@ export default {
 
 	img {
 		position: absolute;
-		max-width: 48%;
+		max-width: 42%;
 		bottom: 0;
 		left: 0;
-		width: 100%;
 	}
 
 	.header-heading-1 {
@@ -115,11 +103,6 @@ export default {
 	}
 
 	.social-links {
-		svg {
-			width: 1.125rem;
-			height: auto;
-		}
-
 		a {
 			opacity: 0.5;
 			transition: opacity 0.3s ease-in-out;
@@ -131,23 +114,6 @@ export default {
 			&:not(:last-child) {
 				margin-right: 2rem;
 			}
-		}
-	}
-
-	.quotes {
-		background-color: #121518;
-		border-radius: 0.25rem;
-		padding: 0.45rem 0.65rem;
-		text-align: center;
-		width: 100%;
-
-		.text {
-			margin-bottom: 0.15rem;
-		}
-
-		.author {
-			color: #343a40;
-			margin: 0;
 		}
 	}
 }

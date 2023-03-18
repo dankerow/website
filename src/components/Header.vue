@@ -2,9 +2,10 @@
 	<header>
 		<nav class="navbar navbar-dark navbar-expand-md">
 			<div class="container">
-				<NuxtLink class="navbar-brand" to="/">
+				<div class="navbar-brand page-link">
 					<span class="text">DAN</span><span class="highlight">M</span>
-				</NuxtLink>
+				</div>
+
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -20,23 +21,24 @@
 				<div id="navbarSupportedContent" class="collapse navbar-collapse">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
-							<a v-scroll-to="'#about'" href="#about" class="nav-link">
+							<a href="#about" class="nav-link">
 								{{ $t('about.index') }}
 							</a>
 						</li>
+
 						<li class="nav-item">
-							<a v-scroll-to="'#experience'" href="#experience" class="nav-link">
+							<a href="#experience" class="nav-link">
 								{{ $t('experience.index') }}
 							</a>
 						</li>
+
 						<li class="nav-item">
-							<a v-scroll-to="'#projects'" href="#projects" class="nav-link">
+							<a href="#projects" class="nav-link">
 								{{ $t('projects.index') }}
 							</a>
 						</li>
-						<li class="nav-item">
-							<LanguageSelector />
-						</li>
+
+						<LanguageSelector />
 					</ul>
 				</div>
 			</div>

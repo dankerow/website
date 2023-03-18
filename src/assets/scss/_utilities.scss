@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities";
 
 @each $color, $value in $theme-colors {
 	@include bg-gradient-variant($color, $value);

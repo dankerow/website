@@ -12,11 +12,9 @@
 			<div class="row gy-5 row-cols-1 row-cols-lg-2">
 				<div class="col">
 					<div class="biography">
-						<p>
-							<span v-for="(sentence, index) in $t('about.paragraphOne')" :key="index">
-								{{ sentence }}
-								<br v-if="index !== $t('about.paragraphOne').length - 1">
-							</span>
+						<p v-for="(sentence, index) in $tm('about.paragraphOne')" :key="sentence">
+							{{ $rt(sentence) }}
+							<br v-if="index !== $tm('about.paragraphOne').length - 1">
 						</p>
 					</div>
 
@@ -34,20 +32,21 @@
 								{{ $t('about.skillsCard.cardTitle') }}
 							</h1>
 						</div>
+
 						<div class="card-header card-sub-header">
 							<ul class="nav nav-pills nav-justified card-header-pills" role="tablist">
-								<li v-for="category in $t('about.skillsCard.categories')" :key="category.name" class="nav-item" role="presentation">
+								<li v-for="(category, index) in $tm('about.skillsCard.categories')" :key="`${$rt(category.name)}-tab`" class="nav-item" role="presentation">
 									<button
-										:id="`skills-pills-${category.tag}-tab`"
-										:class="`nav-link ${category.active ? 'active' : '' } text-capitalize`"
+										:id="`skills-pills-${index}-tab`"
+										:class="`nav-link ${index === 0 ? 'active' : ''} text-capitalize`"
 										data-bs-toggle="pill"
-										:data-bs-target="`#skills-pills-${category.tag}`"
+										:data-bs-target="`#skills-pills-${index}`"
 										type="button"
 										role="tab"
-										:aria-controls="`skills-pills-${category.tag}`"
+										:aria-controls="`skills-pills-${index}`"
 										aria-selected="true"
 									>
-										{{ category.name }}
+										{{ $rt(category.name) }}
 									</button>
 								</li>
 							</ul>
@@ -56,19 +55,20 @@
 						<div class="card-body">
 							<div id="skills-pills-tabContent" class="tab-content">
 								<div
-									v-for="category in $t('about.skillsCard.categories')"
-									:id="`skills-pills-${category.tag}`"
-									:key="`tab-content-${category.name}`"
-									:class="`tab-pane fade ${category.active ? 'show active' : ''}`"
+									v-for="(category, index) in $tm('about.skillsCard.categories')"
+									:id="`skills-pills-${index}`"
+									:key="`${$rt(category.name)}-tab-content`"
+									:class="`tab-pane fade ${index === 0 ? 'show active' : ''}`"
 									role="tabpanel"
-									:aria-labelledby="`skills-pills-${category.tag}-tab`"
+									:aria-labelledby="`skills-pills-${index}-tab`"
 								>
-									<div v-for="skill in category.skills" :key="`${category.name}-${skill.title}`" class="skill-category">
-										<h1 class="skill-category-title">
-											{{ skill.title }}:
-										</h1>
+									<div v-for="skill in category.skills" :key="`${$rt(category.name)}-${$rt(skill.title)}`" class="skill-category">
+										<h2 class="skill-category-title">
+											{{ $rt(skill.title) }}:
+										</h2>
+
 										<p class="skill-category-content">
-											{{ skill.content.join(', ') }}
+											{{ skill.content.map((item) => $rt(item)).join(', ') }}
 										</p>
 									</div>
 								</div>
