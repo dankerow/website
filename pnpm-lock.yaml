@@ -18,7 +18,7 @@ specifiers:
   nuxt-icon: ^0.3.3
   nuxt-purgecss: ^2.0.0
   nuxt-security: ^0.12.0
-  nuxt-simple-sitemap: ^2.1.7
+  nuxt-simple-sitemap: ^2.1.8
   sass: ^1.59.3
   sass-loader: 13.2.1
   typescript: ^4.9.5
@@ -44,7 +44,7 @@ devDependencies:
   nuxt-icon: 0.3.3
   nuxt-purgecss: 2.0.0
   nuxt-security: 0.12.0
-  nuxt-simple-sitemap: 2.1.7
+  nuxt-simple-sitemap: 2.1.8
   sass: 1.59.3
   sass-loader: 13.2.1_sass@1.59.3
   typescript: 4.9.5
@@ -6406,8 +6406,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-simple-sitemap/2.1.7:
-    resolution: {integrity: sha512-hRNy8Rx89hC+rDGi/I/fa8IE+Pd1Tnv8C57XyHGf9HOvhiouC8bQuBwW/bVy/P45mxMDqdq7vyqngJBK5VwGTQ==}
+  /nuxt-simple-sitemap/2.1.8:
+    resolution: {integrity: sha512-QhQeiNkI9HdbBk8emKJ5/3KTOdu6C1I2dQecvIHk41zSo9od+WTIf0BxPazxK+Sm4Dvz+p0JfxVgWPa4cJvXLA==}
     dependencies:
       '@nuxt/kit': 3.3.1
       chalk: 5.2.0
