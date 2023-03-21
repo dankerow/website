@@ -6,9 +6,10 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
+    "prepare": "nuxi prepare",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "lint:fix": "yarn lint:js --fix"
+    "lint": "pnpm lint:js",
+    "lint:fix": "pnpm lint:js --fix"
   },
   "author": "Dan Mutombo",
   "dependencies": {
