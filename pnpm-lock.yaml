@@ -17,7 +17,7 @@ specifiers:
   nuxt: ^3.3.1
   nuxt-icon: ^0.3.3
   nuxt-purgecss: ^2.0.0
-  nuxt-security: ^0.12.0
+  nuxt-security: ^0.13.0
   nuxt-simple-sitemap: ^2.1.8
   sass: ^1.59.3
   sass-loader: 13.2.1
@@ -43,7 +43,7 @@ devDependencies:
   nuxt: 3.3.1_dlcuf6izk7g7s3ihsjrtekfjiq
   nuxt-icon: 0.3.3
   nuxt-purgecss: 2.0.0
-  nuxt-security: 0.12.0
+  nuxt-security: 0.13.0
   nuxt-simple-sitemap: 2.1.8
   sass: 1.59.3
   sass-loader: 13.2.1_sass@1.59.3
@@ -6390,8 +6390,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-security/0.12.0:
-    resolution: {integrity: sha512-Ed4CbkPBa7DzkvCwbOhJoXN+mg/Htj1agd1hfHqjf1KA5CDAwR8dgxaN5z7uC76RpHQ9tGP1niHNSmcs3D8D0Q==}
+  /nuxt-security/0.13.0:
+    resolution: {integrity: sha512-D2u6ggMA2PVRQIVT/y8jXJ0D+7pxi0f627DlzVTFb6MOhZdazQYZGE54zI2g8fAvZciLHqZ8r+bbt3QlRLzIVg==}
     dependencies:
       '@nuxt/kit': 3.3.1
       basic-auth: 2.0.1
