@@ -3,27 +3,27 @@
 @use "sass:math";
 
 $white:    #fff !default;
-$gray-100: #F3F4F6 !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #e3e3e3 !default;
+$gray-200: #c8c8c8 !default;
+$gray-300: #a4a4a4 !default;
+$gray-400: #818181 !default;
+$gray-500: #666666 !default;
+$gray-600: #515151 !default;
+$gray-700: #434343 !default;
+$gray-800: #383838 !default;
+$gray-900: #171717 !default;
 $black:    #000 !default;
 
 $grays: (
-	"100": $gray-100,
-	"200": $gray-200,
-	"300": $gray-300,
-	"400": $gray-400,
-	"500": $gray-500,
-	"600": $gray-600,
-	"700": $gray-700,
-	"800": $gray-800,
-	"900": $gray-900
+	"gray-100": $gray-100,
+	"gray-200": $gray-200,
+	"gray-300": $gray-300,
+	"gray-400": $gray-400,
+	"gray-500": $gray-500,
+	"gray-600": $gray-600,
+	"gray-700": $gray-700,
+	"gray-800": $gray-800,
+	"gray-900": $gray-900
 ) !default;
 
 $blue:    #6564ff !default;
@@ -55,7 +55,7 @@ $colors: (
 	"gray-dark":  $gray-800
 ) !default;
 
-$primary:       rgba(51,61,73,255) !default;
+$primary:       rgb(146, 164, 184) !default;
 $secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -76,8 +76,6 @@ $theme-colors: (
 	"dark":       $dark,
 	"darker":     $darker
 ) !default;
-
-$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
 
 $min-contrast-ratio:   4.5 !default;
 
@@ -102,7 +100,7 @@ $spacers: (
 	5: $spacer * 3,
 ) !default;
 
-@for $i from 6 through 16 {
+@for $i from 6 through 20 {
 	$spacers: map-merge($spacers, (
 		$i: (($i + 1rem) * 0.5)
 	))
@@ -112,8 +110,8 @@ $spacers: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   rgb(28, 33, 37) !default;
-$body-color:                rgb(146, 164, 184) !default;
+$body-bg:                   rgb(23, 23, 23) !default;
+$body-color:                rgb(180, 180, 180) !default;
 $body-text-align:           null !default;
 
 // Links
@@ -202,6 +200,10 @@ $h3-font-size:                $font-size-base * 1.0625 !default;
 $h4-font-size:                $font-size-base * .9375 !default;
 $h5-font-size:                $font-size-base * .8125 !default;
 $h6-font-size:                $font-size-base * .625 !default;
+
+$hr-border-color:             rgb(38, 38, 38) !default;
+$hr-border-width:             1px !default;
+$hr-opacity:                  .9 !default;
 
 // Tables
 
@@ -430,7 +432,7 @@ $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $component-active-bg !default;
+$nav-pills-link-active-bg:          $gray-800 !default;
 
 // Navbar
 
@@ -507,15 +509,15 @@ $dropdown-header-color:             $gray-600 !default;
 $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
 
 $dropdown-dark-color:               $gray-300 !default;
-$dropdown-dark-bg:                  rgb(22, 26, 30) !default;
-$dropdown-dark-border-color:        $dropdown-border-color !default;
+$dropdown-dark-bg:                  rgba(38, 38, 38, 0.6) !default;
+$dropdown-dark-border-color:        rgba(38, 38, 38, 0.8) !default;
 $dropdown-dark-divider-bg:          $dropdown-divider-bg !default;
 $dropdown-dark-box-shadow:          null !default;
 $dropdown-dark-link-color:          $dropdown-dark-color !default;
 $dropdown-dark-link-hover-color:    $white !default;
 $dropdown-dark-link-hover-bg:       rgba($white, .15) !default;
 $dropdown-dark-link-active-color:   $dropdown-link-active-color !default;
-$dropdown-dark-link-active-bg:      $dropdown-link-active-bg !default;
+$dropdown-dark-link-active-bg:      $gray-700 !default;
 $dropdown-dark-link-disabled-color: $gray-500 !default;
 $dropdown-dark-header-color:        $gray-500 !default;
 
@@ -524,17 +526,17 @@ $dropdown-dark-header-color:        $gray-500 !default;
 $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
-$card-border-width:                 $border-width !default;
+$card-border-width:                 1px !default;
 $card-border-radius:                $border-radius !default;
-$card-border-color:                 rgba($black, .125) !default;
+$card-border-color:                 rgba(38, 38, 38, 0.8) !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
-$card-cap-bg:                       rgba($black, .03) !default;
+$card-cap-bg:                       rgba(24, 24, 24, .1) !default;
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
 $card-color:                        null !default;
-$card-bg:                           $primary !default;
+$card-bg:                           rgba(38, 38, 38, 0.3) !default;
 $card-img-overlay-padding:          $spacer !default;
 
 // Modals
@@ -586,7 +588,7 @@ $alert-padding-x:               $spacer !default;
 $alert-margin-bottom:           1rem !default;
 $alert-border-radius:           $border-radius !default;
 $alert-link-font-weight:        $font-weight-bold !default;
-$alert-border-width:            $border-width !default;
+$alert-border-width:            2px !default;
 $alert-bg-scale:                -80% !default;
 $alert-border-scale:            -70% !default;
 $alert-color-scale:             40% !default;
