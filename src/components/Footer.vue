@@ -11,7 +11,7 @@ const year = new Date().getFullYear()
 				</a>
 
 				<a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
-					<Icon name="line-md:github-twotone" />
+					<Icon name="ph:github-logo-duotone" />
 				</a>
 
 				<a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank" rel="noreferrer">
@@ -32,22 +32,13 @@ const year = new Date().getFullYear()
 
 <style lang="scss" scoped>
 footer {
-	background-color: rgb(25, 30, 33);
-
 	.footer-social {
-		background-color: #161a1e;
-		border-bottom: 2px solid rgb(28, 33, 37);
+		background-color: rgba(20, 20, 20, 0.5);
+		border-bottom: 1px solid rgba(38, 38, 38, 0.8);
 
 		a {
-			opacity: 0.5;
-			transition: opacity 0.3s ease-in-out;
-
-			&:hover {
-				opacity: 1;
-			}
-
 			&:not(:last-child) {
-				margin-right: 2rem;
+				margin-right: 1.875rem;
 			}
 		}
 	}
