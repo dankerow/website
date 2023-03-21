@@ -1,9 +1,9 @@
 <template>
-	<header>
+	<header class="top-0 start-0 end-0 position-fixed w-100">
 		<nav class="navbar navbar-dark navbar-expand-md">
 			<div class="container">
-				<div class="navbar-brand page-link">
-					<span class="text">DAN</span><span class="highlight">M</span>
+				<div class="navbar-brand">
+					<span class="text p-1">[~D</span><span class="highlight p-1">]</span>
 				</div>
 
 				<button
@@ -48,29 +48,25 @@
 
 <style lang="scss" scoped>
 header {
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	width: 100%;
 	z-index: 99;
 
 	.navbar {
-		background: rgba(28, 33, 37, 0.8);
+		background: rgba(23, 23, 23, 0.3);
+		border-bottom: 1px solid rgba(38, 38, 38, 0.8);
 		backdrop-filter: blur(12px);
 
 		.navbar-brand {
 			font-size: 25px;
-			font-weight: 700;
+			font-weight: 500;
 
 			.text {
-				transition: background-color 500ms linear, color 500ms linear;
+				transition: background-color 0.3s linear, color 0.3s linear;
 			}
 
 			.highlight {
 				background-color: rgb(195, 212, 232);
 				color: rgb(51,61,73);
-				transition: background-color 500ms linear, color 500ms linear;
+				transition: background-color 0.3s linear, color 0.3s linear;
 			}
 
 			&:hover {
@@ -106,7 +102,7 @@ header {
 					font-weight: 500;
 					opacity: 0;
 					position: absolute;
-					transition: opacity 0.5s ease;
+					transition: opacity 0.3s ease;
 					margin-left: 3px;
 				}
 
