@@ -17,7 +17,7 @@ const availableLocales = computed(() => {
 			aria-expanded="false"
 			aria-label="Language Selector"
 		>
-			<Icon name="ph:globe-simple-duotone" size="1.5em" />
+			<Icon name="ph:globe-simple-duotone" size="1.2em" />
 		</a>
 
 		<div class="dropdown-menu dropdown-menu-dark">
