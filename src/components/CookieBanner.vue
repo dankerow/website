@@ -142,9 +142,11 @@ const cookieConsent = () => {
 
 <style lang="scss" scoped>
 .alert {
+	--bs-alert-border-color: rgba(38, 38, 38, 0.8);
+	--bs-alert-bg: rgba(38, 38, 38, 0.1);
+
 	animation: slide-in-up 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	background: rgba(146, 164, 184, 0.2);
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(12px);
 	font-size: 0.875rem;
 }
 
