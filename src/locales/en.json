@@ -1,16 +1,16 @@
 {
   "metadata": {
-    "shortDescription":"A junior web developer, looking for more challenges."
+    "shortDescription":"A web developer, looking for more challenges."
   },
   "hero": {
     "headingOne": "Greetings!",
-    "shortDescription": "A junior web developer living in Canada, currently enrolled at {college}, completing an Associate Degree in Computer Science.",
+    "shortDescription": "A web developer, currently enrolled at {college}, completing a Bachelor in Computer Science.",
     "college": "Columbia College"
   },
   "about": {
     "index": "About",
     "paragraphOne": [
-      "Hello, my name is Dan and I'm a junior web developer from Canada. I enjoy expressing my creativity in a variety of ways, such as through developing websites and graphic designs. In late 2015, I developed an interest in web development and graphic design. Since then, I've continued to learn and practice in each of these areas.",
+      "Hello, my name is Dan and I'm a web developer. I enjoy expressing my creativity in a variety of ways, such as through developing websites and graphic designs. In late 2015, I developed an interest in web development and graphic design. Since then, I've continued to learn and practice in each of these areas.",
       "Naturally inquisitive and enjoying learning new things, I fit in well with others.",
       "Fluent in numerous languages, including French, English, and Italian, and currently learning Spanish, which I already comprehend very well."
     ],
@@ -130,7 +130,9 @@
   },
   "projects": {
     "index": "Projects",
-    "tempMessage": "I'm still cooking, please come back later. It should be ready soon. 😉"
+    "project": {
+      "noDescription": "No description available."
+    }
   },
   "footer": {
     "copyright": {
