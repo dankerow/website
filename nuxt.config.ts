@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 	purgecss: {
 		variables: true,
 		keyframes: true,
-		safelist: ['img']
+		safelist: ['svg']
 	},
 
 	pwa: {
@@ -91,8 +91,12 @@ export default defineNuxtConfig({
 		}
 	},
 
+	security: {
+		enabled: !isDevelopment
+	},
+
 	sitemap: {
-		enabled: isDevelopment,
+		enabled: !isDevelopment,
 		siteUrl: process.env.BASE_URL
 	}
 })
