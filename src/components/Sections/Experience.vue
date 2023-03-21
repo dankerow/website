@@ -1,14 +1,12 @@
 <template>
-	<section id="experience" class="py-12">
+	<section id="experience" class="py-10">
 		<div class="container">
-			<div class="mb-5">
-				<h1 class="section-heading">
-					<span class="highlight">E</span><span class="highlight inverse">XP</span><span class="highlight">ERIENCE</span>
-				</h1>
-			</div>
+			<h1 class="h3 section-heading mb-5">
+				Experience
+			</h1>
 
 			<div class="row">
-				<div class="experience-pills mx-auto d-flex align-items-start">
+				<div class="experience-pills d-flex align-items-start">
 					<div id="experience-pills-tab" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
 						<button
 							v-for="(work, index) in $tm('experience.jobs')"
@@ -26,7 +24,7 @@
 						</button>
 					</div>
 
-					<div id="experience-pills-tabContent" class="tab-content">
+					<div id="experience-pills-tabContent" class="tab-content w-100 ps-3">
 						<div
 							v-for="(work, index) in $tm('experience.jobs')"
 							:id="`experience-pills-${index}`"
@@ -40,11 +38,11 @@
 							</h2>
 
 							<h3 v-if="$rt(work.jobType) || $rt(work.timePeriod)" class="h5 mb-4">
-								<span v-if="work.jobType" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem', backgroundColor: '#21282f' }">
+								<span v-if="work.jobType" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem', backgroundColor: 'rgb(38, 38, 38)' }">
 									{{ $rt(work.jobType) }}
 								</span>
 								<span v-if="work.timePeriod" class="mx-1">|</span>
-								<span v-if="work.timePeriod" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem' }">
+								<span v-if="work.timePeriod" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem', backgroundColor: 'rgb(38, 38, 38)' }">
 									{{ $rt(work.timePeriod.start) }} - {{ $rt(work.timePeriod.end) }}
 								</span>
 							</h3>
@@ -71,22 +69,17 @@
 </template>
 
 <style lang="scss" scoped>
-.experience-pills {
-	max-width: 1000px;
-	min-height: 240px;
-}
-
 #experience-pills-tab {
 	width: max-content;
 }
 
 .nav {
-	border-right: 2px solid rgb(46, 52, 57);
+	border-right: 2px solid rgba(38, 38, 38, 0.8);
 	counter-reset: nav-link;
 }
 
 .nav-link {
-	border-left: 3px solid rgb(28, 33, 37);
+	border-left: 3px solid rgba(38, 38, 38, 0.3);
 	border-radius: 0;
 	padding: 0.475rem 0.875rem;
 	white-space: nowrap;
@@ -94,18 +87,13 @@
 	&:before {
 		counter-increment: nav-link;
 		content: "0" counter(nav-link) ".";
-		color: rgb(195, 212, 232);
+		color: rgb(164, 164, 164);
 		font-family: "Roboto Mono", sans-serif;
 	}
 
 	&.active {
-		background-color: rgba(51, 61, 73, 0.35);
-		border-left: 3px solid rgb(195, 212, 232);
+		background-color: rgba(38, 38, 38, 0.3);
+		border-left: 3px solid rgb(164, 164, 164);
 	}
-}
-
-.tab-content {
-	width: 100%;
-	padding-left: 1rem;
 }
 </style>
