@@ -25,12 +25,12 @@ const availableLocales = computed(() => {
 				{{ locales.find(l => l.code === locale).name }}
 			</span>
 			<span
-				v-for="locale in availableLocales"
-				:key="locale.code"
+				v-for="availableLocale in availableLocales"
+				:key="availableLocale.code"
 				class="dropdown-item"
-				@click="setLocale(locale.code)"
+				@click="setLocale(availableLocale.code)"
 			>
-				{{ locale.name }}
+				{{ availableLocale.name }}
 			</span>
 		</div>
 	</li>
