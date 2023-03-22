@@ -19,7 +19,7 @@
   "devDependencies": {
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxt/devtools": "^0.2.5",
-    "@nuxt/image-edge": "1.0.0-27990059.c3f31ce",
+    "@nuxt/image-edge": "1.0.0-27991759.1a5eea1",
     "@nuxtjs/critters": "^0.4.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/fontaine": "^0.2.4",
