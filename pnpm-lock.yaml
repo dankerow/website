@@ -18,7 +18,7 @@ specifiers:
   nuxt-icon: ^0.3.3
   nuxt-purgecss: ^2.0.0
   nuxt-security: ^0.13.0
-  nuxt-simple-sitemap: ^2.1.8
+  nuxt-simple-sitemap: ^2.2.0
   sass: ^1.60.0
   sass-loader: 13.2.1
   typescript: ^4.9.5
@@ -44,7 +44,7 @@ devDependencies:
   nuxt-icon: 0.3.3
   nuxt-purgecss: 2.0.0
   nuxt-security: 0.13.0
-  nuxt-simple-sitemap: 2.1.8
+  nuxt-simple-sitemap: 2.2.0
   sass: 1.60.0
   sass-loader: 13.2.1_sass@1.60.0
   typescript: 4.9.5
@@ -1091,7 +1091,7 @@ packages:
       scule: 1.0.0
       semver: 7.3.8
       unctx: 2.1.2
-      unimport: 3.0.3
+      unimport: 3.0.4
       untyped: 1.2.2
     transitivePeerDependencies:
       - rollup
@@ -5699,7 +5699,7 @@ packages:
   /nuxt-config-schema/0.4.5:
     resolution: {integrity: sha512-Y5anu5puDfMJfDP7IYjXsn6Dvj262HtjZqa73jCBbFRCc5jnjrs+BEpJJmtPG32ZsqzO2+RL4oTNb3H6IfKZLQ==}
     dependencies:
-      '@nuxt/kit': 3.3.1
+      '@nuxt/kit': 3.3.2
       changelogen: 0.4.1
       defu: 6.1.2
       jiti: 1.18.2
@@ -5713,7 +5713,7 @@ packages:
   /nuxt-csurf/1.2.0:
     resolution: {integrity: sha512-sO8Hm3fR+GB3DMc0y1Slzt+f9LiUKpvF/qvUUZBWz1ZknfTRTYemZkfSNcoYf0/hoL2Wb9O0c8pFtzj0hs8Spw==}
     dependencies:
-      '@nuxt/kit': 3.3.1
+      '@nuxt/kit': 3.3.2
       defu: 6.1.2
     transitivePeerDependencies:
       - rollup
@@ -5762,10 +5762,10 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-simple-sitemap/2.1.8:
-    resolution: {integrity: sha512-QhQeiNkI9HdbBk8emKJ5/3KTOdu6C1I2dQecvIHk41zSo9od+WTIf0BxPazxK+Sm4Dvz+p0JfxVgWPa4cJvXLA==}
+  /nuxt-simple-sitemap/2.2.0:
+    resolution: {integrity: sha512-8BN9H4LFxYY8SGFDG8mhMNpBjh0IawsCwmry2Zhb1ynzdIy5sz6Fr+J864XJxbKX7u/tIsWdkVbnr2ch+kM4iw==}
     dependencies:
-      '@nuxt/kit': 3.3.1
+      '@nuxt/kit': 3.3.2
       chalk: 5.2.0
       defu: 6.1.2
       escape-string-regexp: 5.0.0
@@ -7653,23 +7653,6 @@ packages:
     transitivePeerDependencies:
       - rollup
     dev: true
-
-  /unimport/3.0.3:
-    resolution: {integrity: sha512-RzQqQiqepF5P13SwBGCe4pLlRnAQlbFuDAaQlSkXiNJDpN2iymtGMSfa75AcVSejgV05Q2aQYt6UhCiy5GuZ2A==}
-    dependencies:
-      '@rollup/pluginutils': 5.0.2
-      escape-string-regexp: 5.0.0
-      fast-glob: 3.2.12
-      local-pkg: 0.4.3
-      magic-string: 0.30.0
-      mlly: 1.2.0
-      pathe: 1.1.0
-      pkg-types: 1.0.2
-      scule: 1.0.0
-      strip-literal: 1.0.1
-      unplugin: 1.3.1
-    transitivePeerDependencies:
-      - rollup
 
   /unimport/3.0.4:
     resolution: {integrity: sha512-eoof/HLiNJcIkVpnqc7sJbzKSLx39J6xTaP7E4ElgVQKeq2t9fPTkvJKcA55IJTaRPkEkDq8kcc/IZPmrypnFg==}
