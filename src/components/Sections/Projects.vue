@@ -7,7 +7,7 @@ watch(repositoriesData, (newData) => {
 	repos.value = newData
 })
 
-repos.value = repos.value?.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
+repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
 </script>
 
 <template>
@@ -59,8 +59,6 @@ repos.value = repos.value?.sort((a, b) => b?.stargazers_count - a?.stargazers_co
 								:language="repo.language"
 								:stars="repo.stargazers_count"
 								:description="repo.description"
-								:license="repo.license && repo.license.spdx_id"
-								:top="index === 0"
 								class="h-100"
 							/>
 						</a>
