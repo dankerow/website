@@ -6,7 +6,7 @@ defineProps<{
 	description?: string
 }>()
 
-const getIconName = (language: string) => {
+const getIconName = (language?: string) => {
 	switch (language) {
 	case 'javascript':
 		return 'cib:javascript'
