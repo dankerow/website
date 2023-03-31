@@ -187,35 +187,17 @@ $navbar-brand-font-size:            $font-size-sm !default;
 $navbar-toggler-transition:         box-shadow .3s ease-in-out !default;
 
 // Dropdowns
-//
-// Dropdown menu container and contents.
 
 $dropdown-padding-x:                .25rem !default;
 $dropdown-padding-y:                .25rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-sm  !default;
-$dropdown-color:                    $body-color !default;
-$dropdown-bg:                       $primary !default;
-$dropdown-border-color:             rgba($black, .05) !default;
-$dropdown-border-radius:            $border-radius-lg !default;
-$dropdown-border-width:             $border-width !default;
-$dropdown-divider-margin-y:         $spacer * 0.25 !default;
-
-$dropdown-link-color:               $gray-900 !default;
-$dropdown-link-hover-color:         shade-color($gray-900, 5%) !default;
-$dropdown-link-hover-bg:            $gray-100 !default;
-
-$dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           $component-active-bg !default;
-
-$dropdown-link-disabled-color:      $gray-500 !default;
 
 $dropdown-item-padding-y:           $spacer * .25 !default;
 $dropdown-item-padding-x:           $spacer * 0.5 !default;
 
 $dropdown-dark-bg:                  rgba(38, 38, 38, 0.6) !default;
 $dropdown-dark-border-color:        rgba(38, 38, 38, 0.8) !default;
-
 
 // Cards
 
