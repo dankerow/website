@@ -45,6 +45,9 @@ devDependencies:
   nuxt:
     specifier: ^3.3.2
     version: 3.3.2(@types/node@18.15.11)(eslint@8.37.0)(sass@1.60.0)(typescript@5.0.3)
+  nuxt-gtag:
+    specifier: ^0.3.0
+    version: 0.3.0
   nuxt-icon:
     specifier: ^0.3.3
     version: 0.3.3(vue@3.2.47)
@@ -66,9 +69,6 @@ devDependencies:
   typescript:
     specifier: ^5.0.3
     version: 5.0.3
-  vue-gtag-next:
-    specifier: ^1.14.0
-    version: 1.14.0(vue@3.2.47)
 
 packages:
 
@@ -5882,6 +5882,17 @@ packages:
       - supports-color
     dev: true
 
+  /nuxt-gtag@0.3.0:
+    resolution: {integrity: sha512-BTG7q066aPpf3lj2bGfBO7WZWOg3SO8YBOPe+qD+t8G6Av9mzyYkwZ2smP1l4XMksANQDc8MyuKWP+4RhMcDMg==}
+    dependencies:
+      '@nuxt/kit': 3.3.2(rollup@3.20.2)
+      defu: 6.1.2
+      pathe: 1.1.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt-icon@0.3.3(vue@3.2.47):
     resolution: {integrity: sha512-KdhJAigBGTP8/YIFZ3orwetk40AgLq6VQ5HRYuDLmv5hiDptor9Ro+WIdZggHw7nciRxZvDdQkEwi9B5G/jrkQ==}
     dependencies:
@@ -8212,14 +8223,6 @@ packages:
       semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vue-gtag-next@1.14.0(vue@3.2.47):
-    resolution: {integrity: sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==}
-    peerDependencies:
-      vue: ^3.0.0-rc.11
-    dependencies:
-      vue: 3.2.47
     dev: true
 
   /vue-i18n-routing@0.12.2(vue-i18n@9.3.0-beta.16)(vue@3.2.47):

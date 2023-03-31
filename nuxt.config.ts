@@ -11,12 +11,6 @@ export default defineNuxtConfig({
 		compressPublicAssets: true
 	},
 
-	runtimeConfig: {
-		public: {
-			google_tag_id: process.env.GOOGLE_TAG_ID
-		}
-	},
-
 	css: [
 		'@/assets/scss/bedrock.scss'
 	],
