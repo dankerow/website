@@ -66,7 +66,6 @@ export default defineNuxtConfig({
 	},
 
 	purgecss: {
-		variables: true,
 		keyframes: true,
 		safelist: ['svg']
 	},
