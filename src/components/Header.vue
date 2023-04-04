@@ -2,9 +2,9 @@
 	<header class="top-0 start-0 end-0 position-fixed w-100">
 		<nav class="navbar navbar-dark navbar-expand-md">
 			<div class="container">
-				<div class="navbar-brand">
+				<NuxtLink to="/" class="navbar-brand">
 					<span class="text p-1">[~D</span><span class="highlight p-1">]</span>
-				</div>
+				</NuxtLink>
 
 				<button
 					class="navbar-toggler"
@@ -23,6 +23,12 @@
 						<li class="nav-item">
 							<a href="#about" class="nav-link">
 								{{ $t('about.index') }}
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#blog" class="nav-link">
+								Blog
 							</a>
 						</li>
 
@@ -83,10 +89,6 @@ header {
 		}
 
 		.nav-item {
-			&:not(:first-child) {
-				margin-left: 16px;
-			}
-
 			.nav-link {
 				color: #fff;
 
