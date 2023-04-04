@@ -7,9 +7,8 @@
     "build": "nuxt build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
-    "lint": "pnpm lint:js",
-    "lint:fix": "pnpm lint:js --fix"
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix"
   },
   "author": "Dan Mutombo",
   "dependencies": {
@@ -20,15 +19,14 @@
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxt/content": "^2.5.2",
     "@nuxt/devtools": "^0.3.1",
+    "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/image-edge": "1.0.0-28008586.381b906",
     "@nuxtjs/critters": "^0.4.0",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/fontaine": "^0.2.4",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@types/node": "^18.15.11",
     "eslint": "8.37.0",
-    "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "^3.3.3",
     "nuxt-gtag": "^0.4.0",
     "nuxt-icon": "^0.3.3",
