@@ -1,20 +1,20 @@
 import { defineStore } from 'pinia'
 
 export interface SettingsState {
-	cookieConsent: boolean|null
+  cookieConsent: boolean|null
 }
 
 export const useSettingsStore = defineStore('settings', () => {
-	const cookieConsent: Ref<SettingsState['cookieConsent']> = ref(null)
+  const cookieConsent: Ref<SettingsState['cookieConsent']> = ref(null)
 
-	const setCookiePreference = (payload: boolean) => {
-		useCookie('cookie_consent').value = payload.toString()
+  const setCookiePreference = (payload: boolean) => {
+    useCookie('cookie_consent').value = payload.toString()
 
-		cookieConsent.value = payload
-	}
+    cookieConsent.value = payload
+  }
 
-	return {
-		cookieConsent,
-		setCookiePreference
-	}
+  return {
+    cookieConsent,
+    setCookiePreference
+  }
 })

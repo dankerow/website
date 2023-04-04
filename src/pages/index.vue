@@ -1,40 +1,40 @@
 <script setup lang="ts">
 definePageMeta({
-	script: [
-		{
-			type: 'application/ld+json',
-			json: {
-				'@context': 'https://schema.org/',
-				'@type': 'Person',
-				name: 'Dan Mutombo',
-				jobTitle: 'Web Developer',
-				url: 'https://danmutombo.com/'
-			}
-		}
-	]
+  script: [
+    {
+      type: 'application/ld+json',
+      json: {
+        '@context': 'https://schema.org/',
+        '@type': 'Person',
+        name: 'Dan Mutombo',
+        jobTitle: 'Web Developer',
+        url: 'https://danmutombo.com/'
+      }
+    }
+  ]
 })
 </script>
 
 <template>
-	<div>
-		<SectionsHero />
+  <div>
+    <SectionsHero />
 
-		<hr class="mx-2 mx-md-12 mx-lg-16">
+    <hr class="mx-2 mx-md-12 mx-lg-16">
 
-		<SectionsAbout />
+    <SectionsAbout />
 
-		<hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-5 mx-md-15 mx-lg-20">
 
-		<SectionsBlog />
+    <SectionsBlog />
 
-		<hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-5 mx-md-15 mx-lg-20">
 
-		<SectionsExperience />
+    <SectionsExperience />
 
-		<hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-5 mx-md-15 mx-lg-20">
 
-		<SectionsProjects />
-	</div>
+    <SectionsProjects />
+  </div>
 </template>
 
 <style lang="scss">

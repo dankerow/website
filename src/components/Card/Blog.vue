@@ -1,34 +1,34 @@
 <script setup lang="ts">
 defineProps<{
-	post: {
-		title: string
-		description: string
-		_path: string
-	}
+  post: {
+    title: string
+    description: string
+    _path: string
+  }
 }>()
 </script>
 
 <template>
-	<div class="card shadow-sm">
-		<div class="card-body min-vh-50">
-			<h4 class="card-title text-truncate mb-4">
-				<span class="align-middle d-inline-block text-white">#blog/</span>
-				<span class="align-middle d-inline-block">{{ post.title }}</span>
+  <div class="card shadow-sm">
+    <div class="card-body min-vh-50">
+      <h4 class="card-title text-truncate mb-4">
+        <span class="align-middle d-inline-block text-white">#blog/</span>
+        <span class="align-middle d-inline-block">{{ post.title }}</span>
 
-				<Icon name="material-symbols:open-in-new" class="open-new float-end" />
-			</h4>
+        <Icon name="material-symbols:open-in-new" class="open-new float-end" />
+      </h4>
 
-			<p class="card-text">
-				{{ post.description }}
-			</p>
-		</div>
+      <p class="card-text">
+        {{ post.description }}
+      </p>
+    </div>
 
-		<NuxtLink
-			:title="post.title"
-			:to="post._path"
-			class="stretched-link"
-		/>
-	</div>
+    <NuxtLink
+      :title="post.title"
+      :to="post._path"
+      class="stretched-link"
+    />
+  </div>
 </template>
 
 <style lang="scss" scoped>

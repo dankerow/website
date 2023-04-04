@@ -4,38 +4,38 @@ import type { LocaleObject } from 'vue-i18n-routing'
 const { locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() => {
-	return (locales.value as LocaleObject[]).filter((l: { code: any; value: any; }) => l.code !== locale.value)
+  return (locales.value as LocaleObject[]).filter((l: { code: any; value: any; }) => l.code !== locale.value)
 })
 </script>
 
 <template>
-	<li class="nav-item dropdown">
-		<a
-			class="nav-link"
-			href="#"
-			role="button"
-			data-bs-toggle="dropdown"
-			aria-haspopup="true"
-			aria-expanded="false"
-			aria-label="Language Selector"
-		>
-			<Icon name="ph:globe-simple-duotone" />
-		</a>
+  <li class="nav-item dropdown">
+    <a
+      class="nav-link"
+      href="#"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Language Selector"
+    >
+      <Icon name="ph:globe-simple-duotone" />
+    </a>
 
-		<div class="dropdown-menu dropdown-menu-dark">
-			<span class="dropdown-item active">
-				{{ locales.find(l => l.code === locale).name }}
-			</span>
-			<span
-				v-for="availableLocale in availableLocales"
-				:key="availableLocale.code"
-				class="dropdown-item"
-				@click="setLocale(availableLocale.code)"
-			>
-				{{ availableLocale.name }}
-			</span>
-		</div>
-	</li>
+    <div class="dropdown-menu dropdown-menu-dark">
+      <span class="dropdown-item active">
+        {{ locales.find(l => l.code === locale).name }}
+      </span>
+      <span
+        v-for="availableLocale in availableLocales"
+        :key="availableLocale.code"
+        class="dropdown-item"
+        @click="setLocale(availableLocale.code)"
+      >
+        {{ availableLocale.name }}
+      </span>
+    </div>
+  </li>
 </template>
 
 <style lang="scss" scoped>

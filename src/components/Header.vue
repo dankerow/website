@@ -1,55 +1,55 @@
 <template>
-	<header class="top-0 start-0 end-0 position-fixed w-100">
-		<nav class="navbar navbar-dark navbar-expand-md">
-			<div class="container">
-				<NuxtLink to="/" class="navbar-brand">
-					<span class="text p-1">[~D</span><span class="highlight p-1">]</span>
-				</NuxtLink>
+  <header class="top-0 start-0 end-0 position-fixed w-100">
+    <nav class="navbar navbar-dark navbar-expand-md">
+      <div class="container">
+        <NuxtLink to="/" class="navbar-brand">
+          <span class="text p-1">[~D</span><span class="highlight p-1">]</span>
+        </NuxtLink>
 
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					Menu
-				</button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
 
-				<div id="navbarSupportedContent" class="collapse navbar-collapse">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a href="#about" class="nav-link">
-								{{ $t('about.index') }}
-							</a>
-						</li>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                {{ $t('about.index') }}
+              </a>
+            </li>
 
-						<li class="nav-item">
-							<a href="#blog" class="nav-link">
-								Blog
-							</a>
-						</li>
+            <li class="nav-item">
+              <a href="#blog" class="nav-link">
+                Blog
+              </a>
+            </li>
 
-						<li class="nav-item">
-							<a href="#experience" class="nav-link">
-								{{ $t('experience.index') }}
-							</a>
-						</li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">
+                {{ $t('experience.index') }}
+              </a>
+            </li>
 
-						<li class="nav-item">
-							<a href="#projects" class="nav-link">
-								{{ $t('projects.index') }}
-							</a>
-						</li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">
+                {{ $t('projects.index') }}
+              </a>
+            </li>
 
-						<LanguageSelector />
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+            <LanguageSelector />
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <style lang="scss" scoped>
