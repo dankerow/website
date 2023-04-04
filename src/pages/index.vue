@@ -19,15 +19,19 @@ definePageMeta({
 	<div>
 		<SectionsHero />
 
-		<hr class="mx-16">
+		<hr class="mx-2 mx-md-12 mx-lg-16">
 
 		<SectionsAbout />
 
-		<hr class="mx-20">
+		<hr class="mx-5 mx-md-15 mx-lg-20">
+
+		<SectionsBlog />
+
+		<hr class="mx-5 mx-md-15 mx-lg-20">
 
 		<SectionsExperience />
 
-		<hr class="mx-20">
+		<hr class="mx-5 mx-md-15 mx-lg-20">
 
 		<SectionsProjects />
 	</div>
@@ -35,17 +39,17 @@ definePageMeta({
 
 <style lang="scss">
 .section-heading {
-	color: white;
-	display: inline-block;
-	background: rgba(146, 164, 184, 0.3);
-	border: 2px solid rgba(146, 164, 184, 0.8);
-	border-radius: 0.20rem;
-	padding: 0.25rem 0.45rem;
-	position: relative;
+    color: white;
+    display: inline-block;
+    background: rgba(146, 164, 184, 0.3);
+    border: 2px solid rgba(146, 164, 184, 0.8);
+    border-radius: 0.20rem;
+    padding: 0.25rem 0.45rem;
+    position: relative;
 
-	&:before {
-		content: '~/';
-		color: rgb(200, 200, 200);
-	}
+    &:before {
+        content: '~/';
+        color: rgb(200, 200, 200);
+    }
 }
 </style>
