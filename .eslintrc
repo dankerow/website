@@ -1,19 +1,57 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "extends": [
-    "@nuxtjs/eslint-config-typescript",
-    "plugin:nuxt/recommended"
-  ],
+  "extends": ["@nuxt/eslint-config"],
   "rules": {
-    "vue/html-indent": ["error", "tab"],
+    "@typescript-eslint/indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "outerIIFEBody": 1,
+        "MemberExpression": 1,
+        "FunctionDeclaration": {
+          "parameters": 1,
+          "body": 1
+        },
+        "FunctionExpression": {
+          "parameters": 1,
+          "body": 1
+        },
+        "CallExpression": {
+          "arguments": 1
+        },
+        "ArrayExpression": 1,
+        "ObjectExpression": 1,
+        "ImportDeclaration": 1,
+        "flatTernaryExpressions": false,
+        "ignoreComments": false,
+        "ignoredNodes": [
+          "TemplateLiteral *",
+          "JSXElement",
+          "JSXElement > *",
+          "JSXAttribute",
+          "JSXIdentifier",
+          "JSXNamespacedName",
+          "JSXMemberExpression",
+          "JSXSpreadAttribute",
+          "JSXExpressionContainer",
+          "JSXOpeningElement",
+          "JSXClosingElement",
+          "JSXFragment",
+          "JSXOpeningFragment",
+          "JSXClosingFragment",
+          "JSXText",
+          "JSXEmptyExpression",
+          "JSXSpreadChild",
+          "TSTypeParameterInstantiation",
+          "FunctionExpression > .params[decorators.length > 0]",
+          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+        ],
+        "offsetTernaryExpressions": true
+      }
+    ],
     "vue/max-attributes-per-line": "off",
     "vue/no-v-html": "off",
     "vue/require-prop-types": "off",
@@ -51,7 +89,7 @@
     "vue/arrow-spacing": ["error", { "before": true, "after": true }],
     "vue/block-spacing": ["error", "always"],
     "vue/brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-    "vue/comma-dangle": ["error", "always-multiline"],
+    "vue/comma-dangle": ["error"],
     "vue/comma-spacing": ["error", { "before": false, "after": true }],
     "vue/comma-style": ["error", "last"],
     "vue/dot-location": ["error", "property"],
@@ -89,40 +127,6 @@
     "vue/space-in-parens": ["error", "never"],
     "vue/space-infix-ops": "error",
     "vue/space-unary-ops": ["error", { "words": true, "nonwords": false }],
-    "vue/template-curly-spacing": "error",
-    "brace-style": [
-      "error",
-      "1tbs",
-      {
-        "allowSingleLine": true
-      }
-    ],
-    "block-spacing": "error",
-    "camelcase": "error",
-    "comma-dangle": ["error", "never"],
-    "comma-spacing": "error",
-    "comma-style": ["error", "last"],
-    "curly": ["error", "multi-line", "consistent"],
-    "dot-location": ["error", "property"],
-    "indent": ["error", "tab"],
-    "no-undef": "off",
-    "no-trailing-spaces": "error",
-    "no-unused-vars": "off",
-    "object-curly-spacing": ["error", "always"],
-    "quote-props": "off",
-    "quotes": ["error", "single"],
-    "space-before-blocks": "error",
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "never",
-        "named": "never",
-        "asyncArrow": "always"
-      }
-    ],
-    "space-in-parens": "error",
-    "space-infix-ops": "error",
-    "space-unary-ops": "error",
-    "no-tabs": "off"
+    "vue/template-curly-spacing": "error"
   }
 }
