@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 		'nuxt-security',
 		'@kevinmarrec/nuxt-pwa',
 		'@pinia/nuxt',
+		'@nuxt/content',
 		'@nuxt/devtools',
 		'@nuxt/image-edge',
 		'@nuxtjs/critters',
