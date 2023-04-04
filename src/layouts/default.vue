@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { t } = useI18n()
+import type { Directions, LocaleObject } from 'vue-i18n-routing'
+
+const { t, locale, locales } = useI18n()
 const head = useLocaleHead({
 	addDirAttribute: true,
 	identifierAttribute: 'id',
@@ -9,7 +11,16 @@ const head = useLocaleHead({
 const description = t('metadata.shortDescription')
 const image = ref('https://danmutombo.com/icon.png')
 
+const localeMap = (locales.value as LocaleObject[]).reduce((acc, l) => {
+	acc[l.code!] = l.dir ?? 'auto'
+	return acc
+}, {} as Record<string, Directions>)
+
 useHead({
+	htmlAttrs: {
+		lang: () => locale.value,
+		dir: () => localeMap[locale.value] ?? 'auto'
+	},
 	title: 'Dan Mutombo',
 	meta: [
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,14 +67,16 @@ useHead({
 		{
 			name: 'og:image',
 			content: image
-		}
+		},
+		...(head.value.meta || [])
 	],
 	link: [
-		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		...(head.value.link || [])
 	],
 	script: [
 		{
-			src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js',
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha2/js/bootstrap.bundle.min.js',
 			defer: true
 		}
 	]
@@ -71,25 +84,15 @@ useHead({
 </script>
 
 <template>
-	<Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-		<Head>
-			<template v-for="link in head.link" :key="link.id">
-				<Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
-			</template>
-			<template v-for="meta in head.meta" :key="meta.id">
-				<Meta :id="meta.id" :property="meta.property" :content="meta.content" />
-			</template>
-		</Head>
-		<Body>
-			<Header />
+	<div>
+		<Header />
 
-			<main>
-				<slot />
-			</main>
+		<main>
+			<slot />
+		</main>
 
-			<LazyFooter />
+		<LazyFooter />
 
-			<LazyCookieBanner />
-		</Body>
-	</Html>
+		<LazyCookieBanner />
+	</div>
 </template>
