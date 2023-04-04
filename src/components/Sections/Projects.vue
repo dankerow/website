@@ -43,25 +43,20 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
 			</div>
 
 			<div v-else>
-				<div class="row row-cols-1 row-cols-lg-3 gy-4">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
 					<div
 						v-for="(repo, index) in repos"
 						:key="`repo-${index}`"
 						class="col"
 					>
-						<a
-							:href="repo.html_url"
-							target="blank"
-							rel="noreferrer"
-						>
-							<CardRepository
-								:name="repo.name"
-								:language="repo.language"
-								:stars="repo.stargazers_count"
-								:description="repo.description"
-								class="h-100"
-							/>
-						</a>
+						<CardRepository
+							:name="repo.name"
+							:language="repo.language"
+							:stars="repo.stargazers_count"
+							:description="repo.description"
+							:url="repo.html_url"
+							class="h-100"
+						/>
 					</div>
 				</div>
 			</div>
