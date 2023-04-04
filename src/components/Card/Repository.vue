@@ -3,7 +3,8 @@ defineProps<{
 	name: string
 	language?: string
 	stars: string|number
-	description?: string
+	description?: string,
+	url: string
 }>()
 
 const getIconName = (language?: string) => {
@@ -65,6 +66,13 @@ const getIconName = (language?: string) => {
 				</span>
 			</div>
 		</div>
+
+		<a
+			:href="url"
+			target="blank"
+			rel="noreferrer"
+			class="stretched-link"
+		/>
 	</div>
 </template>
 
