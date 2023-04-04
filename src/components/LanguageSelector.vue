@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { LocaleObject } from 'vue-i18n-routing'
+
 const { locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() => {
-	return (locales.value).filter((l: { code: any; value: any; }) => l.code !== locale.value)
+	return (locales.value as LocaleObject[]).filter((l: { code: any; value: any; }) => l.code !== locale.value)
 })
 </script>
 
@@ -17,7 +19,7 @@ const availableLocales = computed(() => {
 			aria-expanded="false"
 			aria-label="Language Selector"
 		>
-			<Icon name="ph:globe-simple-duotone" size="1.2em" />
+			<Icon name="ph:globe-simple-duotone" />
 		</a>
 
 		<div class="dropdown-menu dropdown-menu-dark">
