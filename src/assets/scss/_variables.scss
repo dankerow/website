@@ -79,7 +79,7 @@ $spacers: (
 	5: $spacer * 3,
 ) !default;
 
-@for $i from 6 through 16 {
+@for $i from 6 through 20 {
 	$spacers: map-merge($spacers, (
 		$i: (($i + 1rem) * 0.5)
 	))
