@@ -52,6 +52,11 @@
         "offsetTernaryExpressions": true
       }
     ],
+    "@typescript-eslint/quotes":[
+      "error",
+      "single"
+    ],
+
     "vue/max-attributes-per-line": "off",
     "vue/no-v-html": "off",
     "vue/require-prop-types": "off",
