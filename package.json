@@ -27,8 +27,8 @@
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@types/node": "^18.15.11",
     "eslint": "8.38.0",
-    "nuxt": "^3.3.3",
-    "nuxt-gtag": "^0.5.1",
+    "nuxt": "^3.4.0",
+    "nuxt-gtag": "^0.5.4",
     "nuxt-icon": "^0.3.3",
     "nuxt-purgecss": "^2.0.0",
     "nuxt-security": "^0.13.0",
@@ -37,5 +37,5 @@
     "sass-loader": "13.2.2",
     "typescript": "^5.0.4"
   },
-  "packageManager": "pnpm@8.1.1"
+  "packageManager": "pnpm@8.2.0"
 }
