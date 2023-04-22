@@ -25,8 +25,6 @@ useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: description },
-    { name: 'format-detection', content: 'telephone=no' },
-    { name: 'google', content: 'notranslate' },
     { name: 'robots', content: 'noydir,noodp,noarchive,nocache,notranslate,follow,imageindex,index' },
     {
       name: 'twitter:card',
