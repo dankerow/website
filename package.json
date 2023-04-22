@@ -36,5 +36,10 @@
     "sass": "^1.62.0",
     "typescript": "^5.0.4"
   },
+  "pnpm": {
+    "overrides": {
+      "consola": "3.0.1"
+    }
+  },
   "packageManager": "pnpm@8.3.1"
 }
