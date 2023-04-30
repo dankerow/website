@@ -69,7 +69,7 @@ export default defineNuxtConfig({
 
   pwa: {
     meta: {
-      mobileApp: true,
+      mobileAppIOS: true,
       name: 'Dan Mutombo',
       appleStatusBarStyle: 'black-translucent'
     },
