@@ -1,4 +1,5 @@
 const isDevelopment = process.env.NODE_ENV === 'development'
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default defineNuxtConfig({
   rootDir: './',
@@ -26,6 +27,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
+    'nuxt-gtag',
     'nuxt-icon',
     'nuxt-purgecss',
     'nuxt-simple-sitemap'
@@ -41,6 +43,10 @@ export default defineNuxtConfig({
       }
     },
     display: 'swap'
+  },
+
+  gtag: {
+    id: isProduction && process.env.GTAG_ID ? process.env.GTAG_ID : undefined,
   },
 
   i18n: {
