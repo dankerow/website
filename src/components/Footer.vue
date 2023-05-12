@@ -6,15 +6,19 @@ const year = new Date().getFullYear()
   <footer class="text-center">
     <div class="footer-social py-3">
       <div class="container">
-        <a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
-          <Icon name="ph:linkedin-logo-duotone" />
-        </a>
-
-        <a href="https://github.com/dankerow" aria-label="GitHub" target="_blank" rel="noreferrer">
+        <a href="https://github.com/dankerow" aria-label="GitHub" target="_blank">
           <Icon name="ph:github-logo-duotone" />
         </a>
 
-        <a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank">
+          <Icon name="ph:linkedin-logo-duotone" />
+        </a>
+
+        <a href="https://instagram.com/danielito.mtb/" aria-label="Instagram" target="_blank">
+          <Icon name="ph:instagram-logo-duotone" />
+        </a>
+
+        <a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank">
           <Icon name="ph:twitter-logo-duotone" />
         </a>
       </div>
@@ -23,7 +27,7 @@ const year = new Date().getFullYear()
     <div class="footer-bottom py-3">
       <div class="container">
         <p class="mb-0">
-          © {{ year }} {{ $t('footer.copyright.text') }}
+          © {{ year }} All rights reserved. Designed and developed by Dan Mutombo.
         </p>
       </div>
     </div>

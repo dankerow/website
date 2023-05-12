@@ -22,7 +22,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="#about" class="nav-link">
-                {{ $t('about.index') }}
+                About
               </a>
             </li>
 
@@ -34,17 +34,15 @@
 
             <li class="nav-item">
               <a href="#experience" class="nav-link">
-                {{ $t('experience.index') }}
+                Experience
               </a>
             </li>
 
             <li class="nav-item">
               <a href="#projects" class="nav-link">
-                {{ $t('projects.index') }}
+                Projects
               </a>
             </li>
-
-            <LanguageSelector />
           </ul>
         </div>
       </div>

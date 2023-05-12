@@ -35,13 +35,12 @@ const cookieConsent = () => {
     <div class="fixed-bottom">
       <div class="container">
         <div id="cookie-consent-banner" class="alert alert-dismissible d-none fade mx-sm-0 mx-md-2 text-center" role="alert">
-          <i18n-t scope="global" keypath="cookieBanner.text" tag="p" class="mb-0">
-            <template #cookiePolicy>
-              <a class="text-decoration-underline" href="#" type="button" data-bs-toggle="modal" data-bs-target="#cookiePolicyModal">
-                {{ $t('cookiePolicy.title') }}
-              </a>
-            </template>
-          </i18n-t>
+          <p class="mb-0">
+            I use cookies to provide and improve this website. By using my site, you consent to cookies (By Scrolling you consent to cookies). For more information, please see the
+            <a class="text-decoration-underline" href="#" type="button" data-bs-toggle="modal" data-bs-target="#cookiePolicyModal">
+              Cookie Policy.
+            </a>
+          </p>
 
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="cookieConsent">
             <span aria-hidden="true">&times;</span>

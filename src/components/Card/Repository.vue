@@ -54,7 +54,7 @@ const getIconName = (language?: string) => {
       </h4>
 
       <p class="card-text text-gray-300">
-        {{ description || $t('projects.project.noDescription') }}
+        {{ description || 'No description available.' }}
       </p>
     </div>
 

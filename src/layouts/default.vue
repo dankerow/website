@@ -1,25 +1,11 @@
 <script setup lang="ts">
-import type { Directions, LocaleObject } from 'vue-i18n-routing'
-
-const { t, locale, locales } = useI18n()
-const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: 'id',
-  addSeoAttributes: true
-})
-
-const description = t('metadata.shortDescription')
-const image = ref('https://danmutombo.com/icon.png')
-
-const localeMap = (locales.value as LocaleObject[]).reduce((acc, l) => {
-  acc[l.code!] = l.dir ?? 'auto'
-  return acc
-}, {} as Record<string, Directions>)
+const description = 'Software developer, looking for more challenges.'
+const image = 'https://danmutombo.com/icon.png'
 
 useHead({
   htmlAttrs: {
-    lang: () => locale.value,
-    dir: () => localeMap[locale.value] ?? 'auto'
+    lang: 'en',
+    dir: 'ltr'
   },
   title: 'Dan Mutombo',
   meta: [
@@ -65,12 +51,10 @@ useHead({
     {
       name: 'og:image',
       content: image
-    },
-    ...(head.value.meta || [])
+    }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ...(head.value.link || [])
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
   ],
   script: [
     {
