@@ -26,7 +26,6 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/i18n',
     'nuxt-gtag',
     'nuxt-icon',
     'nuxt-purgecss',
@@ -47,19 +46,6 @@ export default defineNuxtConfig({
 
   gtag: {
     id: isProduction && process.env.GTAG_ID ? process.env.GTAG_ID : undefined,
-  },
-
-  i18n: {
-    baseUrl: process.env.BASE_URL,
-    locales: [
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
-      { code: 'es', iso: 'es-ES', name: 'Español', file: 'es.json' },
-      { code: 'fr', iso: 'fr-FR', name: 'Français', file: 'fr.json' },
-      { code: 'it', iso: 'it-IT', name: 'Italiano', file: 'it.json' }
-    ],
-    defaultLocale: 'en',
-    lazy: true,
-    langDir: 'locales'
   },
 
   purgecss: {
