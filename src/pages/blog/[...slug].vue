@@ -6,11 +6,11 @@ const articleDate = formatDate(article.date)
 
 <template>
   <div>
-    <section class="hero d-flex justify-content-center align-items-center flex-column position-relative text-center pt-5">
+    <section class="hero d-flex justify-content-center align-items-center flex-column position-relative text-center pt-12">
       <div class="container">
-        <h1 class="title m-0 text-uppercase">
+        <h2 class="title m-0 text-uppercase">
           {{ article.title }}
-        </h1>
+        </h2>
         <p> {{ article.description }}</p>
 
         <div class="info fs-5 fw-semibold d-flex flex-wrap position-absolute">
@@ -50,3 +50,22 @@ const articleDate = formatDate(article.date)
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.hero {
+  background-color: rgba(38, 38, 38, 0.3);
+  border-bottom: 2px solid rgba(38, 38, 38, 0.8);
+  height: 40vh;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info {
+  bottom: 10px;
+}
+</style>

@@ -19,19 +19,19 @@ definePageMeta({
   <div>
     <SectionsHero />
 
-    <hr class="mx-2 mx-md-12 mx-lg-16">
+    <hr class="mx-2 mx-md-10 mx-lg-12">
 
     <SectionsAbout />
 
-    <hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-2 mx-md-5 mx-lg-8">
 
     <SectionsBlog />
 
-    <hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-2 mx-md-5 mx-lg-8">
 
     <SectionsExperience />
 
-    <hr class="mx-5 mx-md-15 mx-lg-20">
+    <hr class="mx-2 mx-md-5 mx-lg-8">
 
     <SectionsProjects />
   </div>
