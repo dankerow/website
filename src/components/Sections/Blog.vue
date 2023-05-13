@@ -5,7 +5,7 @@ const { data: latestPosts } = await useAsyncData('latest-posts', () => queryCont
 <template>
   <section id="blog" class="py-10">
     <div class="container">
-      <h2 class="h3 section-heading mb-5">
+      <h2 class="section-heading mb-5">
         Blog
       </h2>
 

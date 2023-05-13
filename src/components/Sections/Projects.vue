@@ -30,7 +30,7 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
 <template>
   <section id="projects" class="py-10">
     <div class="container">
-      <h2 class="h3 section-heading mb-5">
+      <h2 class="section-heading mb-5">
         Projects
       </h2>
 
