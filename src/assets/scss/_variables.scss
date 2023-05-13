@@ -93,10 +93,7 @@ $body-bg:                   rgb(23, 23, 23) !default;
 
 // Links
 
-$link-color:                              rgb(146, 164, 184) !default;
 $link-decoration:                         none !default;
-$link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 
 // Paragraphs
 
