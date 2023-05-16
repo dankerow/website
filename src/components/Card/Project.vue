@@ -11,7 +11,18 @@ defineProps<{
   <div
     class="card rounded"
   >
-    <nuxt-img loading="lazy" :src="`/img/projects/${image}`" placeholder class="card-img-top img-fluid" :alt="`${name} project's thumbnail`" />
+    <nuxt-img
+      loading="lazy"
+      format="webp"
+      :src="`/img/projects/${image}`"
+      sizes="sm:100vw md:50vw lg:500px xl:700px"
+      :width="300"
+      :height="150"
+      fit="cover"
+      placeholder
+      class="card-img-top img-fluid"
+      :alt="`${name} project's thumbnail`"
+    />
 
     <div class="card-header">
       <h4 class="text-primary text-truncate mb-0">
