@@ -2,6 +2,8 @@
 const description = 'Software developer, looking for more challenges.'
 const image = 'https://danmutombo.com/icon.png'
 
+const route = useRoute()
+
 useHead({
   htmlAttrs: {
     lang: 'en',
@@ -11,7 +13,6 @@ useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: description },
-    { name: 'robots', content: 'noydir,noodp,noarchive,nocache,notranslate,follow,imageindex,index' },
     {
       name: 'twitter:card',
       content: 'summary'
@@ -54,7 +55,10 @@ useHead({
     }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'canonical', href: `https://danmutombo.com${route.path}` },
+    { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com' },
+    { rel: 'dns-prefetch', href: 'https://cdnjs.cloudflare.com' }
   ],
   script: [
     {
