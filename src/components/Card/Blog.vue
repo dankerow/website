@@ -11,12 +11,12 @@ defineProps<{
 <template>
   <div class="card shadow-sm">
     <div class="card-body min-vh-50">
-      <h4 class="card-title text-truncate mb-4">
+      <h3 class="card-title text-truncate mb-4">
         <span class="align-middle d-inline-block text-white">#blog/</span>
         <span class="align-middle d-inline-block">{{ post.title }}</span>
 
         <Icon name="material-symbols:open-in-new" class="open-new float-end" />
-      </h4>
+      </h3>
 
       <p class="card-text">
         {{ post.description }}
