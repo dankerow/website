@@ -1,1 +1,3 @@
 User-agent: *
+
+Sitemap: https://danmutombo.com/sitemap.xml
