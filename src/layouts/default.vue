@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const description = 'Software developer, looking for more challenges.'
+const description = 'Software developer, building whatever in my bed.'
 const image = 'https://danmutombo.com/icon.png'
 
 const route = useRoute()
@@ -14,10 +14,6 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: description },
     {
-      name: 'twitter:card',
-      content: 'summary'
-    },
-    {
       name: 'twitter:site',
       content: '@dankerow'
     },
@@ -27,7 +23,7 @@ useHead({
     },
     {
       name: 'twitter:title',
-      content: 'danmutombo.com'
+      content: 'Dan Mutombo'
     },
     {
       name: 'twitter:description',
@@ -38,12 +34,8 @@ useHead({
       content: image
     },
     {
-      name: 'og:type',
-      content: 'website'
-    },
-    {
-      name: 'og:site_name',
-      content: 'danmutombo.com'
+      name: 'og:url',
+      content: `https://danmutombo.com${route.path}`
     },
     {
       name: 'og:description',

@@ -7,8 +7,23 @@ definePageMeta({
         '@context': 'https://schema.org/',
         '@type': 'Person',
         name: 'Dan Mutombo',
-        jobTitle: 'Web Developer',
+        jobTitle: 'Software Developer',
+        sameAs: [
+          'https://github.com/dankerow',
+          'https://www.linkedin.com/in/dan-mutombo/',
+          'https://instagram.com/danielito.mtb/',
+          'https://twitter.com/dankerow'
+        ],
         url: 'https://danmutombo.com/'
+      },
+    },
+    {
+      type: 'application/ld+json',
+      json: {
+        '@context': 'https://schema.org/',
+        '@type': 'WebSite',
+        url: 'https://danmutombo.com/',
+        name: 'Dan Mutombo'
       }
     }
   ]
@@ -39,17 +54,19 @@ definePageMeta({
 
 <style lang="scss">
 .section-heading {
-    color: white;
-    display: inline-block;
-    background: rgba(146, 164, 184, 0.3);
-    border: 2px solid rgba(146, 164, 184, 0.8);
-    border-radius: 0.20rem;
-    padding: 0.25rem 0.45rem;
-    position: relative;
+  color: white;
+  display: inline-block;
+  background: rgba(146, 164, 184, 0.3);
+  border: 1.5px solid rgba(146, 164, 184, 0.8);
+  border-left: 3px solid rgba(146, 164, 184, 1);
+  border-radius: 0.20rem;
+  padding: 0.5rem 0.7rem;
+  position: relative;
+  text-transform: lowercase;
 
-    &:before {
-        content: '~/';
-        color: rgb(200, 200, 200);
-    }
+  &:before {
+    content: '~/';
+    color: rgb(200, 200, 200);
+  }
 }
 </style>
