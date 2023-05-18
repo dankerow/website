@@ -162,7 +162,6 @@ $btn-transition:              color .3s ease-in-out, background-color .3s ease-i
 
 // Navs
 
-$nav-link-padding-y:                .25rem !default;
 $nav-link-font-size:                $font-size-sm !default;
 $nav-link-transition:               color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out !default;
 
@@ -176,8 +175,7 @@ $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg
 
 // Navbar
 
-$navbar-padding-y:                  $spacer * .75 !default;
-$navbar-padding-x:                  null !default;
+$navbar-nav-link-padding-x:         .95rem !default;
 
 $navbar-brand-font-size:            $font-size-sm !default;
 
@@ -201,6 +199,13 @@ $dropdown-dark-border-color:        rgba(38, 38, 38, 0.8) !default;
 $card-border-color:                 rgba(38, 38, 38, 0.8) !default;
 $card-cap-bg:                       rgba(24, 24, 24, .1) !default;
 $card-bg:                           rgba(38, 38, 38, 0.3) !default;
+
+// Accordion
+
+$accordion-bg:                            rgba(38, 38, 38, 0.3) !default;
+$accordion-border-color:                  rgba(38, 38, 38, 0.8) !default;
+
+$accordion-icon-width:                    1rem !default;
 
 // Modals
 
