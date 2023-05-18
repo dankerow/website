@@ -46,11 +46,11 @@ const getIconName = (language?: string) => {
   <div class="card shadow-sm">
     <div class="card-body min-vh-50">
       <h3 class="card-title text-truncate mb-4">
-        <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" />
+        <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" size="1em" />
         <span class="align-middle d-inline-block text-white">dankerow/</span>
         <span class="align-middle d-inline-block">{{ name }}</span>
 
-        <Icon name="material-symbols:open-in-new" class="open-new float-end" />
+        <Icon name="material-symbols:open-in-new" class="open-new float-end" size="1.15em" />
       </h3>
 
       <p class="card-text text-gray-300">

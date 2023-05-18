@@ -15,7 +15,7 @@ defineProps<{
         <span class="align-middle d-inline-block text-white">#blog/</span>
         <span class="align-middle d-inline-block">{{ post.title }}</span>
 
-        <Icon name="material-symbols:open-in-new" class="open-new float-end" />
+        <Icon name="material-symbols:open-in-new" class="open-new float-end" size="1.15em" />
       </h3>
 
       <p class="card-text">
