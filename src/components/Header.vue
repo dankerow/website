@@ -91,7 +91,7 @@ header {
 				color: #fff;
 
 				&:before {
-					content: './ ';
+					content: '~/ ';
 					color: rgb(146, 164, 184);
 					font-weight: 500;
 				}

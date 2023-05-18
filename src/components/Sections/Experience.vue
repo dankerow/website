@@ -25,7 +25,7 @@ const jobs = [
 <template>
   <section id="experience" class="py-10">
     <div class="container">
-      <h2 class="section-heading mb-5">
+      <h2 class="h3 section-heading mb-5">
         Experience
       </h2>
 
