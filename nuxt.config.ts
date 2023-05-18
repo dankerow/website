@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     compressPublicAssets: true
   },
 
+  experimental: {
+    typedPages: true
+  },
+
   css: [
     '@/assets/scss/bedrock.scss'
   ],
