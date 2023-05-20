@@ -25,7 +25,7 @@ defineProps<{
     />
 
     <div class="card-header">
-      <h4 class="text-primary text-truncate mb-0">
+      <h3 class="text-primary text-truncate mb-0">
         <a
           :href="url"
           target="blank"
@@ -33,7 +33,7 @@ defineProps<{
         >
           {{ name }}
         </a>
-      </h4>
+      </h3>
     </div>
 
     <div class="card-footer text-secondary">
