@@ -1,12 +1,6 @@
-const isDevelopment = process.env.NODE_ENV === 'development'
-const isProduction = process.env.NODE_ENV === 'production'
-
 export default defineNuxtConfig({
   rootDir: './',
   srcDir: 'src',
-
-  debug: isDevelopment,
-  sourcemap: isDevelopment,
 
   nitro: {
     compressPublicAssets: true
@@ -25,15 +19,11 @@ export default defineNuxtConfig({
     '@kevinmarrec/nuxt-pwa',
     '@pinia/nuxt',
     '@nuxt/content',
-    '@nuxt/devtools',
     '@nuxt/image-edge',
     '@nuxtjs/critters',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-gtag',
-    'nuxt-icon',
-    'nuxt-purgecss',
-    'nuxt-simple-sitemap'
+    'nuxt-icon'
   ],
 
   googleFonts: {
@@ -46,15 +36,6 @@ export default defineNuxtConfig({
       }
     },
     display: 'swap'
-  },
-
-  gtag: {
-    id: isProduction && process.env.GTAG_ID ? process.env.GTAG_ID : undefined,
-  },
-
-  purgecss: {
-    keyframes: true,
-    safelist: ['svg']
   },
 
   pwa: {
@@ -77,8 +58,33 @@ export default defineNuxtConfig({
     }
   },
 
-  sitemap: {
-    enabled: !isDevelopment,
-    siteUrl: process.env.BASE_URL
+  $development: {
+    debug: true,
+    sourcemap: true,
+
+    modules: [
+      '@nuxt/devtools'
+    ]
+  },
+
+  $production: {
+    modules: [
+      'nuxt-gtag',
+      'nuxt-purgecss',
+      'nuxt-simple-sitemap'
+    ],
+
+    gtag: {
+      id: process.env.GTAG_ID ?? undefined
+    },
+
+    purgecss: {
+      keyframes: true,
+      safelist: ['svg']
+    },
+
+    sitemap: {
+      siteUrl: process.env.BASE_URL
+    }
   }
 })
