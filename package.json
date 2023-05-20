@@ -24,6 +24,7 @@
     "@nuxtjs/critters": "^0.4.1",
     "@nuxtjs/fontaine": "^0.2.5",
     "@nuxtjs/google-fonts": "^3.0.1",
+    "@parcel/watcher": "^2.1.0",
     "@types/node": "^18.16.13",
     "eslint": "8.40.0",
     "nuxt": "^3.5.0",
