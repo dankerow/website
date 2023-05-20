@@ -58,7 +58,7 @@ const getIconName = (language?: string) => {
       </p>
     </div>
 
-    <div class="card-footer d-flex align-items-center justify-content-between text-muted">
+    <div class="card-footer d-flex align-items-center justify-content-between text-secondary">
       <div class="fs-5">
         <Icon name="ph:star-duotone" class="align-middle d-inline-block me-1" />
         <span class="align-middle d-inline-block">
@@ -72,6 +72,7 @@ const getIconName = (language?: string) => {
       target="blank"
       rel="noreferrer"
       class="stretched-link"
+      :aria-label="`Open ${name} on GitHub`"
     />
   </div>
 </template>
