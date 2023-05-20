@@ -31,7 +31,6 @@
     "nuxt-gtag": "^0.5.7",
     "nuxt-icon": "^0.4.0",
     "nuxt-purgecss": "^2.0.0",
-    "nuxt-security": "^0.13.0",
     "nuxt-simple-sitemap": "^2.5.0",
     "sass": "^1.62.1",
     "typescript": "^5.0.4"

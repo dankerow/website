@@ -22,7 +22,6 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    'nuxt-security',
     '@kevinmarrec/nuxt-pwa',
     '@pinia/nuxt',
     '@nuxt/content',
@@ -76,10 +75,6 @@ export default defineNuxtConfig({
     workbox: {
       enabled: false
     }
-  },
-
-  security: {
-    enabled: !isDevelopment
   },
 
   sitemap: {
