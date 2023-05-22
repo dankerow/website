@@ -38,7 +38,7 @@ const skills = ref({
 </script>
 
 <template>
-  <section id="about" class="py-10">
+  <section id="about" class="py-6">
     <div class="container">
       <h2 class="h3 section-heading mb-5">
         About

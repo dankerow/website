@@ -28,7 +28,7 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
 </script>
 
 <template>
-  <section id="projects" class="py-10">
+  <section id="projects" class="py-8">
     <div class="container">
       <h2 class="h3 section-heading mb-5">
         Projects
