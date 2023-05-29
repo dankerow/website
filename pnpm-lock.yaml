@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@pinia/nuxt':
@@ -22,8 +26,8 @@ devDependencies:
     specifier: ^0.1.1
     version: 0.1.1(eslint@8.41.0)
   '@nuxt/image-edge':
-    specifier: 1.0.0-28085504.69f8eb0
-    version: 1.0.0-28085504.69f8eb0
+    specifier: 1.0.0-28088649.74a91bd
+    version: 1.0.0-28088649.74a91bd
   '@nuxtjs/critters':
     specifier: ^0.4.1
     version: 0.4.1
@@ -1031,8 +1035,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/image-edge@1.0.0-28085504.69f8eb0:
-    resolution: {integrity: sha512-wSBOuK2IuPvUniYRjSfxXiT8k4G/vgYHkDxnav6jVWgrncqZ4PS3Xdy6rHfX5EHvgBW78EHitewxdZePDw+vxQ==}
+  /@nuxt/image-edge@1.0.0-28088649.74a91bd:
+    resolution: {integrity: sha512-txDc0BMWxU8/KerAXqLd4O6s8LA5LRESapYarld1VfG+G28XS4LwlfzARJ8x/nB2FlfrdeulfPl6QKp57ETU0w==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
       '@nuxt/kit': 3.5.1
