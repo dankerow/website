@@ -1,8 +1,8 @@
 <template>
-  <section class="hero pt-16 pb-8">
+  <section class="hero pt-14 pb-6">
     <div class="container">
       <span class="tooltip">
-        Blop !
+        @dankerow
       </span>
 
       <h1 class="header-heading-2 display-4 text-white fw-bolder">
@@ -38,15 +38,15 @@
 <style lang="scss" scoped>
 .hero {
 	.tooltip {
-		color: rgb(146, 164, 184);
-		font-size: .775rem;
-		font-weight: 700;
+		color: white;
+		font-size: .825rem;
+		font-weight: 500;
 		display: inline-block;
 		position: relative;
 		background: rgba(146, 164, 184, 0.3);
 		border: 2px solid rgba(146, 164, 184, 0.8);
 		border-radius: 0.25rem;
-		padding: 0.45rem;
+		padding: 0.45rem 0.75rem;
 
 		&:after {
 			content: '';
