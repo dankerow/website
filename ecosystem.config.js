@@ -5,7 +5,7 @@ module.exports = {
     {
       name: 'danmutombo.com',
       exec_mode: 'cluster',
-      instances: 'max',
+      instances: 2,
       env: {
         ...env.parsed
       },
