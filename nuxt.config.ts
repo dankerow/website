@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@kevinmarrec/nuxt-pwa',
     '@pinia/nuxt',
     '@nuxt/content',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@nuxtjs/critters',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
