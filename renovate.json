@@ -4,7 +4,7 @@
     "config:base",
     "group:allNonMajor"
   ],
-  "commitMessagePrefix": "chore(dep):",
+  "commitMessagePrefix": "chore(deps):",
   "commitMessageAction": "bump",
   "commitMessageExtra": "to {{newValue}}",
   "commitMessageTopic": "{{depName}}",
