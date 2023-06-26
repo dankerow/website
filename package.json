@@ -27,7 +27,7 @@
     "@parcel/watcher": "^2.1.0",
     "@types/node": "^18.16.18",
     "eslint": "8.43.0",
-    "nuxt": "^3.6.0",
+    "nuxt": "^3.6.1",
     "nuxt-gtag": "^0.5.7",
     "nuxt-icon": "^0.4.1",
     "nuxt-purgecss": "^2.0.0",
