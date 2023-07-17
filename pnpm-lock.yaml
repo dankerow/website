@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(postcss@8.4.26)
   nuxt-simple-sitemap:
-    specifier: ^3.0.9
-    version: 3.0.9(nuxt@3.6.3)(vite@4.4.4)
+    specifier: ^3.0.11
+    version: 3.0.11(nuxt@3.6.3)(vite@4.4.4)
   sass:
     specifier: ^1.63.6
     version: 1.63.6
@@ -6001,8 +6001,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-simple-sitemap@3.0.9(nuxt@3.6.3)(vite@4.4.4):
-    resolution: {integrity: sha512-+g5DaJazFnrzB10O8bWLiJtTo9c4147WmG03wzQuocd+Jp03EKBdBugSc6alGlWYkJWwfhaMrNMANUFYxFWnQQ==}
+  /nuxt-simple-sitemap@3.0.11(nuxt@3.6.3)(vite@4.4.4):
+    resolution: {integrity: sha512-nH2OIrsDfetE5WZI5N0KCw97C80eJv5p0ZwM0BvTdMZmHDCVTinkMcx/GMk48OSfYtk829iiQyWW0rudYcYCIQ==}
     dependencies:
       '@nuxt/devtools-kit': 0.6.7(nuxt@3.6.3)(vite@4.4.4)
       '@nuxt/kit': 3.6.3
@@ -6012,10 +6012,10 @@ packages:
       fast-glob: 3.3.0
       knitwork: 1.0.0
       nuxt-site-config: 1.0.5
-      nuxt-site-config-kit: 1.0.5
+      nuxt-site-config-kit: 1.0.7
       pathe: 1.1.1
       radix3: 1.0.1
-      semver: 7.5.4
+      site-config-stack: 1.0.7
       ufo: 1.1.2
     transitivePeerDependencies:
       - nuxt
@@ -6032,6 +6032,20 @@ packages:
       defu: 6.1.2
       pkg-types: 1.0.3
       site-config-stack: 1.0.5
+      ufo: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /nuxt-site-config-kit@1.0.7:
+    resolution: {integrity: sha512-oVSFT/3iMCJk8N4zFX3A3OTEWFVf70TfPbiQs9kb5bdQCBkV4SNB1gzhz4lT6GZZudxk1MWOHxRvJoKZ8oQVbg==}
+    dependencies:
+      '@nuxt/kit': 3.6.3
+      '@nuxt/schema': 3.6.3
+      defu: 6.1.2
+      pkg-types: 1.0.3
+      site-config-stack: 1.0.7
       ufo: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -7446,6 +7460,18 @@ packages:
 
   /site-config-stack@1.0.5:
     resolution: {integrity: sha512-1sToRHVWQ6RY//OuKea2KW78p64o8Uni6vK3TCYyJ6s6RWr5FH6w9MZHXuKpsdStmuPwiTZi6t0XTCLO8v9Wng==}
+    dependencies:
+      '@nuxt/kit': 3.6.3
+      defu: 6.1.2
+      pkg-types: 1.0.3
+      ufo: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /site-config-stack@1.0.7:
+    resolution: {integrity: sha512-mw+ZgKGVnTMgTnzoFgJequFCck4nHDfvELkUMdIJjQT42cN6yCrBw+szChCqDjOBCypiV872wlvmYGGadSxVdQ==}
     dependencies:
       '@nuxt/kit': 3.6.3
       defu: 6.1.2
