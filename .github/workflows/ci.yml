@@ -23,7 +23,7 @@ jobs:
 
     name: (Lint) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: corepack enable
       - uses: pnpm/action-setup@v2.4.0
       - uses: actions/setup-node@v3
@@ -52,7 +52,7 @@ jobs:
 
     name: (Build) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: corepack enable
       - uses: pnpm/action-setup@v2.4.0
       - uses: actions/setup-node@v3
