@@ -23,10 +23,6 @@
           <Icon name="ph:linkedin-logo-duotone" />
         </a>
 
-        <a href="https://instagram.com/danielito.mtb/" aria-label="Instagram" target="_blank">
-          <Icon name="ph:instagram-logo-duotone" />
-        </a>
-
         <a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank">
           <Icon name="ph:twitter-logo-duotone" />
         </a>
