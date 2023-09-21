@@ -6,7 +6,7 @@ const route = useRoute()
 
 useHead({
   htmlAttrs: {
-    lang: 'en',
+    lang: 'en-US',
     dir: 'ltr'
   },
   title: 'Dan Mutombo',
