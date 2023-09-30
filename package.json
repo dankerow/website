@@ -24,7 +24,7 @@
     "@nuxtjs/critters": "^0.5.1",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.0.2",
-    "@types/node": "^20.7.1",
+    "@types/node": "^20.8.0",
     "eslint": "8.50.0",
     "nuxt": "^3.7.4",
     "nuxt-gtag": "^1.1.1",
