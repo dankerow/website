@@ -1,6 +1,19 @@
 <script setup lang="ts">
 const jobs = [
   {
+    organizationName: 'Freelance',
+    jobTitle: 'Social Media Manager',
+    jobType: 'Freelance',
+    timePeriod: {
+      start: 'June 2023',
+      end: 'Present'
+    },
+    description: [
+      'I am currently working as a freelance content manager for a few clients.',
+      'I am responsible for creating and managing content for their social media accounts.'
+    ]
+  },
+  {
     organizationName: 'UNICEF',
     jobTitle: 'Web Developer',
     jobType: 'Internship',
@@ -12,12 +25,6 @@ const jobs = [
       'Individually built web application to manage inventory of the company utilizing Express.js, Bootstrap & MongoDB.',
       'Improved efficiency for up to 5 IT department staff; transferred from MS Access to a web application available on mobile + computer devices.'
     ]
-  },
-  {
-    organizationName: 'Work with me',
-    jobTitle: 'Work with me',
-    jobType: 'Waiting for you',
-    description: 'I don\'t have much work experience yet, that\'s why I am looking for opportunities to apply the skills I have acquired on my own over the last 3 years.'
   }
 ]
 </script>
@@ -44,7 +51,7 @@ const jobs = [
               :aria-controls="`experience-pills-${index}`"
               :aria-selected="index === 0"
             >
-              {{ work.organizationName }}
+              {{ work.jobTitle }} @ {{ work.organizationName }}
             </button>
           </div>
 
