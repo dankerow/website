@@ -26,14 +26,9 @@ const skills = ref({
   ],
   tools: [
     'Git',
-    'GitHub',
-    'GitLab',
-    'VS Code',
-    'Postman',
     'Figma',
     'Adobe Photoshop',
-    'Adobe Illustrator',
-    'Adobe InDesign'
+    'Adobe Illustrator'
   ]
 })
 </script>
@@ -41,7 +36,7 @@ const skills = ref({
 <template>
   <section class="hero pt-14 pb-6">
     <div class="container">
-      <div class="row row-cols-1 row-cols-lg-2">
+      <div class="row row-cols-1 row-cols-lg-2 mb-4">
         <div class="col">
           <span class="tooltip">
             @dankerow
@@ -52,7 +47,7 @@ const skills = ref({
             <span class="special-letter">M</span>utombo
           </h1>
 
-          <p class="mb-6">
+          <p>
             Software developer, building whatever in my bed.
           </p>
         </div>
@@ -71,7 +66,7 @@ const skills = ref({
 
             <a class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank">
               <Icon name="ph:twitter-logo-duotone" />
-              Twitter
+              X
             </a>
           </div>
         </div>
