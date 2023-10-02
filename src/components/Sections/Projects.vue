@@ -34,7 +34,7 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
         Projects
       </h2>
 
-      <div class="row row-cols-1 row-cols-lg-2 gy-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 gy-4">
         <div
           v-for="(project, index) in projects"
           :key="`project-${index}`"
