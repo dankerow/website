@@ -36,10 +36,6 @@ definePageMeta({
 
     <hr class="mx-2 mx-md-10 mx-lg-12">
 
-    <SectionsAbout />
-
-    <hr class="mx-2 mx-md-5 mx-lg-8">
-
     <SectionsBlog />
 
     <hr class="mx-2 mx-md-5 mx-lg-8">
