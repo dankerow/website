@@ -20,8 +20,9 @@ const skills = ref({
   databases: [
     'MongoDB',
     'MySQL',
-    'Redis',
-    'SQLite'
+    'PostgreSQL',
+    'SQLite',
+    'Redis'
   ],
   tools: [
     'Git',
@@ -40,50 +41,83 @@ const skills = ref({
 <template>
   <section class="hero pt-14 pb-6">
     <div class="container">
-      <span class="tooltip">
-        @dankerow
-      </span>
-
-      <h1 class="header-heading-2 display-4 text-white fw-bolder">
-        <span class="special-letter">D</span>an
-        <span class="special-letter">M</span>utombo.
-      </h1>
-
-      <p class="mb-4">
-        Software developer, building whatever in my bed.
-      </p>
-
-      <div class="row gy-5 row-cols-1 row-cols-lg-2">
+      <div class="row row-cols-1 row-cols-lg-2">
         <div class="col">
-          <div class="card mb-4">
-            <div class="card-body">
-              I'm a software developer. I enjoy expressing my creativity in a variety of ways, such as through developing websites and graphic designs. In late 2015, I developed an interest in software development and graphic design. Since then, I've continued to learn and practice in each of these areas.
-              <br>
-              Naturally inquisitive and enjoying learning new things, I fit in well with others.
-              <br>
-              Fluent in numerous languages, including French, English, and Italian, and currently learning Spanish, which I already comprehend very well.
-            </div>
-          </div>
+          <span class="tooltip">
+            @dankerow
+          </span>
 
-          <div class="actions">
-            <a href="/files/Resume.pdf" target="_blank" class="btn btn-primary" type="button">
-              Resume
+          <h1 class="header-heading-2 display-4 text-white fw-bolder">
+            <span class="special-letter">D</span>an
+            <span class="special-letter">M</span>utombo
+          </h1>
+
+          <p class="mb-6">
+            Software developer, building whatever in my bed.
+          </p>
+        </div>
+
+        <div class="col text-start text-lg-end">
+          <div class="social-links">
+            <a class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="https://github.com/dankerow" aria-label="GitHub" target="_blank">
+              <Icon name="ph:github-logo-duotone" />
+              GitHub
             </a>
+
+            <a class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank">
+              <Icon name="ph:linkedin-logo-duotone" />
+              LinkedIn
+            </a>
+
+            <a class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank">
+              <Icon name="ph:twitter-logo-duotone" />
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-4 row-cols-1 mb-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="h4 mb-0">
+                About
+              </h2>
+            </div>
+            <div class="card-body">
+              <p class="mb-0">
+                I'm a software developer. I enjoy expressing my creativity in a variety of ways, such as through developing websites and graphic designs. In late 2015, I developed an interest in software development and graphic design. Since then, I've continued to learn and practice in each of these areas.
+                <br>
+                Naturally inquisitive and enjoying learning new things, I fit in well with others.
+                <br>
+                Fluent in numerous languages, including French, English, and Italian, and currently learning Spanish, which I already comprehend very well.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div id="accordionPanelsStayOpenExample" class="accordion">
-            <div v-for="(value, key, index) in skills" :key="key" class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button text-capitalize" :class="{ collapsed: index !== 0 }" type="button" data-bs-toggle="collapse" :data-bs-target="`#${key}-collapse`" :aria-expanded="index === 0" :aria-controls="`${key}-collapse`">
-                  {{ key }}
-                </button>
-              </h3>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="h4 mb-0">
+                Skills
+              </h2>
+            </div>
+            <div class="card-body">
+              <div id="accordionPanelsStayOpenExample" class="accordion">
+                <div v-for="(value, key, index) in skills" :key="key" class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button text-capitalize" :class="{ collapsed: index !== 0 }" type="button" data-bs-toggle="collapse" :data-bs-target="`#${key}-collapse`" :aria-expanded="index === 0" :aria-controls="`${key}-collapse`">
+                      {{ key }}
+                    </button>
+                  </h3>
 
-              <div :id="`${key}-collapse`" class="accordion-collapse collapse" :class="{ show: index === 0 }">
-                <div class="accordion-body">
-                  {{ value.join(', ') }}
+                  <div :id="`${key}-collapse`" class="accordion-collapse collapse" :class="{ show: index === 0 }">
+                    <div class="accordion-body">
+                      {{ value.join(', ') }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,17 +125,9 @@ const skills = ref({
         </div>
       </div>
 
-      <div class="social-links">
-        <a href="https://github.com/dankerow" aria-label="GitHub" target="_blank">
-          <Icon name="ph:github-logo-duotone" />
-        </a>
-
-        <a href="https://www.linkedin.com/in/dan-mutombo/" aria-label="LinkedIn" target="_blank">
-          <Icon name="ph:linkedin-logo-duotone" />
-        </a>
-
-        <a href="https://twitter.com/dankerow" aria-label="Twitter" target="_blank">
-          <Icon name="ph:twitter-logo-duotone" />
+      <div class="actions">
+        <a href="/files/Resume.pdf" target="_blank" class="btn btn-primary" type="button">
+          Download Resume
         </a>
       </div>
     </div>
@@ -149,7 +175,16 @@ const skills = ref({
 			}
 		}
 	}
+
+  .card {
+    .card-header {
+      h2 {
+        &:before {
+          content: '~/';
+          color: rgb(200, 200, 200);
+        }
+      }
+    }
+  }
 }
 </style>
-<script setup lang="ts">
-</script>
