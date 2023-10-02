@@ -11,7 +11,6 @@ definePageMeta({
         sameAs: [
           'https://github.com/dankerow',
           'https://www.linkedin.com/in/dan-mutombo/',
-          'https://instagram.com/danielito.mtb/',
           'https://twitter.com/dankerow'
         ],
         url: 'https://danmutombo.com/'
@@ -34,15 +33,15 @@ definePageMeta({
   <div>
     <SectionsHero />
 
-    <hr class="mx-2 mx-md-10 mx-lg-12">
+    <hr class="mx-4 mx-md-10 mx-lg-12">
 
     <SectionsBlog />
 
-    <hr class="mx-2 mx-md-5 mx-lg-8">
+    <hr class="mx-4 mx-md-5 mx-lg-12">
 
     <SectionsExperience />
 
-    <hr class="mx-2 mx-md-5 mx-lg-8">
+    <hr class="mx-4 mx-md-5 mx-lg-12">
 
     <SectionsProjects />
   </div>
