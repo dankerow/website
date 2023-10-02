@@ -21,12 +21,6 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#about" class="nav-link">
-                About
-              </a>
-            </li>
-
-            <li class="nav-item">
               <a href="#blog" class="nav-link">
                 Blog
               </a>
