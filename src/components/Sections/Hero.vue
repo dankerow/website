@@ -36,7 +36,7 @@ const skills = ref({
 <template>
   <section class="hero pt-14 pb-6">
     <div class="container">
-      <div class="row row-cols-1 row-cols-lg-2 mb-4">
+      <div class="row row-cols-1 row-cols-lg-2 mb-5">
         <div class="col">
           <span class="tooltip">
             @dankerow
@@ -72,7 +72,7 @@ const skills = ref({
         </div>
       </div>
 
-      <div class="row gy-4 row-cols-1 mb-4">
+      <div class="row gy-4 row-cols-1 mb-5">
         <div class="col">
           <div class="card">
             <div class="card-header">
