@@ -2,6 +2,10 @@
 const path = useRoute().path
 const { data: article } = await useAsyncData('article', () => queryContent(path).findOne())
 const articleDate = formatDate(article.date)
+
+if (!article) {
+  throw createError({ statusCode: 404, message: 'The article you are looking for couldn\'t be found.' })
+}
 </script>
 
 <template>
@@ -35,14 +39,14 @@ const articleDate = formatDate(article.date)
         <div
           class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 justify-content-center py-5"
         >
-          <div class="col col-lg-9">
+          <div class="col col-lg-9 order-2 order-lg-1">
             <ContentRenderer :value="article">
               <template #empty>
                 <p>No content found.</p>
               </template>
             </ContentRenderer>
           </div>
-          <div class="col col-lg-3">
+          <div class="col col-lg-3 order-1 order-lg-2">
             <BlogToc :links="article.body.toc.links" />
           </div>
         </div>
@@ -55,7 +59,7 @@ const articleDate = formatDate(article.date)
 .hero {
   background-color: rgba(38, 38, 38, 0.3);
   border-bottom: 2px solid rgba(38, 38, 38, 0.8);
-  height: 40vh;
+  height: 30vh;
 }
 
 .title {
