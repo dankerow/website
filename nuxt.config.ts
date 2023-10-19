@@ -60,10 +60,6 @@ export default defineNuxtConfig({
   $development: {
     debug: true,
     sourcemap: true,
-
-    modules: [
-      '@nuxt/devtools'
-    ]
   },
 
   $production: {
