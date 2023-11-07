@@ -23,15 +23,15 @@
     "@nuxtjs/critters": "^0.5.1",
     "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/google-fonts": "^3.0.2",
-    "@types/node": "^20.8.9",
-    "eslint": "8.52.0",
-    "nuxt": "^3.8.0",
+    "@types/node": "^20.9.0",
+    "eslint": "8.53.0",
+    "nuxt": "^3.8.1",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-icon": "^0.6.1",
+    "nuxt-icon": "^0.6.5",
     "nuxt-purgecss": "^2.0.0",
     "nuxt-simple-sitemap": "^3.4.1",
     "sass": "^1.69.5",
     "typescript": "^5.2.2"
   },
-  "packageManager": "pnpm@8.10.0"
+  "packageManager": "pnpm@8.10.2"
 }
