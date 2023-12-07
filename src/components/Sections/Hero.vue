@@ -1,38 +1,3 @@
-<script setup lang="ts">
-const skills = ref({
-  languages: [
-    'HTML',
-    'CSS/SCSS',
-    'JavaScript (ES6+)',
-    'TypeScript',
-    'Python',
-    'C#'
-  ],
-  frameworks: [
-    'Node.js',
-    'Express',
-    'Vue',
-    'Nuxt.js',
-    'jQuery',
-    'Bootstrap',
-    'Bulma'
-  ],
-  databases: [
-    'MongoDB',
-    'MySQL',
-    'PostgreSQL',
-    'SQLite',
-    'Redis'
-  ],
-  tools: [
-    'Git',
-    'Figma',
-    'Adobe Photoshop',
-    'Adobe Illustrator'
-  ]
-})
-</script>
-
 <template>
   <section class="hero pt-14 pb-6">
     <div class="container">
@@ -91,33 +56,6 @@ const skills = ref({
             </div>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="h4 mb-0">
-                Skills
-              </h2>
-            </div>
-            <div class="card-body">
-              <div id="accordionPanelsStayOpenExample" class="accordion">
-                <div v-for="(value, key, index) in skills" :key="key" class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button text-capitalize" :class="{ collapsed: index !== 0 }" type="button" data-bs-toggle="collapse" :data-bs-target="`#${key}-collapse`" :aria-expanded="index === 0" :aria-controls="`${key}-collapse`">
-                      {{ key }}
-                    </button>
-                  </h3>
-
-                  <div :id="`${key}-collapse`" class="accordion-collapse collapse" :class="{ show: index === 0 }">
-                    <div class="accordion-body">
-                      {{ value.join(', ') }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="actions">
@@ -170,16 +108,5 @@ const skills = ref({
 			}
 		}
 	}
-
-  .card {
-    .card-header {
-      h2 {
-        &:before {
-          content: '~/';
-          color: rgb(200, 200, 200);
-        }
-      }
-    }
-  }
 }
 </style>
