@@ -75,8 +75,8 @@ export default defineNuxtConfig({
       safelist: ['svg']
     },
 
-    sitemap: {
-      siteUrl: process.env.BASE_URL
+    site: {
+      url: process.env.BASE_URL
     }
   }
 })
