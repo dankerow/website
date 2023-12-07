@@ -5,6 +5,5 @@ export function formatDate(string: string) {
     year: 'numeric'
   })
 
-  const date = typeof string === 'string' ? new Date(string) : string
-  return format(date)
+  return format(new Date(string))
 }
