@@ -5,7 +5,7 @@ export interface SettingsState {
 }
 
 export const useSettingsStore = defineStore('settings', () => {
-  const cookieConsent: Ref<SettingsState['cookieConsent']> = ref(null)
+  const cookieConsent= ref<SettingsState['cookieConsent']>(null)
 
   const setCookiePreference = (payload: boolean) => {
     useCookie('cookie_consent').value = payload.toString()
