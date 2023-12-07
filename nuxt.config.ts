@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
+    headNext: true,
     typedPages: true
   },
 
