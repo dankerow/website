@@ -33,15 +33,7 @@ definePageMeta({
   <div>
     <SectionsHero />
 
-    <hr class="mx-4 mx-md-10 mx-lg-12">
-
-    <SectionsBlog />
-
-    <hr class="mx-4 mx-md-5 mx-lg-12">
-
     <SectionsExperience />
-
-    <hr class="mx-4 mx-md-5 mx-lg-12">
 
     <SectionsProjects />
   </div>
@@ -51,17 +43,7 @@ definePageMeta({
 .section-heading {
   color: white;
   display: inline-block;
-  background: rgba(146, 164, 184, 0.3);
-  border: 1.5px solid rgba(146, 164, 184, 0.8);
-  border-left: 3px solid rgba(146, 164, 184, 1);
-  border-radius: 0.20rem;
-  padding: 0.5rem 0.7rem;
-  position: relative;
-  text-transform: lowercase;
-
-  &:before {
-    content: '~/';
-    color: rgb(200, 200, 200);
-  }
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 </style>

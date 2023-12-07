@@ -53,7 +53,7 @@ $colors: (
 	"gray-dark":  $gray-900
 ) !default;
 
-$primary:       rgb(146, 164, 184) !default;
+$primary:       rgb(195, 212, 232) !default;
 $secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -62,9 +62,36 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 
+$primary-text-emphasis:        tint-color($primary, 40%) !default;
+$secondary-text-emphasis:      tint-color($secondary, 40%) !default;
+$success-text-emphasis:        tint-color($success, 40%) !default;
+$info-text-emphasis:           tint-color($info, 40%) !default;
+$warning-text-emphasis:        tint-color($warning, 40%) !default;
+$danger-text-emphasis:         tint-color($danger, 40%) !default;
+$light-text-emphasis:          $gray-100 !default;
+$dark-text-emphasis:           $gray-300 !default;
+
+$primary-bg-subtle:            shade-color($primary, 80%) !default;
+$secondary-bg-subtle:          shade-color($secondary, 80%) !default;
+$success-bg-subtle:            shade-color($success, 80%) !default;
+$info-bg-subtle:               shade-color($info, 80%) !default;
+$warning-bg-subtle:            shade-color($warning, 80%) !default;
+$danger-bg-subtle:             shade-color($danger, 80%) !default;
+$light-bg-subtle:              $gray-800 !default;
+$dark-bg-subtle:               mix($gray-800, $black) !default;
+
+$primary-border-subtle:        shade-color($primary, 40%) !default;
+$secondary-border-subtle:      shade-color($secondary, 40%) !default;
+$success-border-subtle:        shade-color($success, 40%) !default;
+$info-border-subtle:           shade-color($info, 40%) !default;
+$warning-border-subtle:        shade-color($warning, 40%) !default;
+$danger-border-subtle:         shade-color($danger, 40%) !default;
+$light-border-subtle:          $gray-700 !default;
+$dark-border-subtle:           $gray-800 !default;
+
+
 $enable-negative-margins: true !default;
 $enable-shadows:          true !default;
-
 $enable-dark-mode:        false !default;
 
 $prefix:                  bs- !default;
@@ -87,13 +114,21 @@ $spacers: (
 
 // Body
 
-$body-text-align:           null !default;
-$body-color:                rgb(180, 180, 180) !default;
-$body-bg:                   rgb(20, 20, 20) !default;
+$body-color:                   rgb(200, 200, 200) !default;
+$body-bg:                      rgb(12, 12, 12) !default;
+$body-secondary-color:         rgba($body-color, .75) !default;
+$body-secondary-bg:            $gray-800 !default;
+$body-tertiary-color:          rgba($body-color, .5) !default;
+$body-tertiary-bg:             mix($gray-800, $gray-900, 50%) !default;
+$body-emphasis-color:          $white !default;
+
 
 // Links
 
 $link-decoration:                         none !default;
+$link-shade-percentage:                   20% !default;
+$link-color:                   tint-color($primary, 40%) !default;
+$link-hover-color:             shift-color($link-color, -$link-shade-percentage) !default;
 
 // Paragraphs
 
@@ -102,6 +137,9 @@ $paragraph-margin-bottom:   .675rem !default;
 // Components
 
 $border-width:                1px !default;
+
+$border-color:                 $gray-800  !default;
+$border-color-translucent:     rgba($white, .05) !default;
 
 $border-color:                $gray-300 !default;
 
@@ -198,16 +236,16 @@ $dropdown-dark-border-color:        rgba(38, 38, 38, 0.8) !default;
 
 // Cards
 
-$card-border-color:                 rgba(38, 38, 38, 0.8) !default;
-$card-cap-bg:                       rgba(24, 24, 24, .1) !default;
-$card-bg:                           rgba(38, 38, 38, 0.3) !default;
+$card-bg:                           rgb(20, 20, 20) !default;
 
 // Accordion
 
-$accordion-bg:                            rgba(38, 38, 38, 0.3) !default;
-$accordion-border-color:                  rgba(38, 38, 38, 0.8) !default;
-
 $accordion-icon-width:                    1rem !default;
+$accordion-icon-color-dark:         $primary-text-emphasis !default;
+$accordion-icon-active-color-dark:  $primary-text-emphasis !default;
+
+$accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 
 // Modals
 

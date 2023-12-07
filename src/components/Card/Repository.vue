@@ -35,9 +35,9 @@ const getIconName = (language?: string) => {
 </script>
 
 <template>
-  <div class="card shadow-sm">
+  <div class="card hoverable shadow-sm">
     <div class="card-body min-vh-50">
-      <h3 class="card-title text-truncate mb-4">
+      <h3 class="card-title text-truncate mb-3">
         <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" size="1em" />
         <span class="align-middle d-inline-block text-white">{{ name }}</span>
 
@@ -47,9 +47,9 @@ const getIconName = (language?: string) => {
       <p class="card-text text-gray-300">
         {{ description || 'No description available.' }}
       </p>
-    </div>
 
-    <div class="card-footer d-flex align-items-center justify-content-between text-secondary">
+      <hr>
+
       <div class="fs-5">
         <Icon name="ph:star-duotone" class="align-middle d-inline-block me-1" />
         <span class="align-middle d-inline-block">
