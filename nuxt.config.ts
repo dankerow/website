@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-  rootDir: './',
   srcDir: 'src',
 
   nitro: {
@@ -29,9 +28,6 @@ export default defineNuxtConfig({
     families: {
       Rubik: {
         wght: [300, 400, 500, 600, 700]
-      },
-      'Roboto Mono': {
-        wght: [400]
       }
     },
     display: 'swap'
