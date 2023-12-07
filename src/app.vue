@@ -9,13 +9,17 @@ useHead({
     lang: 'en-US',
     dir: 'ltr'
   },
-  title: 'Dan Mutombo',
+  title: () => route.meta.title as string ?? 'Dan Mutombo',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'description', content: description },
+    { name: 'description', content: route.meta.description as string ?? description },
     {
       name: 'twitter:site',
       content: '@dankerow'
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
     },
     {
       name: 'twitter:creator',
@@ -23,15 +27,19 @@ useHead({
     },
     {
       name: 'twitter:title',
-      content: 'Dan Mutombo'
+      content: route.meta.title as string ?? 'Dan Mutombo'
     },
     {
       name: 'twitter:description',
-      content: description
+      content: route.meta.description as string ?? description
     },
     {
       name: 'twitter:image',
       content: image
+    },
+    {
+      name: 'og:title',
+      content: route.meta.title as string ?? 'Dan Mutombo',
     },
     {
       name: 'og:url',
@@ -39,7 +47,7 @@ useHead({
     },
     {
       name: 'og:description',
-      content: description
+      content: route.meta.description as string ?? description
     },
     {
       name: 'og:image',
