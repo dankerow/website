@@ -1,13 +1,24 @@
+<script setup lang="ts">
+const route = useRoute()
+const navbarBrandName = computed(() => route.name === 'index' ? 'D' : splitString(route.name)[0])
+
+const splitString = (string: string) => {
+  return string.split('-')
+}
+</script>
+
 <template>
   <header class="top-0 start-0 end-0 position-fixed w-100">
     <nav class="navbar navbar-dark navbar-expand-md">
       <div class="container">
         <NuxtLink to="/" class="navbar-brand">
-          <span class="text p-1">[~D</span><span class="highlight p-1">]</span>
+          <span class="text text-capitalize p-1">
+            [~{{ navbarBrandName }}</span><span class="highlight p-1">]
+          </span>
         </NuxtLink>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -15,27 +26,21 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          Menu
+          <Icon name="solar:hamburger-menu-line-duotone" size="1.8em" class="text-white" />
         </button>
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#blog" class="nav-link">
+              <NuxtLink to="/blog" class="nav-link">
                 Blog
-              </a>
+              </NuxtLink>
             </li>
 
             <li class="nav-item">
-              <a href="#experience" class="nav-link">
-                Experience
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">
+              <NuxtLink href="/#projects" class="nav-link">
                 Projects
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -63,19 +68,19 @@ header {
 
 			.highlight {
 				background-color: rgb(195, 212, 232);
-				color: rgb(51,61,73);
+				color: rgb(51, 61, 73);
 				transition: background-color 0.3s linear, color 0.3s linear;
 			}
 
 			&:hover {
 				.text {
 					background-color: rgb(195, 212, 232);
-					color: rgb(51,61,73);
+					color: rgb(51, 61, 73);
 				}
 
 				.highlight {
 					background-color: unset;
-					color: rgb(146,164,184);
+					color: rgb(146, 164, 184);
 				}
 			}
 		}
@@ -86,13 +91,13 @@ header {
 
 				&:before {
 					content: '~/ ';
-					color: rgb(146, 164, 184);
+					color: rgb(195, 212, 232);
 					font-weight: 500;
 				}
 
 				&:after {
 					content: '/';
-					color: rgb(146, 164, 184);
+					color: rgb(195, 212, 232);
 					font-weight: 500;
 					opacity: 0;
 					position: absolute;
@@ -101,7 +106,7 @@ header {
 				}
 
 				&:hover {
-					color: rgb(146, 164, 184);
+					color: rgb(195, 212, 232);
 
 					&:after {
 						opacity: 1;
@@ -109,7 +114,7 @@ header {
 				}
 
 				&.nuxt-link-exact-active {
-					color: rgb(146, 164, 184);
+					color: rgb(195, 212, 232);
 				}
 			}
 		}
