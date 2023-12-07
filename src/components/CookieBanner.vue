@@ -124,7 +124,7 @@ const cookieConsent = () => {
             <p>If you have any questions about this Cookies Policy, You can contact us:</p>
             <ul>
               <li>
-                By email: <a class="text-decoration-underline" href="mailto:danmutombo1@gmail.com">danmutombo1@gmail.com</a>
+                By email: <a class="text-decoration-underline" href="mailto:dan@mtombo.co">dan@mtombo.co</a>
               </li>
             </ul>
           </div>
