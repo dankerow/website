@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@leonardssh/use-lanyard':
+    specifier: ^1.0.4
+    version: 1.0.4(vue@3.3.8)
   '@pinia/nuxt':
     specifier: ^0.5.1
     version: 0.5.1(typescript@5.2.2)(vue@3.3.8)
@@ -1034,6 +1037,20 @@ packages:
   /@kwsites/promise-deferred@1.1.1:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
+
+  /@leonardssh/use-lanyard@1.0.4(vue@3.3.8):
+    resolution: {integrity: sha512-kZyOq84ubuuzuZhdkS3LdVa8cfRyLRUNQ+YqZkw1+BDKO65h+1+2rhsgiDyecNQijF99fjG2BA72Gc1ZBwe7JQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@vueuse/core': 5.3.0(vue@3.3.8)
+      vue: 3.3.8(typescript@5.2.2)
+      vue-demi: 0.14.6(vue@3.3.8)
+    dev: false
 
   /@mapbox/node-pre-gyp@1.0.11:
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
@@ -2878,6 +2895,16 @@ packages:
       - vue
     dev: true
 
+  /@vueuse/core@5.3.0(vue@3.3.8):
+    resolution: {integrity: sha512-bBL1/JMRHFWmbgQzUZHF4WOwlqfenR1B8+elriXsbnHlogQM5foSz9++WyDBR0YPIVgCJq7fvNLqd4T7+cjc5w==}
+    dependencies:
+      '@vueuse/shared': 5.3.0(vue@3.3.8)
+      vue-demi: 0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
   /@vueuse/head@2.0.0(vue@3.3.8):
     resolution: {integrity: sha512-ykdOxTGs95xjD4WXE4na/umxZea2Itl0GWBILas+O4oqS7eXIods38INvk3XkJKjqMdWPcpCyLX/DioLQxU1KA==}
     peerDependencies:
@@ -3001,6 +3028,15 @@ packages:
       - '@vue/composition-api'
       - vue
     dev: true
+
+  /@vueuse/shared@5.3.0(vue@3.3.8):
+    resolution: {integrity: sha512-qZfkPFH0qTScFpYiPOFpTcxWriRhlM3bgSzl3DFTgr/U0eZg3w2EFWaRZHdWeSvAUdNQyjOC4Toa8S0zJyEjHw==}
+    dependencies:
+      vue-demi: 0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}
