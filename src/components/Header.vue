@@ -51,15 +51,14 @@ const splitString = (string: string) => {
 
 <style lang="scss" scoped>
 header {
-	z-index: 99;
+	z-index: 2;
 
 	.navbar {
-		background: rgba(23, 23, 23, 0.3);
-		border-bottom: 1px solid rgba(38, 38, 38, 0.8);
+    background-color: rgba(var(--bs-body-bg-rgb), 0.3);
+		border-bottom: 1px solid var(--bs-border-color-translucent);
 		backdrop-filter: blur(12px);
 
 		.navbar-brand {
-			font-size: 25px;
 			font-weight: 500;
 
 			.text {
@@ -67,20 +66,20 @@ header {
 			}
 
 			.highlight {
-				background-color: rgb(195, 212, 232);
+				background-color: var(--bs-primary);
 				color: rgb(51, 61, 73);
 				transition: background-color 0.3s linear, color 0.3s linear;
 			}
 
 			&:hover {
 				.text {
-					background-color: rgb(195, 212, 232);
+					background-color: var(--bs-primary);
 					color: rgb(51, 61, 73);
 				}
 
 				.highlight {
 					background-color: unset;
-					color: rgb(146, 164, 184);
+					color: var(--bs-primary);
 				}
 			}
 		}
@@ -91,13 +90,13 @@ header {
 
 				&:before {
 					content: '~/ ';
-					color: rgb(195, 212, 232);
+					color: var(--bs-primary);
 					font-weight: 500;
 				}
 
 				&:after {
 					content: '/';
-					color: rgb(195, 212, 232);
+					color: var(--bs-primary);
 					font-weight: 500;
 					opacity: 0;
 					position: absolute;
@@ -106,7 +105,7 @@ header {
 				}
 
 				&:hover {
-					color: rgb(195, 212, 232);
+					color: var(--bs-primary);
 
 					&:after {
 						opacity: 1;
@@ -114,7 +113,7 @@ header {
 				}
 
 				&.nuxt-link-exact-active {
-					color: rgb(195, 212, 232);
+					color: var(--bs-primary);
 				}
 			}
 		}
