@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { useSettingsStore } from '@/stores/settings'
-
-const settingsStore = useSettingsStore()
+const { cookieConsent, setCookiePreference } = useSettings()
 
 onMounted(() => {
   const cookieConsentBanner = document.getElementById('cookie-consent-banner') as HTMLElement
 
-  if (!settingsStore.cookieConsent) {
+  if (!cookieConsent.value) {
     const cookieConsentBannerAlert = new window.bootstrap.Alert(cookieConsentBanner)
     cookieConsentBanner.classList.remove('d-none')
     cookieConsentBanner.classList.add('d-block')
@@ -16,18 +14,14 @@ onMounted(() => {
       const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
       const scrolled = (windowScroll / documentHeight) * 100
 
-      if (scrolled > 50 && !settingsStore.cookieConsent) {
-        settingsStore.setCookiePreference(true)
+      if (scrolled > 50 && !cookieConsent.value) {
+        setCookiePreference(true)
 
         cookieConsentBannerAlert.close()
       }
     })
   }
 })
-
-const cookieConsent = () => {
-  settingsStore.setCookiePreference(true)
-}
 </script>
 
 <template>
@@ -42,7 +36,7 @@ const cookieConsent = () => {
             </a>
           </p>
 
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="cookieConsent">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" @click="setCookiePreference(true)">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>

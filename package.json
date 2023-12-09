@@ -13,7 +13,6 @@
   "author": "Dan Mutombo",
   "dependencies": {
     "@leonardssh/use-lanyard": "^1.0.4",
-    "@pinia/nuxt": "^0.5.1",
     "bootstrap": "5.3.2"
   },
   "devDependencies": {

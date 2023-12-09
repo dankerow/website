@@ -16,7 +16,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@kevinmarrec/nuxt-pwa',
-    '@pinia/nuxt',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/critters',
