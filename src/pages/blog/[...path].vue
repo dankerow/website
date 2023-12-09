@@ -2,7 +2,7 @@
 const path = useRoute().path
 const { data: article } = await useAsyncData('article', () => queryContent(path).findOne())
 
-if (!article) {
+if (!article.value) {
   throw createError({ statusCode: 404, message: 'The article you are looking for couldn\'t be found.' })
 }
 
