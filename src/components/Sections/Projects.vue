@@ -1,40 +1,51 @@
 <script setup lang="ts">
-import { Ref } from 'vue'
-
-const projects = ref([
+const projects = [
   {
-    name: 'Dankerow',
-    description: 'My personal website.',
+    name: 'danmutombo.com',
+    description: 'My personal website and blog.',
     url: 'https://danmutombo.com',
     image: 'dankerow.png',
-    tags: ['Vue', 'Nuxt', 'Bootstrap', 'TypeScript']
+    tags: ['Vue', 'Nuxt', 'TypeScript']
   },
   {
-    name: 'Adrian Salvador',
-    description: 'My personal website.',
+    name: 'Adrian Salvador\'s Potfolio',
+    description: 'A photography portfolio, built for a friend.',
     url: 'https://salvadoradrian.com',
     image: 'adriansalvador.png',
-    tags: ['Vue', 'Nuxt', 'Bootstrap', 'TypeScript']
+    tags: ['Vue', 'Nuxt', 'TypeScript']
   }
-])
+]
 
-const repos: Ref<object[]> = ref([])
-const { data: repositoriesData, pending } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=100', { immediate: process.client, default: () => shallowRef() })
+const repos = ref<object[]>([])
+const { data: repositoriesData, pending } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=100', {
+  immediate: process.client,
+  default: () => shallowRef(),
+  transform: (data) => {
+    return data
+      .map((repo: any) => ({
+        name: repo.name,
+        language: repo.language,
+        stargazers_count: repo.stargazers_count,
+        description: repo.description,
+        html_url: repo.html_url
+      }))
+      .sort((a, b) => b?.stargazers_count - a?.stargazers_count)
+  }
+})
+
 watch(repositoriesData, (newData) => {
   repos.value = newData
 })
-
-repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
 </script>
 
 <template>
-  <section id="projects" class="py-8">
+  <section id="projects" class="py-5">
     <div class="container">
-      <h2 class="h3 section-heading mb-5">
+      <h2 class="section-heading mb-5">
         Projects
       </h2>
 
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 gy-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
         <div
           v-for="(project, index) in projects"
           :key="`project-${index}`"
@@ -49,10 +60,10 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
 
       <hr class="my-5">
 
-      <div v-if="pending" class="row row-cols-1 row-cols-lg-3 gy-4">
+      <div v-if="pending" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
         <div v-for="i in 6" :key="`skeleton-${i}`" class="col">
           <div class="card shadow-sm" aria-hidden="true">
-            <div class="card-body placeholder-glow min-vh-50">
+            <div class="card-body placeholder-glow">
               <h4 class="card-title text-truncate mb-4">
                 <span class="rounded placeholder col-1 me-2" />
                 <span class="rounded placeholder col-2" />
@@ -95,3 +106,9 @@ repos.value = repos.value.sort((a, b) => b?.stargazers_count - a?.stargazers_cou
     </div>
   </section>
 </template>
+
+<style scoped>
+section {
+  will-change: transform;
+}
+</style>
