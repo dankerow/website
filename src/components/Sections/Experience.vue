@@ -9,8 +9,8 @@ const jobs = [
       end: 'Present'
     },
     description: [
-      'I am currently working as a freelance content manager for a few clients.',
-      'I am responsible for creating and managing content for their social media accounts.'
+      'I am currently working as a freelance content manager for a few clients (such as daddysfavgirlie on TikTok).',
+      'I am responsible for managing content for their social media accounts.'
     ]
   },
   {
@@ -30,15 +30,15 @@ const jobs = [
 </script>
 
 <template>
-  <section id="experience" class="py-6">
+  <section id="experience" class="py-5">
     <div class="container">
-      <h2 class="h3 section-heading mb-5">
+      <h2 class="section-heading mb-5">
         Experience
       </h2>
 
       <div class="row">
-        <div class="experience-pills d-flex align-items-start">
-          <div id="experience-pills-tab" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+        <div class="experience-pills d-lg-flex align-items-lg-start">
+          <div id="experience-pills-tab" class="nav flex-lg-column nav-pills mb-3 mb-lg-0" role="tablist">
             <button
               v-for="(work, index) in jobs"
               :id="`experience-pills-${index}-tab`"
@@ -51,11 +51,11 @@ const jobs = [
               :aria-controls="`experience-pills-${index}`"
               :aria-selected="index === 0"
             >
-              {{ work.jobTitle }} @ {{ work.organizationName }}
+              <span class="d-none d-md-inline">{{ work.jobTitle }} @</span> {{ work.organizationName }}
             </button>
           </div>
 
-          <div id="experience-pills-tabContent" class="tab-content w-100 ps-3">
+          <div id="experience-pills-tabContent" class="tab-content w-100 ps-lg-3">
             <div
               v-for="(work, index) in jobs"
               :id="`experience-pills-${index}`"
@@ -64,19 +64,19 @@ const jobs = [
               role="tabpanel"
               :aria-labelledby="`experience-pills-${index}-tab`"
             >
-              <h2 v-if="work.jobTitle" class="mb-1">
+              <h2 v-if="work.jobTitle" class="text-white mb-1">
                 {{ work.jobTitle }}
               </h2>
 
-              <h3 v-if="work.jobType || work.timePeriod" class="h5 mb-4">
-                <span v-if="work.jobType" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem', backgroundColor: 'rgb(38, 38, 38)' }">
+              <p v-if="work.jobType || work.timePeriod" class="mb-4 text-body-secondary fst-italic small">
+                <span v-if="work.jobType">
                   {{ work.jobType }}
                 </span>
                 <span v-if="work.timePeriod" class="mx-1">|</span>
-                <span v-if="work.timePeriod" class="px-1 rounded-1" :style="{ paddingTop: '0.15rem', paddingBottom: '0.15rem', backgroundColor: 'rgb(38, 38, 38)' }">
+                <span v-if="work.timePeriod">
                   {{ work.timePeriod.start }} - {{ work.timePeriod.end }}
                 </span>
-              </h3>
+              </p>
 
               <div v-if="typeof work.description === 'object'">
                 <ul
@@ -106,7 +106,6 @@ const jobs = [
 
 .nav {
 	border-right: 2px solid rgba(38, 38, 38, 0.8);
-	counter-reset: nav-link;
 }
 
 .nav-link {
@@ -114,13 +113,6 @@ const jobs = [
 	border-radius: 0;
 	padding: 0.475rem 0.875rem;
 	white-space: nowrap;
-
-	&:before {
-		counter-increment: nav-link;
-		content: "0" counter(nav-link) ".";
-		color: rgb(164, 164, 164);
-		font-family: "Roboto Mono", sans-serif;
-	}
 
 	&.active {
 		background-color: rgba(38, 38, 38, 0.3);
