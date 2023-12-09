@@ -6,6 +6,11 @@ if (!article.value) {
   throw createError({ statusCode: 404, message: 'The article you are looking for couldn\'t be found.' })
 }
 
+useSeoMeta({
+  title: article.value.title,
+  description: article.value.description
+})
+
 const articleDate = formatDate(article.value.date)
 </script>
 
