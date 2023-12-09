@@ -53,6 +53,11 @@ export default defineNuxtConfig({
     }
   },
 
+  site: {
+    url: process.env.BASE_URL,
+    name: 'danker'
+  },
+
   $development: {
     debug: true,
     sourcemap: true,
@@ -72,10 +77,6 @@ export default defineNuxtConfig({
     purgecss: {
       keyframes: true,
       safelist: ['svg']
-    },
-
-    site: {
-      url: process.env.BASE_URL
     }
   }
 })
