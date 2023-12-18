@@ -8,7 +8,7 @@ const projects = [
     tags: ['Vue', 'Nuxt', 'TypeScript']
   },
   {
-    name: 'Adrian Salvador\'s Potfolio',
+    name: 'Adrian Salvador\'s Portfolio',
     description: 'A photography portfolio, built for a friend.',
     url: 'https://salvadoradrian.com',
     image: 'adriansalvador.png',
