@@ -31,7 +31,7 @@ const splitString = (string: string) => {
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li class="nav-item me-3">
               <NuxtLink to="/blog" class="nav-link">
                 Blog
               </NuxtLink>
