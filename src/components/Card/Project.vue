@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   name: string;
+  description: string;
   url: string;
   tags: string[];
   image: string;
@@ -25,12 +26,12 @@ defineProps<{
           :width="300"
           :height="150"
           fit="cover"
-          placeholder
           class="card-img-top img-fluid"
           :alt="`${name} project's thumbnail`"
         />
       </a>
     </div>
+
     <h3 class="text-primary text-truncate mt-3">
       <a
         :href="url"
@@ -41,6 +42,10 @@ defineProps<{
       </a>
     </h3>
 
+    <p>
+      {{ description }}
+    </p>
+
     <span class="small fst-italic">{{ tags.join(', ') }}</span>
   </div>
 </template>
@@ -48,13 +53,12 @@ defineProps<{
 <style lang="scss" scoped>
 .card {
   .card-img-top {
-    mix-blend-mode: color-dodge;
     transition: mix-blend-mode 0.3s ease-in-out;
   }
 
   &:hover {
     .card-img-top {
-      mix-blend-mode: unset;
+      mix-blend-mode: color-dodge;
     }
   }
 }
