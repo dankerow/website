@@ -28,6 +28,7 @@
     "nuxt": "^3.8.2",
     "nuxt-gtag": "^1.1.1",
     "nuxt-icon": "^0.6.7",
+    "nuxt-og-image": "^2.2.4",
     "nuxt-purgecss": "^2.0.0",
     "nuxt-simple-sitemap": "^4.1.7",
     "sass": "^1.69.5",
