@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-icon'
+    'nuxt-icon',
+    'nuxt-og-image'
   ],
 
   googleFonts: {
