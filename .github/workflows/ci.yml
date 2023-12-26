@@ -24,6 +24,10 @@ jobs:
     name: (Lint) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - name: create env file
+        run: |
+          touch .env
+          echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - run: corepack enable
       - uses: pnpm/action-setup@v2.4.0
       - uses: actions/setup-node@v4
@@ -53,6 +57,10 @@ jobs:
     name: (Build) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - name: create env file
+        run: |
+          touch .env
+          echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - run: corepack enable
       - uses: pnpm/action-setup@v2.4.0
       - uses: actions/setup-node@v4
