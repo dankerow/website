@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const description = 'Software developer, building whatever in my bed.'
-const image = 'https://danmutombo.com/icon.png'
 
 const route = useRoute()
 
@@ -34,10 +33,6 @@ useHead({
       content: route.meta.description as string ?? description
     },
     {
-      name: 'twitter:image',
-      content: image
-    },
-    {
       name: 'og:title',
       content: route.meta.title as string ?? 'Dan Mutombo',
     },
@@ -48,10 +43,6 @@ useHead({
     {
       name: 'og:description',
       content: route.meta.description as string ?? description
-    },
-    {
-      name: 'og:image',
-      content: image
     }
   ],
   link: [
@@ -66,6 +57,10 @@ useHead({
       defer: true
     }
   ]
+})
+
+defineOgImage({
+  component: 'Page'
 })
 </script>
 
