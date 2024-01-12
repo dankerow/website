@@ -4,26 +4,9 @@ const description = 'Software developer, building whatever in my bed.'
 const route = useRoute()
 
 useHead({
-  htmlAttrs: {
-    lang: 'en-US',
-    dir: 'ltr'
-  },
   title: () => route.meta.title as string ?? 'Dan Mutombo',
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: route.meta.description as string ?? description },
-    {
-      name: 'twitter:site',
-      content: '@dankerow'
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:creator',
-      content: '@dankerow'
-    },
     {
       name: 'twitter:title',
       content: route.meta.title as string ?? 'Dan Mutombo'
@@ -46,16 +29,7 @@ useHead({
     }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'canonical', href: `https://danmutombo.com${route.path}` },
-    { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com' },
-    { rel: 'dns-prefetch', href: 'https://cdnjs.cloudflare.com' }
-  ],
-  script: [
-    {
-      src: 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js',
-      defer: true
-    }
+    { rel: 'canonical', href: `https://danmutombo.com${route.path}` }
   ]
 })
 

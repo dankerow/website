@@ -10,6 +10,36 @@ export default defineNuxtConfig({
     typedPages: true
   },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        dir: 'ltr'
+      },
+      meta: [
+        {
+          name: 'twitter:site',
+          content: '@dankerow'
+        },
+        {
+          name: 'twitter:creator',
+          content: '@dankerow'
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com' },
+        { rel: 'dns-prefetch', href: 'https://cdnjs.cloudflare.com' }
+      ],
+      script: [
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js',
+          type: 'text/javascript',
+          defer: true
+        }
+      ]
+    }
+  },
+
   css: [
     '@/assets/scss/bedrock.scss'
   ],
