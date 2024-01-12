@@ -4,14 +4,14 @@ const projects = [
     name: 'danmutombo.com',
     description: 'My personal website and blog.',
     url: 'https://danmutombo.com',
-    image: 'dankerow.png',
+    image: 'dankerow.webp',
     tags: ['Vue', 'Nuxt', 'TypeScript']
   },
   {
     name: 'Adrian Salvador\'s Portfolio',
     description: 'A photography portfolio, built for a friend.',
     url: 'https://salvadoradrian.com',
-    image: 'adriansalvador.png',
+    image: 'adriansalvador.webp',
     tags: ['Vue', 'Nuxt', 'TypeScript']
   }
 ]
