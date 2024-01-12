@@ -68,7 +68,7 @@ export default defineNuxtConfig({
     modules: [
       'nuxt-gtag',
       'nuxt-purgecss',
-      'nuxt-simple-sitemap'
+      '@nuxtjs/sitemap'
     ],
 
     gtag: {
