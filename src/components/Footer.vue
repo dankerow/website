@@ -33,7 +33,6 @@ const year = new Date().getFullYear()
 <style lang="scss" scoped>
 footer {
 	.footer-social {
-		background-color: rgba(20, 20, 20, 0.5);
 		border-bottom: 1px solid rgba(38, 38, 38, 0.8);
 
 		a {
