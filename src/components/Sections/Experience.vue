@@ -1,6 +1,20 @@
 <script setup lang="ts">
 const jobs = [
   {
+    organizationName: 'MIA',
+    jobTitle: 'IT Manager',
+    jobType: 'Full-time',
+    timePeriod: {
+      start: 'January 2024',
+      end: 'Present'
+    },
+    description: [
+      'I am currently working as an IT Manager for MIA.',
+      'I am responsible for managing the IT department and all of its staff.',
+      'I am also responsible for managing the company\'s IT infrastructure.'
+    ]
+  },
+  {
     organizationName: 'Freelance',
     jobTitle: 'Social Media Manager',
     jobType: 'Freelance',
