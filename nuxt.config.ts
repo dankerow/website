@@ -47,21 +47,20 @@ export default defineNuxtConfig({
   modules: [
     '@kevinmarrec/nuxt-pwa',
     '@nuxt/content',
+    '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/critters',
-    '@nuxtjs/fontaine',
-    '@nuxtjs/google-fonts',
     'nuxt-icon',
     'nuxt-og-image'
   ],
 
-  googleFonts: {
-    families: {
-      Rubik: {
-        wght: [300, 400, 500, 600, 700]
-      }
+  fonts: {
+    experimental: {
+      processCSSVariables: true
     },
-    display: 'swap'
+    families: [
+      { name: 'Rubiks', weights: [300, 400, 500, 600, 700] }
+    ],
   },
 
   pwa: {
