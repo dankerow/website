@@ -95,14 +95,9 @@ export default defineNuxtConfig({
 
   $production: {
     modules: [
-      'nuxt-gtag',
       'nuxt-purgecss',
       '@nuxtjs/sitemap'
     ],
-
-    gtag: {
-      id: process.env.GTAG_ID ?? undefined
-    },
 
     purgecss: {
       keyframes: true,

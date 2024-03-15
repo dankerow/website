@@ -47,7 +47,5 @@ defineOgImage({
     </main>
 
     <LazyFooter />
-
-    <LazyCookieBanner />
   </div>
 </template>

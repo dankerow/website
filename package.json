@@ -26,7 +26,6 @@
     "@types/node": "^20.11.27",
     "eslint": "8.57.0",
     "nuxt": "^3.10.3",
-    "nuxt-gtag": "^1.2.1",
     "nuxt-icon": "^0.6.9",
     "nuxt-og-image": "^2.2.4",
     "nuxt-purgecss": "^2.0.0",
