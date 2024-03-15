@@ -19,14 +19,13 @@ defineProps<{
         rel="noopener"
       >
         <nuxt-img
-          loading="lazy"
           format="webp"
           :src="`/img/projects/${image}`"
-          sizes="sm:100vw md:50vw lg:500px xl:700px"
-          :width="300"
-          :height="150"
+          sizes="sm:100vw md:50vw lg:300px xl:400px"
           fit="cover"
           class="card-img-top img-fluid"
+          loading="lazy"
+          decoding="async"
           :alt="`${name} project's thumbnail`"
         />
       </a>
