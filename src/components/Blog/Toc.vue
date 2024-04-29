@@ -1,6 +1,16 @@
 <script setup lang="ts">
-defineProps(['links'])
-const flattenLinks = (links: Array<any>) => {
+defineProps<{
+  links: Link[]
+}>()
+
+interface Link {
+  id: string
+  text: string
+  depth: number
+  children?: Link[]
+}
+
+const flattenLinks = (links: Link[]) => {
   const _links = links
     .map((link) => {
       let _link = [link]
