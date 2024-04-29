@@ -2,7 +2,14 @@ export default defineNuxtConfig({
   srcDir: 'src',
 
   nitro: {
-    compressPublicAssets: true
+    compressPublicAssets: true,
+    publicAssets: [
+      {
+        dir: 'public/img',
+        maxAge: 24 * 60 * 60 * 365, // 1 year (versioned)
+        baseURL: 'img'
+      }
+    ]
   },
 
   experimental: {
