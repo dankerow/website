@@ -53,6 +53,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@kevinmarrec/nuxt-pwa',
+    '@nuxt/eslint',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/image',
