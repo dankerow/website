@@ -1,10 +1,18 @@
 <script setup lang="ts">
+interface Repository {
+  name: string
+  language: string
+  stargazers_count: number
+  description: string
+  html_url: string
+}
+
 const projects = [
   {
-    name: 'danmutombo.com',
-    description: 'My personal website and blog.',
-    url: 'https://danmutombo.com',
-    image: 'dankerow.webp',
+    name: 'MIA Gospel',
+    description: 'A website for a Gospel Ministry.',
+    url: 'https://miagospel.org',
+    image: 'miagospel.webp',
     tags: ['Vue', 'Nuxt', 'TypeScript']
   },
   {
@@ -13,16 +21,21 @@ const projects = [
     url: 'https://salvadoradrian.com',
     image: 'adriansalvador.webp',
     tags: ['Vue', 'Nuxt', 'TypeScript']
+  },
+  {
+    name: 'danmutombo.com',
+    description: 'My personal website and blog.',
+    url: 'https://danmutombo.com',
+    image: 'dankerow.webp',
+    tags: ['Vue', 'Nuxt', 'TypeScript']
   }
 ]
 
-const repos = ref<object[]>([])
-const { data: repositoriesData, pending } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=100', {
-  immediate: process.client,
-  default: () => shallowRef(),
-  transform: (data) => {
+const { data: repos, pending } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=100', {
+  default: () => [],
+  transform: (data: Repository[]) => {
     return data
-      .map((repo: any) => ({
+      .map((repo) => ({
         name: repo.name,
         language: repo.language,
         stargazers_count: repo.stargazers_count,
@@ -30,11 +43,8 @@ const { data: repositoriesData, pending } = await useLazyFetch('https://api.gith
         html_url: repo.html_url
       }))
       .sort((a, b) => b?.stargazers_count - a?.stargazers_count)
-  }
-})
-
-watch(repositoriesData, (newData) => {
-  repos.value = newData
+  },
+  deep: false
 })
 </script>
 
