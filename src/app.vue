@@ -40,6 +40,8 @@ defineOgImage({
 
 <template>
   <div>
+    <NuxtPwaAssets />
+
     <Header />
 
     <main>

@@ -52,12 +52,12 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@kevinmarrec/nuxt-pwa',
     '@nuxt/eslint',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/critters',
+    '@vite-pwa/nuxt',
     'nuxt-icon',
     'nuxt-og-image'
   ],
@@ -73,11 +73,6 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    meta: {
-      mobileAppIOS: true,
-      name: 'Dan Mutombo',
-      appleStatusBarStyle: 'black-translucent'
-    },
     manifest: {
       name: 'Dan Mutombo',
       start_url: '/',
@@ -87,9 +82,12 @@ export default defineNuxtConfig({
       background_color: '#1c2125',
       theme_color: '#92a4b8'
     },
+    pwaAssets: {
+      config: true
+    },
     workbox: {
-      enabled: false
-    }
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
   },
 
   site: {
