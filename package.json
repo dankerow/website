@@ -20,6 +20,7 @@
     "@nuxt/eslint": "^0.3.12",
     "@nuxt/fonts": "^0.7.0",
     "@nuxt/image": "^1.7.0",
+    "@nuxt/scripts": "^0.4.1",
     "@nuxtjs/critters": "^0.7.1",
     "@nuxtjs/sitemap": "^5.1.5",
     "@types/node": "^20.12.11",
