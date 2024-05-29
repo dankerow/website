@@ -22,7 +22,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxt/scripts": "^0.4.3",
     "@nuxtjs/critters": "^0.7.1",
-    "@nuxtjs/sitemap": "^5.1.5",
+    "@nuxtjs/sitemap": "^5.2.0",
     "@types/node": "^20.12.12",
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/nuxt": "^0.7.0",
@@ -34,5 +34,5 @@
     "sass": "^1.77.2",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@9.1.1"
+  "packageManager": "pnpm@9.1.3"
 }
