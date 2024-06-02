@@ -12,7 +12,6 @@
   },
   "author": "Dan Mutombo",
   "dependencies": {
-    "@leonardssh/use-lanyard": "^1.0.4",
     "bootstrap": "5.3.3"
   },
   "devDependencies": {

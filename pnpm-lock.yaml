@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@leonardssh/use-lanyard':
-        specifier: ^1.0.4
-        version: 1.0.4(vue@3.4.26(typescript@5.4.5))
       bootstrap:
         specifier: 5.3.3
         version: 5.3.3(@popperjs/core@2.11.8)
@@ -995,15 +992,6 @@ packages:
 
   '@kwsites/promise-deferred@1.1.1':
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
-
-  '@leonardssh/use-lanyard@1.0.4':
-    resolution: {integrity: sha512-kZyOq84ubuuzuZhdkS3LdVa8cfRyLRUNQ+YqZkw1+BDKO65h+1+2rhsgiDyecNQijF99fjG2BA72Gc1ZBwe7JQ==}
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^2.0.0 || >=3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
 
   '@mapbox/node-pre-gyp@1.0.11':
     resolution: {integrity: sha512-Yhlar6v9WQgUp/He7BdgzOz8lqMQ8sU+jkCq7Wx8Myc5YFJLbEe7lgui/V7G1qB1DJykHSGwreceSaD60Y0PUQ==}
@@ -2031,9 +2019,6 @@ packages:
   '@vueuse/core@10.9.0':
     resolution: {integrity: sha512-/1vjTol8SXnx6xewDEKfS0Ra//ncg4Hb0DaZiwKf7drgfMsKFExQ+FnnENcN6efPen+1kIzhLQoGSy0eDUVOMg==}
 
-  '@vueuse/core@5.3.0':
-    resolution: {integrity: sha512-bBL1/JMRHFWmbgQzUZHF4WOwlqfenR1B8+elriXsbnHlogQM5foSz9++WyDBR0YPIVgCJq7fvNLqd4T7+cjc5w==}
-
   '@vueuse/head@2.0.0':
     resolution: {integrity: sha512-ykdOxTGs95xjD4WXE4na/umxZea2Itl0GWBILas+O4oqS7eXIods38INvk3XkJKjqMdWPcpCyLX/DioLQxU1KA==}
     peerDependencies:
@@ -2090,9 +2075,6 @@ packages:
 
   '@vueuse/shared@10.9.0':
     resolution: {integrity: sha512-Uud2IWncmAfJvRaFYzv5OHDli+FbOzxiVEQdLCKQKLyhz94PIyFC3CHcH7EDMwIn8NPtD06+PNbC/PiO0LGLtw==}
-
-  '@vueuse/shared@5.3.0':
-    resolution: {integrity: sha512-qZfkPFH0qTScFpYiPOFpTcxWriRhlM3bgSzl3DFTgr/U0eZg3w2EFWaRZHdWeSvAUdNQyjOC4Toa8S0zJyEjHw==}
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==}
@@ -7494,12 +7476,6 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@leonardssh/use-lanyard@1.0.4(vue@3.4.26(typescript@5.4.5))':
-    dependencies:
-      '@vueuse/core': 5.3.0(vue@3.4.26(typescript@5.4.5))
-      vue: 3.4.26(typescript@5.4.5)
-      vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
-
   '@mapbox/node-pre-gyp@1.0.11(encoding@0.1.13)':
     dependencies:
       detect-libc: 2.0.3
@@ -9339,14 +9315,6 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/core@5.3.0(vue@3.4.26(typescript@5.4.5))':
-    dependencies:
-      '@vueuse/shared': 5.3.0(vue@3.4.26(typescript@5.4.5))
-      vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-
   '@vueuse/head@2.0.0(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@unhead/dom': 1.9.7
@@ -9383,13 +9351,6 @@ snapshots:
       - vue
 
   '@vueuse/shared@10.9.0(vue@3.4.26(typescript@5.4.5))':
-    dependencies:
-      vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-
-  '@vueuse/shared@5.3.0(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
     transitivePeerDependencies:
