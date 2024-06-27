@@ -33,9 +33,9 @@ definePageMeta({
   <div>
     <SectionsHero />
 
-    <SectionsExperience />
-
     <SectionsProjects />
+
+    <SectionsExperience />
   </div>
 </template>
 
