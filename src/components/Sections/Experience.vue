@@ -28,7 +28,7 @@ const jobs = [
     ]
   },
   {
-    organizationName: 'UNICEF',
+    organizationName: 'UNICEF Madagascar',
     jobTitle: 'Web Developer',
     jobType: 'Internship',
     timePeriod: {
@@ -47,7 +47,7 @@ const jobs = [
   <section id="experience" class="py-5">
     <div class="container">
       <h2 class="section-heading mb-5">
-        Experience
+        Work Experiences
       </h2>
 
       <div class="row">
@@ -79,7 +79,7 @@ const jobs = [
               :aria-labelledby="`experience-pills-${index}-tab`"
             >
               <h2 v-if="work.jobTitle" class="text-white mb-1">
-                {{ work.jobTitle }}
+                {{ work.jobTitle }} at {{ work.organizationName }}
               </h2>
 
               <p v-if="work.jobType || work.timePeriod" class="mb-4 text-body-secondary fst-italic small">
