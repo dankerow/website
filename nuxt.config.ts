@@ -49,11 +49,11 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/content',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxtjs/critters',
     '@vite-pwa/nuxt',
-    'nuxt-icon',
     'nuxt-og-image'
   ],
 
