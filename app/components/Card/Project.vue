@@ -21,6 +21,8 @@ defineProps<{
         <nuxt-img
           format="webp"
           :src="`/img/projects/${image}`"
+          :width="350"
+          :height="200"
           sizes="sm:100vw md:50vw lg:300px xl:400px"
           fit="cover"
           class="card-img-top img-fluid"
@@ -48,17 +50,3 @@ defineProps<{
     <span class="small fst-italic">{{ tags.join(', ') }}</span>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.card {
-  .card-img-top {
-    transition: mix-blend-mode 0.3s ease-in-out;
-  }
-
-  &:hover {
-    .card-img-top {
-      mix-blend-mode: color-dodge;
-    }
-  }
-}
-</style>

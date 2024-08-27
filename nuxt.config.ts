@@ -1,8 +1,18 @@
 export default defineNuxtConfig({
-  srcDir: 'src',
+  future: {
+    compatibilityVersion: 4,
+  },
 
   nitro: {
     compressPublicAssets: true,
+    routeRules: {
+      '/': {
+        swr: true
+      },
+      '/blog/**': {
+        swr: true
+      }
+    },
     publicAssets: [
       {
         dir: 'public/img',
@@ -34,9 +44,7 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'preconnect', href: 'https://cdnjs.cloudflare.com' },
-        { rel: 'dns-prefetch', href: 'https://cdnjs.cloudflare.com' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   },
@@ -78,10 +86,7 @@ export default defineNuxtConfig({
     },
     pwaAssets: {
       config: true
-    },
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-    },
+    }
   },
 
   site: {
