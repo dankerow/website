@@ -14,20 +14,6 @@ const projects = [
     url: 'https://miagospel.org',
     image: 'miagospel.webp',
     tags: ['Vue', 'Nuxt', 'TypeScript']
-  },
-  {
-    name: 'Adrian Salvador\'s Portfolio',
-    description: 'A photography portfolio, built for a friend.',
-    url: 'https://salvadoradrian.com',
-    image: 'adriansalvador.webp',
-    tags: ['Vue', 'Nuxt', 'TypeScript']
-  },
-  {
-    name: 'danmutombo.com',
-    description: 'My personal website and blog.',
-    url: 'https://danmutombo.com',
-    image: 'dankerow.webp',
-    tags: ['Vue', 'Nuxt', 'TypeScript']
   }
 ]
 
