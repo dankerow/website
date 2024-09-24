@@ -22,7 +22,7 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(eslint@9.11.1(jiti@1.21.6))(magicast@0.3.5)(rollup@4.22.4)(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3)(terser@5.33.0))(webpack-sources@3.2.3)
       '@nuxt/fonts':
-        specifier: ^0.9.0
+        specifier: ^0.9.1
         version: 0.9.1(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.22.4)(vite@5.4.7(@types/node@20.16.6)(sass@1.79.3)(terser@5.33.0))(webpack-sources@3.2.3)
       '@nuxt/icon':
         specifier: ^1.5.1
