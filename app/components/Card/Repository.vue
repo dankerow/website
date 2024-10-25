@@ -37,25 +37,16 @@ const getIconName = (language?: string) => {
 <template>
   <div class="card hoverable shadow-sm">
     <div class="card-body min-vh-50">
-      <h3 class="card-title text-truncate mb-3">
+      <div class="card-title text-truncate mb-3">
         <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" size="1em" />
         <span class="align-middle d-inline-block text-white">{{ name }}</span>
 
         <Icon name="material-symbols:open-in-new" class="open-new float-end" size="1.15em" />
-      </h3>
+      </div>
 
       <p class="card-text text-gray-300">
         {{ description || 'No description available.' }}
       </p>
-
-      <hr>
-
-      <div class="fs-5">
-        <Icon name="ph:star-duotone" class="align-middle d-inline-block me-1" />
-        <span class="align-middle d-inline-block">
-          {{ stars }}
-        </span>
-      </div>
     </div>
 
     <a
