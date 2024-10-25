@@ -28,10 +28,11 @@ const flattenLinks = (links: Link[]) => {
 <template>
   <nav class="py-4 px-4 rounded">
     <header class="pb-1 mb-3">
-      <h2 class="fw-bolder">
+      <h2 class="text-white">
         Table of contents
       </h2>
     </header>
+
     <ul class="d-flex flex-column px-1 mb-0 list-unstyled">
       <li
         v-for="link of flattenLinks(links)"
@@ -40,7 +41,7 @@ const flattenLinks = (links: Link[]) => {
           'ms-2 pb-2': link.depth === 3
         }"
       >
-        <NuxtLink :href="`#${link.id}`">
+        <NuxtLink :to="`#${link.id}`">
           {{ link.text }}
         </NuxtLink>
       </li>
@@ -50,8 +51,8 @@ const flattenLinks = (links: Link[]) => {
 
 <style lang="scss" scoped>
 nav {
-	background-color: rgba(38, 38, 38, 0.3);
-	border: 1px solid rgba(38, 38, 38, 0.8);
+	background-color: rgba(var(--bs-white-rgb), 0.02);
+	border: 1px solid rgba(var(--bs-white-rgb), 0.05);
 }
 
 header {
