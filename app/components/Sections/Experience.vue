@@ -9,9 +9,8 @@ const jobs = [
       end: 'Present'
     },
     description: [
-      'I am currently working as an IT Manager for MIA.',
-      'I am responsible for managing the IT department and all of its staff.',
-      'I am also responsible for managing the company\'s IT infrastructure.'
+      'Lead and manage the IT department, ensuring effective coordination and support for all team members and activities.',
+      'Oversee and maintain the company’s IT infrastructure, ensuring optimal performance and reliability.'
     ]
   },
   {
@@ -23,8 +22,9 @@ const jobs = [
       end: 'Present'
     },
     description: [
-      'I am currently working as a freelance content manager for a few clients (such as daddysfavgirlie on TikTok).',
-      'I am responsible for managing content for their social media accounts.'
+      'Managed and optimized Tiktok and INstagram accounts, increasing follower engagement and watch time through strategic content planning and interaction.',
+      'Created compelling video thumbnails and captions to enhance visibility and attract a larger audience, resulting in signifiant growth in followers and engagement.',
+      'Actively engaged with followers by responding to comments and messages, fostering a positive community and improving overall user experience.'
     ]
   },
   {
@@ -59,7 +59,7 @@ const jobs = [
           {{ work.jobTitle }} at {{ work.organizationName }}
         </div>
 
-        <p v-if="work.jobType || work.timePeriod" class="mb-4 text-body-secondary fst-italic small">
+        <p v-if="work.jobType || work.timePeriod" class="mb-4 text-body-secondary small">
           <span v-if="work.jobType">
             {{ work.jobType }}
           </span>
