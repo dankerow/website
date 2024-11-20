@@ -17,7 +17,8 @@ const projects = [
   }
 ]
 
-const { data: repos, pending } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=100', {
+const { data: repos, status } = await useLazyFetch('https://api.github.com/users/dankerow/repos?per_page=6', {
+  key: 'repos',
   default: () => [],
   transform: (data: Repository[]) => {
     return data
@@ -35,11 +36,15 @@ const { data: repos, pending } = await useLazyFetch('https://api.github.com/user
 </script>
 
 <template>
-  <section id="projects" class="py-5">
+  <div id="projects" class="py-10">
     <div class="container">
-      <h2 class="section-heading mb-5">
+      <h2 class="text-white">
         Projects
       </h2>
+
+      <p class="mb-5 border-start border-3 border-light-subtle ps-2">
+        Some of the projects I've worked on.
+      </p>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
         <div
@@ -56,7 +61,11 @@ const { data: repos, pending } = await useLazyFetch('https://api.github.com/user
 
       <hr class="my-5">
 
-      <div v-if="pending" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
+      <p class="mb-4 border-start border-3 border-light-subtle ps-2">
+        GitHub repositories sorted by stars.
+      </p>
+
+      <div v-if="status === 'pending'" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
         <div v-for="i in 6" :key="`skeleton-${i}`" class="col">
           <div class="card shadow-sm" aria-hidden="true">
             <div class="card-body placeholder-glow">
@@ -99,12 +108,22 @@ const { data: repos, pending } = await useLazyFetch('https://api.github.com/user
           </div>
         </div>
       </div>
+
+      <NuxtLink to="/projects" class="d-inline-flex align-items-center btn btn-link text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover mt-4 ps-0">
+        View all projects
+
+        <Icon
+          name="ph:arrow-right-light"
+          class="ms-2"
+        />
+      </NuxtLink>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-section {
+#projects {
+  scroll-margin-top: 3rem;
   will-change: transform;
 }
 </style>
