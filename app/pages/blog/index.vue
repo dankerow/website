@@ -65,43 +65,47 @@ const selectTag = (tag: string) => {
 </script>
 
 <template>
-  <div>
-    <div class="container pt-12">
-      <div class="nav-scroller py-1 mb-3 border-bottom">
-        <nav class="nav nav-underline">
-          <button
-            class="nav-item nav-link link-body-emphasis"
-            :class="{ active: !selectedTag }"
-            @click="selectTag('all')"
-          >
-            All
-          </button>
+  <main class="container pt-12 pb-4">
+    <h1 class="text-white text-uppercase fw-bolder">
+      Blog
+    </h1>
 
-          <button
-            v-for="tag in tagList"
-            :key="tag.name"
-            class="nav-item nav-link link-body-emphasis text-capitalize"
-            :class="{ active: selectedTag === tag.name }"
-            @click="selectTag(tag.name)"
-          >
-            {{ tag.name }}
-          </button>
-        </nav>
-      </div>
+    <p class="mb-5 border-start border-3 border-light-subtle ps-2 mb-6">
+      A collection of my thoughts and ideas.
+    </p>
+
+    <div class="nav-scroller py-1 mb-3 border-bottom">
+      <nav class="nav nav-underline">
+        <button
+          class="nav-item nav-link link-body-emphasis"
+          :class="{ active: !selectedTag }"
+          @click="selectTag('all')"
+        >
+          All
+        </button>
+
+        <button
+          v-for="tag in tagList"
+          :key="tag.name"
+          class="nav-item nav-link link-body-emphasis text-capitalize"
+          :class="{ active: selectedTag === tag.name }"
+          @click="selectTag(tag.name)"
+        >
+          {{ tag.name }}
+        </button>
+      </nav>
     </div>
 
-    <main class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
-        <div
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+      <div
           v-for="(post, index) in posts"
           :key="`latest-${index}`"
           class="col"
-        >
-          <CardBlog
-            :post="post"
-          />
-        </div>
+      >
+        <CardBlog
+          :post="post"
+        />
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
