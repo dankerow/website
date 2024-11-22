@@ -17,7 +17,7 @@ jobs:
         os:
           - ubuntu-latest
         node_version:
-          - 20
+          - 22
         architecture:
           - x64
 
@@ -50,7 +50,7 @@ jobs:
         os:
           - ubuntu-latest
         node_version:
-          - 20
+          - 22
         architecture:
           - x64
 
