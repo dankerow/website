@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
+    buildCache: true,
     typedPages: true
   },
 
