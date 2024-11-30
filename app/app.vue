@@ -36,10 +36,7 @@ useHead({
 useScriptNpm({
   packageName: 'bootstrap',
   file: 'dist/js/bootstrap.min.js',
-  version: '5.3.3',
-  scriptOptions: {
-    bundle: true
-  }
+  version: '5.3.3'
 })
 
 defineOgImage({

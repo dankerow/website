@@ -90,6 +90,12 @@ export default defineNuxtConfig({
     disable: true
   },
 
+  scripts: {
+    defaultScriptOptions: {
+      bundle: true
+    }
+  },
+
   site: {
     url: process.env.BASE_URL,
     name: 'danker'
