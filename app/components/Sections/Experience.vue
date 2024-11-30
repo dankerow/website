@@ -22,8 +22,8 @@ const jobs = [
       end: 'Present'
     },
     description: [
-      'Managed and optimized Tiktok and INstagram accounts, increasing follower engagement and watch time through strategic content planning and interaction.',
-      'Created compelling video thumbnails and captions to enhance visibility and attract a larger audience, resulting in signifiant growth in followers and engagement.',
+      'Managed and optimized TikTok and Instagram accounts, increasing follower engagement and watch time through strategic content planning and interaction.',
+      'Created compelling video thumbnails and captions to enhance visibility and attract a larger audience, resulting in significant growth in followers and engagement.',
       'Actively engaged with followers by responding to comments and messages, fostering a positive community and improving overall user experience.'
     ]
   },
