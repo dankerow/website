@@ -86,7 +86,8 @@ export default defineNuxtConfig({
     },
     pwaAssets: {
       config: true
-    }
+    },
+    disable: true
   },
 
   site: {
