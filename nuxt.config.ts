@@ -65,6 +65,13 @@ export default defineNuxtConfig({
     'nuxt-og-image'
   ],
 
+  content: {
+    highlight: {
+      theme: 'github-dark',
+      preload: ['js', 'ts', 'json', 'vue']
+    }
+  },
+
   fonts: {
     experimental: {
       processCSSVariables: true
