@@ -70,8 +70,8 @@ export default defineNuxtConfig({
       processCSSVariables: true
     },
     families: [
-      { name: 'Rubiks', weights: [300, 400, 500, 600, 700] }
-    ],
+      { name: 'Rubik', weights: [300, 400, 500, 600, 700] }
+    ]
   },
 
   pwa: {
