@@ -50,9 +50,7 @@ defineOgImage({
 
     <Header />
 
-    <main>
-      <NuxtPage />
-    </main>
+    <NuxtPage />
 
     <LazyFooter />
   </div>
