@@ -16,6 +16,10 @@ useHead({
       content: route.meta.description as string ?? description
     },
     {
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
       name: 'og:title',
       content: route.meta.title as string ?? 'Dan Mutombo',
     },
