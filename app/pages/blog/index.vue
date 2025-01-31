@@ -7,16 +7,16 @@ definePageMeta({
 const tagList = ref()
 const selectedTag = ref<string | null>()
 
-const { data: posts } = await useAsyncData('posts', () => {
-  const content = queryContent()
-    .sort({ date: -1 })
-    .without(['body'])
+const { data: posts } = await useAsyncData('posts', async () => {
+  const content = queryCollection('blog')
+      .order('date', 'DESC')
+      .select('title', 'description', 'date', 'path', 'tags')
 
   if (selectedTag.value) {
-    content.where({ 'tags': { $contains: selectedTag.value } })
+    content.where('tags', 'LIKE', `%${selectedTag.value}%`)
   }
 
-  return content.find()
+  return content.limit(6).all()
 }, {
   watch: [selectedTag]
 })
@@ -28,7 +28,8 @@ function getMostUsedTags() {
     return []
   }
 
-  const tags = {};
+  const tags = {}
+
   for (const file of files) {
     for (const tag of file.tags) {
       if (tags[tag]) {

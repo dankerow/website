@@ -67,10 +67,14 @@ export default defineNuxtConfig({
   ],
 
   content: {
-    highlight: {
-      theme: 'github-dark',
-      preload: ['js', 'ts', 'json', 'vue']
-    }
+   build: {
+     markdown: {
+       highlight: {
+         theme: 'github-dark',
+         preload: ['js', 'ts', 'json', 'vue']
+       }
+     }
+   }
   },
 
   fonts: {

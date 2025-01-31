@@ -3,7 +3,7 @@ const props = defineProps<{
   post: {
     title: string
     description: string
-    _path: string
+    path: string
     date: string
   }
 }>()
@@ -30,7 +30,7 @@ const postDate = formatDate(props.post.date)
 
     <NuxtLink
       :title="post.title"
-      :to="post._path"
+      :to="post.path"
       class="stretched-link"
     />
   </div>
