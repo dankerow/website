@@ -33,7 +33,7 @@ defineProps<{
       </a>
     </div>
 
-    <h3 class="text-primary text-truncate mt-3">
+    <div class="text-primary text-truncate fw-semibold fs-5 mt-3 mb-1">
       <a
         :href="url"
         target="blank"
@@ -41,12 +41,14 @@ defineProps<{
       >
         {{ name }}
       </a>
-    </h3>
+    </div>
 
     <p>
       {{ description }}
     </p>
 
-    <span class="small fst-italic">{{ tags.join(', ') }}</span>
+    <span class="small fst-italic">
+      {{ tags.join(', ') }}
+    </span>
   </div>
 </template>
