@@ -128,5 +128,7 @@ export default defineNuxtConfig({
       keyframes: true,
       safelist: ['svg']
     }
-  }
+  },
+
+  compatibilityDate: '2025-01-31'
 })
