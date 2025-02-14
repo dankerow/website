@@ -1,20 +1,10 @@
-<script setup lang="ts">
-const route = useRoute()
-const navbarBrandName = computed(() => route.name === 'index' ? 'D' : splitString(route.name)[0])
-
-const splitString = (string: string) => {
-  return string.split('-')
-}
-</script>
-
 <template>
   <header class="top-0 start-0 end-0 position-fixed w-100">
     <nav class="navbar navbar-dark navbar-expand-md">
       <div class="container">
         <NuxtLink to="/" class="navbar-brand">
-          <span class="text text-capitalize p-1">
-            [~{{ navbarBrandName }}</span><span class="highlight p-1">]
-          </span>
+          <span class="text text-capitalize p-1">[~D</span>
+          <span class="highlight p-1">]</span>
         </NuxtLink>
 
         <button
@@ -31,15 +21,21 @@ const splitString = (string: string) => {
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item me-3">
+            <li class="nav-item me-2">
               <NuxtLink to="/blog" class="nav-link">
-                Blog
+                blog
+              </NuxtLink>
+            </li>
+
+            <li class="nav-item me-2">
+              <NuxtLink to="/projects" class="nav-link">
+                projects
               </NuxtLink>
             </li>
 
             <li class="nav-item">
-              <NuxtLink href="/#projects" class="nav-link">
-                Projects
+              <NuxtLink to="/lab" class="nav-link">
+                lab
               </NuxtLink>
             </li>
           </ul>
