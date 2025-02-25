@@ -26,40 +26,72 @@ const flattenLinks = (links: Link[]) => {
 </script>
 
 <template>
-  <nav class="py-4 px-4 rounded">
-    <header class="pb-1 mb-3">
-      <h2 class="text-white">
-        Table of contents
-      </h2>
-    </header>
+  <div class="toc px-sm-2 ps-sm-3 w-100">
+    <button
+        data-bs-toggle="collapse"
+        data-bs-target="#toc-collapse"
+        class="btn btn-link d-md-none p-0"
+        aria-controls="toc-collapse"
+    >
+      Table of contents
+    </button>
 
-    <ul class="d-flex flex-column px-1 mb-0 list-unstyled">
-      <li
-        v-for="link of flattenLinks(links)"
-        :key="link.id"
-        :class="{
-          'ms-2 pb-2': link.depth === 3
-        }"
-      >
-        <NuxtLink :to="`#${link.id}`">
-          {{ link.text }}
-        </NuxtLink>
-      </li>
-    </ul>
-  </nav>
+    <div class="fs-6 text-white d-none d-md-block mb-2">
+      Table of contents
+    </div>
+
+    <hr class="d-none d-md-block">
+
+    <div id="toc-collapse" class="collapse">
+      <nav id="table-of-content" class="py-1 rounded">
+        <ul class="mb-0 list-unstyled">
+          <li
+              v-for="link of flattenLinks(links)"
+              :key="link.id"
+              class="pb-2 small"
+              :class="{
+                'ms-3 pb-2': link.depth === 3
+              }"
+          >
+            <NuxtLink :to="`#${link.id}`">
+              {{ link.text }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-nav {
-	background-color: rgba(var(--bs-white-rgb), 0.02);
-	border: 1px solid rgba(var(--bs-white-rgb), 0.05);
+@media (min-width: 768px) {
+  #toc-collapse {
+    display: block !important;
+  }
 }
 
-header {
-	h2 {
-		font-size: 1.25rem;
-	}
+@media (min-width: 992px) {
+  .toc {
+    border-left: 1px solid var(--bs-border-color);
+    position: sticky;
+    top: 5rem;
+    right: 0;
+    z-index: 1;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+  }
+}
 
-	border-bottom: 1px solid rgba(38, 38, 38, 0.8);
+a {
+  color: rgba(var(--bs-white-rgb), 0.6);
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: white;
+  }
+
+  &.active {
+    color: white;
+  }
 }
 </style>
