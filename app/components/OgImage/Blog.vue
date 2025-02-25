@@ -39,13 +39,13 @@ const siteName = computed(() => {
       </div>
 
       <div class="flex flex-col items-center text-left w-full">
-        <div class="text-[30px] text-gray-500 w-full">
+        <div class="text-[35px] text-gray-400 w-full">
           {{ minRead }}
         </div>
 
         <div class="border-t-2 border-[#92A4B8] mt-8 mb-4 w-full" />
 
-        <div v-if="siteName" class="font-bold text-[25px] w-full">
+        <div v-if="siteName" class="font-bold text-[40px] w-full">
           {{ siteName }}
         </div>
       </div>
