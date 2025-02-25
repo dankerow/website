@@ -25,7 +25,7 @@ const articleContent = article.value.body.value.map((item: string | string[]) =>
 
 
 const calculateReadingTime = (text: string) => {
-  const wordsPerMinute = 238
+  const wordsPerMinute = 120
   const words = text.split(/\s+/).length
   const minutes = Math.ceil(words / wordsPerMinute);
   return minutes > 1 ? `${minutes} minutes` : `${minutes} minute`
