@@ -27,19 +27,15 @@ definePageMeta({
     }
   ]
 })
-
-const { lanyard, getStatusDetails } = useDiscordStatus()
 </script>
 
 <template>
   <main>
-    <div class="hero min-vh-100 d-flex align-items-center overflow-hidden position-relative py-10 py-lg-8">
+    <div class="hero min-vh-100 d-flex align-items-center overflow-hidden position-relative py-12 py-lg-8">
       <div class="position-absolute special-gradient-start" />
       <div class="position-absolute special-gradient-end" />
 
       <div class="container">
-        <span class="tooltip mb-3" :class="{ spotify: lanyard?.spotify }" v-html="lanyard ? getStatusDetails.base : 'beep...'" />
-
         <h1 class="display-5 text-white fw-bolder">
           Dan Mutombo
         </h1>
@@ -48,11 +44,11 @@ const { lanyard, getStatusDetails } = useDiscordStatus()
           Software developer, building whatever in my bed.
         </p>
 
-        <p>
+        <p class="lead">
           I'm a software developer, currently studying for a bachelor's degree in computer science, majoring in cyber security.
         </p>
 
-        <p>
+        <p class="lead">
           My primary area of interest is web development, because I love experimenting with new things and expressing my imagination.
           You can go through my
           <NuxtLink to="#projects" class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover">
@@ -60,27 +56,27 @@ const { lanyard, getStatusDetails } = useDiscordStatus()
           </NuxtLink> to see what I've been up to.
         </p>
 
-        <p>
+        <p class="lead">
           When I'm not on my computer, I often listen to music. I love playing games whenever I have free time. And I also enjoy photography and dancing.
         </p>
 
         <hr>
 
-        <p class="mb-5">
+        <p class="lead mb-5">
           You can find me on
 
           <NuxtLink href="https://github.com/dankerow" class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover me-2" aria-label="GitHub" target="_blank">
-            <Icon class="me-2 align-middle" name="ph:github-logo-duotone" />
+            <Icon class="me-2 align-middle" name="ph:github-logo-duotone" size="1.15em" />
             <span>GitHub</span>
-          </NuxtLink>
+          </NuxtLink>,
 
           <NuxtLink href="https://twitter.com/dankerow"  class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover me-2" aria-label="Twitter" target="_blank">
-            <Icon class="me-2 align-middle" name="pajamas:twitter" />
+            <Icon class="me-2 align-middle" name="ph:x-logo" size="1.15em" />
             <span>(Twitter)</span>
-          </NuxtLink>
+          </NuxtLink>,
 
           <NuxtLink href="https://www.linkedin.com/in/dan-mutombo/" class="text-decoration-underline link-offset-3 link-underline link-underline-opacity-25 link-underline-opacity-75-hover" aria-label="LinkedIn" target="_blank">
-            <Icon class="me-2 align-middle" name="ph:linkedin-logo-duotone" />
+            <Icon class="me-2 align-middle" name="ph:linkedin-logo-duotone" size="1.15em" />
             <span>LinkedIn</span>
           </NuxtLink>
 

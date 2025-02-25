@@ -31,24 +31,26 @@ defineProps<{
           :alt="`${name} project's thumbnail`"
         />
       </a>
+
+      <div class="card-body">
+        <div class="text-primary text-truncate fw-semibold fs-5 mb-1">
+          <a
+              :href="url"
+              target="blank"
+              rel="noopener"
+          >
+            {{ name }}
+          </a>
+        </div>
+
+        <p>
+          {{ description }}
+        </p>
+
+        <span class="small fst-italic text-body-secondary">
+        {{ tags.join(', ') }}
+      </span>
+      </div>
     </div>
-
-    <div class="text-primary text-truncate fw-semibold fs-5 mt-3 mb-1">
-      <a
-        :href="url"
-        target="blank"
-        rel="noopener"
-      >
-        {{ name }}
-      </a>
-    </div>
-
-    <p>
-      {{ description }}
-    </p>
-
-    <span class="small fst-italic">
-      {{ tags.join(', ') }}
-    </span>
   </div>
 </template>

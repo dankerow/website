@@ -80,8 +80,6 @@ header {
 
 		.nav-item {
 			.nav-link {
-				color: #fff;
-
 				&:before {
 					content: '~/ ';
 					color: var(--bs-primary);
@@ -106,8 +104,12 @@ header {
 					}
 				}
 
-				&.nuxt-link-exact-active {
+				&.router-link-exact-active, &.router-link-active {
 					color: var(--bs-primary);
+
+          &:after {
+            opacity: 1;
+          }
 				}
 			}
 		}

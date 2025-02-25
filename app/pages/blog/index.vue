@@ -71,7 +71,7 @@ const selectTag = (tag: string) => {
       Blog
     </h1>
 
-    <p class="mb-5 border-start border-3 border-light-subtle ps-2 mb-6">
+    <p class="lead mb-6">
       A collection of my thoughts and ideas.
     </p>
 

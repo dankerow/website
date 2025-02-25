@@ -42,7 +42,7 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
         Projects
       </h2>
 
-      <p class="mb-5 border-start border-3 border-light-subtle ps-2">
+      <p class="mb-5 lead">
         Some of the projects I've worked on.
       </p>
 
