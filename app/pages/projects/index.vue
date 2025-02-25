@@ -7,6 +7,10 @@ interface Repository {
   html_url: string
 }
 
+definePageMeta({
+  title: 'Projects'
+})
+
 const projects = [
   {
     name: 'MIA Gospel',
@@ -41,7 +45,7 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
       Projects
     </h1>
 
-    <p class="mb-5 border-start border-3 border-light-subtle ps-2 mb-6">
+    <p class="lead mb-6">
       Projects I've worked on.
     </p>
 
