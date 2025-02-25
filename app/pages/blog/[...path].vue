@@ -14,7 +14,7 @@ useSeoMeta({
 const articleDate = formatDate(article.value.date)
 const { onLoaded } = useNuxtApp().$scripts['bootstrap-npm']
 
-const articleContent = article.value.body.value.map((item: any) => {
+const articleContent = article.value.body.value.map((item: string | string[]) => {
   if (typeof item === 'string') {
     return item
   } else if (Array.isArray(item) && item.length > 2 && typeof item[2] === 'string') {
@@ -24,7 +24,7 @@ const articleContent = article.value.body.value.map((item: any) => {
 }).join(' ')
 
 
-const calculateReadingTime = (text: string): string => {
+const calculateReadingTime = (text: string) => {
   const wordsPerMinute = 238
   const words = text.split(/\s+/).length
   const minutes = Math.ceil(words / wordsPerMinute);
