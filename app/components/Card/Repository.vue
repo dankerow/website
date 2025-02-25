@@ -38,10 +38,10 @@ const getIconName = (language?: string) => {
   <div class="card hoverable shadow-sm">
     <div class="card-body min-vh-50">
       <div class="card-title text-truncate mb-3">
-        <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" size="1em" />
+        <Icon :name="getIconName(language?.toLowerCase())" class="align-middle d-inline-block me-2 text-gray-100" size="1.1em" />
         <span class="align-middle d-inline-block text-white">{{ name }}</span>
 
-        <Icon name="material-symbols:open-in-new" class="open-new float-end" size="1.15em" />
+        <Icon name="material-symbols:open-in-new" class="open-new float-end" size="1.2em" />
       </div>
 
       <p class="card-text text-gray-300">
