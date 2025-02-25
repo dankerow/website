@@ -12,6 +12,43 @@ useSeoMeta({
 })
 
 const articleDate = formatDate(article.value.date)
+const { onLoaded } = useNuxtApp().$scripts['bootstrap-npm']
+
+const articleContent = article.value.body.value.map((item: any) => {
+  if (typeof item === 'string') {
+    return item
+  } else if (Array.isArray(item) && item.length > 2 && typeof item[2] === 'string') {
+    return item[2]
+  }
+  return ''
+}).join(' ')
+
+
+const calculateReadingTime = (text: string): string => {
+  const wordsPerMinute = 238
+  const words = text.split(/\s+/).length
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return minutes > 1 ? `${minutes} minutes` : `${minutes} minute`
+}
+
+const readingTime = calculateReadingTime(articleContent)
+
+defineOgImage({
+  ...article.value.ogImage,
+  minRead: readingTime,
+})
+
+onMounted(() => {
+  onLoaded(() => {
+    const scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance('#__nuxt', {
+      target: '#table-of-content',
+      smoothScroll: true,
+      offset: 0
+    })
+
+    scrollSpy.refresh()
+  })
+})
 </script>
 
 <template>
@@ -26,7 +63,7 @@ const articleDate = formatDate(article.value.date)
     </NuxtLink>
 
     <div class="t">
-      <h1 class="text-white text-uppercase">
+      <h1 class="text-white">
         {{ article.title }}
       </h1>
 
@@ -36,18 +73,18 @@ const articleDate = formatDate(article.value.date)
 
       <div class="row justify-content-between fs-6">
         <div class="col-auto">
-          <div v-if="article.date" class="d-inline-flex align-items-center py-1 text-body-secondary">
-            <Icon
-              name="solar:calendar-bold-duotone"
-              class="me-2"
-            />
-
+          <div v-if="article.date" class="d-inline-flex align-items-center py-1 text-body-secondary me-2">
             {{ articleDate }}
+          </div>
+
+          <div class="d-inline-flex align-items-center py-1 text-body-secondary">
+            ·
+            {{ readingTime }}
           </div>
         </div>
 
         <div class="col-auto">
-          <div v-if="article.tags" class="d-inline-flex align-items-center py-1 text-body-secondary text-capitalize">
+          <div v-if="article.tags" class="d-inline-flex align-items-center py-1 text-body-secondary">
             <Icon
               name="solar:hashtag-square-bold-duotone"
               class="me-2"
@@ -65,7 +102,7 @@ const articleDate = formatDate(article.value.date)
       <div
         class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 justify-content-center py-5"
       >
-        <div class="col col-lg-9 order-2 order-lg-1">
+        <div class="col col-lg-9 order-2 order-lg-1 markdown-body">
           <ContentRenderer :value="article">
             <template #empty>
               <p>No content found.</p>
