@@ -37,8 +37,8 @@ const siteName = computed(() => {
         </p>
       </div>
 
-      <div class="flex flex-row justify-center items-center text-left w-full">
-        <p v-if="siteName" style="font-size: 25px;" class="font-bold">
+      <div class="flex flex-row items-center text-left w-full border-t-2 border-[#92A4B8] pt-4">
+        <p v-if="siteName" class="font-bold text-[25px]">
           {{ siteName }}
         </p>
       </div>
