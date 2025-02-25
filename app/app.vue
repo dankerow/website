@@ -1,20 +1,24 @@
 <script setup lang="ts">
-const description = 'Software developer, building whatever in my bed.'
-
 const route = useRoute()
+
+const title = computed(() => route.meta.title as string ? `${route.meta.title} - Dan Mutombo` : 'Dan Mutombo')
+const description = computed(() => route.meta.description as string ?? 'Software developer, building whatever in my bed')
 
 useHead({
   title: () => route.meta.title as string || '',
   titleTemplate: title => (title ? `${title} - Dan Mutombo` : 'Dan Mutombo'),
   meta: [
-    { name: 'description', content: route.meta.description as string ?? description },
+    {
+      name: 'description',
+      content: description
+    },
     {
       name: 'twitter:title',
-      content: route.meta.title as string ? `${route.meta.title} - Dan Mutombo` : 'Dan Mutombo'
+      content: title
     },
     {
       name: 'twitter:description',
-      content: route.meta.description as string ?? description
+      content: description
     },
     {
       name: 'twitter:card',
@@ -22,7 +26,7 @@ useHead({
     },
     {
       name: 'og:title',
-      content: route.meta.title as string ? `${route.meta.title} - Dan Mutombo` : 'Dan Mutombo',
+      content: title
     },
     {
       name: 'og:url',
@@ -30,7 +34,7 @@ useHead({
     },
     {
       name: 'og:description',
-      content: route.meta.description as string ?? description
+      content: description
     }
   ],
   link: [
