@@ -4,12 +4,13 @@ const description = 'Software developer, building whatever in my bed.'
 const route = useRoute()
 
 useHead({
-  title: () => route.meta.title as string ?? 'Dan Mutombo',
+  title: () => route.meta.title as string || '',
+  titleTemplate: title => (title ? `${title} - Dan Mutombo` : 'Dan Mutombo'),
   meta: [
     { name: 'description', content: route.meta.description as string ?? description },
     {
       name: 'twitter:title',
-      content: route.meta.title as string ?? 'Dan Mutombo'
+      content: route.meta.title as string ? `${route.meta.title} - Dan Mutombo` : 'Dan Mutombo'
     },
     {
       name: 'twitter:description',
@@ -21,7 +22,7 @@ useHead({
     },
     {
       name: 'og:title',
-      content: route.meta.title as string ?? 'Dan Mutombo',
+      content: route.meta.title as string ? `${route.meta.title} - Dan Mutombo` : 'Dan Mutombo',
     },
     {
       name: 'og:url',
@@ -43,9 +44,7 @@ useScriptNpm({
   version: '5.3.3'
 })
 
-defineOgImage({
-  component: 'Page'
-})
+defineOgImageComponent('Page')
 </script>
 
 <template>
