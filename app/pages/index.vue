@@ -11,7 +11,7 @@ definePageMeta({
         sameAs: [
           'https://github.com/dankerow',
           'https://www.linkedin.com/in/dan-mutombo/',
-          'https://twitter.com/dankerow'
+          'https://x.com/dankerow'
         ],
         url: 'https://danmutombo.com/'
       },
