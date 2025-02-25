@@ -4,7 +4,7 @@ const year = new Date().getFullYear()
 
 <template>
   <footer class="text-center">
-    <div class="footer-social py-3">
+    <div class="footer-social border-bottom py-3">
       <div class="container">
         <a href="https://github.com/dankerow" aria-label="GitHub" target="_blank">
           <Icon name="ph:github-logo-duotone" />
@@ -33,8 +33,6 @@ const year = new Date().getFullYear()
 <style lang="scss" scoped>
 footer {
 	.footer-social {
-		border-bottom: 1px solid rgba(38, 38, 38, 0.8);
-
 		a {
 			&:not(:last-child) {
 				margin-right: 1.875rem;
@@ -43,7 +41,7 @@ footer {
 	}
 
 	.footer-bottom {
-		font-size: 12px;
+		font-size: 13px;
 	}
 }
 </style>
