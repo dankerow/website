@@ -30,10 +30,12 @@ const flattenLinks = (links: Link[]) => {
     <button
         data-bs-toggle="collapse"
         data-bs-target="#toc-collapse"
-        class="btn btn-link d-md-none p-0"
+        class="btn btn-link toc-toggle d-md-none mb-3 mb-md-none"
         aria-controls="toc-collapse"
     >
       Table of contents
+
+      <Icon name="ph:arrows-out-line-vertical" class="ms-2" />
     </button>
 
     <div class="fs-6 text-white d-none d-md-block mb-2">
@@ -46,12 +48,12 @@ const flattenLinks = (links: Link[]) => {
       <nav id="table-of-content" class="py-1 rounded">
         <ul class="mb-0 list-unstyled">
           <li
-              v-for="link of flattenLinks(links)"
-              :key="link.id"
-              class="pb-2 small"
-              :class="{
-                'ms-3 pb-2': link.depth === 3
-              }"
+            v-for="link of flattenLinks(links)"
+            :key="link.id"
+            class="pb-2 small"
+            :class="{
+              'ms-3 pb-2': link.depth === 3
+            }"
           >
             <NuxtLink :to="`#${link.id}`">
               {{ link.text }}
@@ -64,6 +66,12 @@ const flattenLinks = (links: Link[]) => {
 </template>
 
 <style lang="scss" scoped>
+.toc-toggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--bs-gray-gray-700);
+}
+
 @media (min-width: 768px) {
   #toc-collapse {
     display: block !important;
@@ -79,6 +87,24 @@ const flattenLinks = (links: Link[]) => {
     z-index: 1;
     height: calc(100vh - 7rem);
     overflow-y: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .toc-toggle {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #toc-collapse {
+    nav {
+      padding: 1.25rem 1.25rem 1.25rem 1rem;
+      background-color: var(--bs-tertiary-bg);
+      border: 1px solid var(--bs-border-color);
+      border-radius: var(--bs-border-radius);
+    }
   }
 }
 
