@@ -53,13 +53,12 @@ onMounted(() => {
 
 <template>
   <main class="container pt-12 pb-4">
-    <NuxtLink to="/blog" class="d-inline-flex align-items-center btn btn-link mb-8 ps-0">
+    <NuxtLink to="/blog" class="d-inline-flex align-items-center text-decoration-underline link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-10 link-underline-opacity-75-hover mb-4 mb-md-6 mb-lg-8 ps-0">
       <Icon
-          name="ph:arrow-left-light"
-          class="me-2"
+        name="ph:terminal"
+        class="me-3"
       />
-
-      Back to blog posts
+      cd ..
     </NuxtLink>
 
     <div class="t">
