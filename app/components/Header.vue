@@ -1,5 +1,5 @@
 <template>
-  <header class="top-0 start-0 end-0 position-fixed w-100">
+  <header class="top-0 start-0 end-0 position-fixed w-100 z-2">
     <nav class="navbar navbar-dark navbar-expand-md">
       <div class="container">
         <NuxtLink to="/" class="navbar-brand">
@@ -47,8 +47,6 @@
 
 <style lang="scss" scoped>
 header {
-	z-index: 2;
-
 	.navbar {
     background-color: rgba(var(--bs-body-bg-rgb), 0.3);
 		border-bottom: 1px solid var(--bs-border-color-translucent);
