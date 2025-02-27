@@ -1,15 +1,13 @@
 <script setup lang="ts">
-const path = useRoute().path
-const { data: article } = await useAsyncData('article', () => queryCollection('blog').path(path).first())
+const route = useRoute()
+const { data: article } = await useAsyncData('article', () => queryCollection('blog').path(route.path).first())
 
 if (!article.value) {
   throw createError({ statusCode: 404, message: 'The article you are looking for couldn\'t be found.' })
 }
 
-useSeoMeta({
-  title: article.value.title,
-  description: article.value.description
-})
+route.meta.title = article.value.title
+route.meta.description = article.value.description
 
 const articleDate = formatDate(article.value.date)
 const { onLoaded } = useNuxtApp().$scripts['bootstrap-npm']
