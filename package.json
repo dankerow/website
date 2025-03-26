@@ -27,7 +27,7 @@
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vite-pwa/nuxt": "^0.10.7",
     "eslint": "9.23.0",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.16.1",
     "nuxt-og-image": "^5.0.5",
     "nuxt-purgecss": "^2.0.0",
     "sass": "^1.86.0",
