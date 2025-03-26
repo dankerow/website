@@ -3,7 +3,8 @@
   "extends": [
     "config:recommended",
     "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    "github>nuxt/renovate-config-nuxt"
   ],
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
