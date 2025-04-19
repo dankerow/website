@@ -45,7 +45,7 @@ useHead({
 useScriptNpm({
   packageName: 'bootstrap',
   file: 'dist/js/bootstrap.min.js',
-  version: '5.3.3'
+  version: '5.3.5'
 })
 
 defineOgImageComponent('Page')
