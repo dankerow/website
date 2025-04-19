@@ -25,7 +25,7 @@
     "@nuxtjs/sitemap": "^7.2.10",
     "@types/node": "^22.14.1",
     "@vite-pwa/assets-generator": "^0.2.6",
-    "@vite-pwa/nuxt": "^0.10.8",
+    "@vite-pwa/nuxt": "^1.0.0",
     "eslint": "9.25.0",
     "nuxt": "^3.16.2",
     "nuxt-og-image": "^5.1.2",
