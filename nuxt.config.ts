@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+  devtools: {
+    enabled: true
+  },
+
   future: {
     compatibilityVersion: 4,
   },
@@ -6,14 +10,6 @@ export default defineNuxtConfig({
   nitro: {
     minify: true,
     compressPublicAssets: true,
-    routeRules: {
-      '/': {
-        swr: true
-      },
-      '/blog/**': {
-        swr: true
-      }
-    },
     publicAssets: [
       {
         dir: 'public/img',
@@ -26,6 +22,10 @@ export default defineNuxtConfig({
   experimental: {
     buildCache: true,
     typedPages: true
+  },
+
+  features: {
+    inlineStyles: false
   },
 
   app: {
@@ -71,16 +71,15 @@ export default defineNuxtConfig({
      markdown: {
        highlight: {
          theme: 'github-dark',
-         preload: ['js', 'ts', 'json', 'vue']
+         langs: ['js', 'ts', 'json', 'bash'],
+         preload: ['js', 'ts', 'bash']
        }
      }
    }
   },
 
   fonts: {
-    experimental: {
-      processCSSVariables: true
-    },
+    processCSSVariables: true,
     families: [
       { name: 'Rubik', weights: [300, 400, 500, 600, 700] }
     ]
@@ -120,14 +119,8 @@ export default defineNuxtConfig({
 
   $production: {
     modules: [
-      'nuxt-purgecss',
       '@nuxtjs/sitemap'
-    ],
-
-    purgecss: {
-      keyframes: true,
-      safelist: ['svg']
-    }
+    ]
   },
 
   compatibilityDate: '2025-01-31'
