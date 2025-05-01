@@ -1,31 +1,28 @@
 export default defineNuxtConfig({
-  devtools: {
-    enabled: true
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/content',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxtjs/critters',
+    'nuxt-og-image'
+  ],
+
+  $development: {
+    sourcemap: true,
+    debug: true,
   },
 
-  future: {
-    compatibilityVersion: 4,
-  },
-
-  nitro: {
-    minify: true,
-    compressPublicAssets: true,
-    publicAssets: [
-      {
-        dir: 'public/img',
-        maxAge: 24 * 60 * 60 * 365, // 1 year (versioned)
-        baseURL: 'img'
-      }
+  $production: {
+    modules: [
+      '@nuxtjs/sitemap'
     ]
   },
 
-  experimental: {
-    buildCache: true,
-    typedPages: true
-  },
-
-  features: {
-    inlineStyles: false
+  devtools: {
+    enabled: true
   },
 
   app: {
@@ -54,27 +51,54 @@ export default defineNuxtConfig({
     '@/assets/scss/bedrock.scss'
   ],
 
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/content',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/scripts',
-    '@nuxtjs/critters',
-    'nuxt-og-image'
-  ],
+  site: {
+    url: process.env.BASE_URL,
+    name: 'danker'
+  },
 
   content: {
-   build: {
-     markdown: {
-       highlight: {
-         theme: 'github-dark',
-         langs: ['js', 'ts', 'json', 'bash'],
-         preload: ['js', 'ts', 'bash']
-       }
-     }
-   }
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: ['js', 'ts', 'json', 'bash'],
+          preload: ['js', 'ts', 'bash']
+        }
+      }
+    }
+  },
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  features: {
+    inlineStyles: false
+  },
+
+  experimental: {
+    buildCache: true,
+    typedPages: true
+  },
+
+  compatibilityDate: '2025-01-31',
+
+  nitro: {
+    minify: true,
+    compressPublicAssets: true,
+    publicAssets: [
+      {
+        dir: 'public/img',
+        maxAge: 24 * 60 * 60 * 365, // 1 year (versioned)
+        baseURL: 'img'
+      }
+    ]
+  },
+
+  eslint: {
+    config: {
+      stylistic: true
+    }
   },
 
   fonts: {
@@ -88,23 +112,5 @@ export default defineNuxtConfig({
     defaultScriptOptions: {
       bundle: true
     }
-  },
-
-  site: {
-    url: process.env.BASE_URL,
-    name: 'danker'
-  },
-
-  $development: {
-    debug: true,
-    sourcemap: true,
-  },
-
-  $production: {
-    modules: [
-      '@nuxtjs/sitemap'
-    ]
-  },
-
-  compatibilityDate: '2025-01-31'
+  }
 })
