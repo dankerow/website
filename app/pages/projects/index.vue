@@ -26,14 +26,14 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
   default: () => [],
   transform: (data: Repository[]) => {
     return data
-        .map((repo) => ({
-          name: repo.name,
-          language: repo.language,
-          stargazers_count: repo.stargazers_count,
-          description: repo.description,
-          html_url: repo.html_url
-        }))
-        .sort((a, b) => b?.stargazers_count - a?.stargazers_count)
+      .map(repo => ({
+        name: repo.name,
+        language: repo.language,
+        stargazers_count: repo.stargazers_count,
+        description: repo.description,
+        html_url: repo.html_url
+      }))
+      .sort((a, b) => b?.stargazers_count - a?.stargazers_count)
   },
   deep: false
 })
@@ -51,9 +51,9 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
       <div
-          v-for="(project, index) in projects"
-          :key="`project-${index}`"
-          class="col"
+        v-for="(project, index) in projects"
+        :key="`project-${index}`"
+        class="col"
       >
         <CardProject
           v-bind="project"
@@ -68,9 +68,19 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
       GitHub repositories sorted by stars.
     </p>
 
-    <div v-if="status === 'pending'" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
-      <div v-for="i in 6" :key="`skeleton-${i}`" class="col">
-        <div class="card shadow-sm" aria-hidden="true">
+    <div
+      v-if="status === 'pending'"
+      class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4"
+    >
+      <div
+        v-for="i in 6"
+        :key="`skeleton-${i}`"
+        class="col"
+      >
+        <div
+          class="card shadow-sm"
+          aria-hidden="true"
+        >
           <div class="card-body placeholder-glow">
             <h4 class="card-title text-truncate mb-4">
               <span class="rounded placeholder col-1 me-2" />
@@ -96,17 +106,17 @@ const { data: repos, status } = await useLazyFetch('https://api.github.com/users
     <div v-else>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
         <div
-            v-for="(repo, index) in repos"
-            :key="`repo-${index}`"
-            class="col"
+          v-for="(repo, index) in repos"
+          :key="`repo-${index}`"
+          class="col"
         >
           <CardRepository
-              :name="repo.name"
-              :language="repo.language"
-              :stars="repo.stargazers_count"
-              :description="repo.description"
-              :url="repo.html_url"
-              class="h-100"
+            :name="repo.name"
+            :language="repo.language"
+            :stars="repo.stargazers_count"
+            :description="repo.description"
+            :url="repo.html_url"
+            class="h-100"
           />
         </div>
       </div>

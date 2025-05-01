@@ -23,7 +23,10 @@ const postDate = formatDate(props.post.date)
       </p>
 
       <div class="small text-body-secondary d-inline-flex align-items-center">
-        <Icon name="ph:calendar-light" class="me-1" />
+        <Icon
+          name="ph:calendar-light"
+          class="me-1"
+        />
         {{ postDate }}
       </div>
     </div>
