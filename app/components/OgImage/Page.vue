@@ -21,7 +21,8 @@ const siteName = computed(() => {
 
 <template>
   <div
-    class="w-full h-full flex text-white items-center justify-center" :style="{
+    class="w-full h-full flex text-white items-center justify-center"
+    :style="{
       background: 'linear-gradient(rgb(12, 12, 12), rgb(5, 5, 5))',
       color: theme
     }"
@@ -32,13 +33,19 @@ const siteName = computed(() => {
           {{ title }}
         </h1>
 
-        <p v-if="description" class="text-[35px] text-gray-300">
+        <p
+          v-if="description"
+          class="text-[35px] text-gray-300"
+        >
           {{ description }}
         </p>
       </div>
 
       <div class="flex flex-row items-center text-left w-full border-t-2 border-[#92A4B8] pt-4">
-        <p v-if="siteName" class="font-bold text-[25px]">
+        <p
+          v-if="siteName"
+          class="font-bold text-[25px]"
+        >
           {{ siteName }}
         </p>
       </div>

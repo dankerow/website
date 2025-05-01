@@ -14,7 +14,11 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === '
         :href="`#${id}`"
         class="anchor"
       >
-        <Icon name="ph:link-duotone" class="octicon octicon-link" size="16px" />
+        <Icon
+          name="ph:link-duotone"
+          class="octicon octicon-link"
+          size="16px"
+        />
       </a>
 
       <slot />

@@ -11,10 +11,14 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === '
   <h3 :id="id">
     <template v-if="id && generate">
       <a
-          :href="`#${id}`"
-          class="anchor"
+        :href="`#${id}`"
+        class="anchor"
       >
-        <Icon name="ph:link-duotone" class="octicon octicon-link" size="16px" />
+        <Icon
+          name="ph:link-duotone"
+          class="octicon octicon-link"
+          size="16px"
+        />
       </a>
 
       <slot />

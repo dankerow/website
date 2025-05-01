@@ -28,14 +28,17 @@ const flattenLinks = (links: Link[]) => {
 <template>
   <div class="toc px-sm-2 ps-sm-3 w-100">
     <button
-        data-bs-toggle="collapse"
-        data-bs-target="#toc-collapse"
-        class="btn btn-link toc-toggle d-md-none mb-3 mb-md-none"
-        aria-controls="toc-collapse"
+      data-bs-toggle="collapse"
+      data-bs-target="#toc-collapse"
+      class="btn btn-link toc-toggle d-md-none mb-3 mb-md-none"
+      aria-controls="toc-collapse"
     >
       Table of contents
 
-      <Icon name="ph:arrows-out-line-vertical" class="ms-2" />
+      <Icon
+        name="ph:arrows-out-line-vertical"
+        class="ms-2"
+      />
     </button>
 
     <div class="fs-6 text-white d-none d-md-block mb-2">
@@ -44,8 +47,14 @@ const flattenLinks = (links: Link[]) => {
 
     <hr class="d-none d-md-block">
 
-    <div id="toc-collapse" class="collapse">
-      <nav id="table-of-content" class="py-1 rounded">
+    <div
+      id="toc-collapse"
+      class="collapse"
+    >
+      <nav
+        id="table-of-content"
+        class="py-1 rounded"
+      >
         <ul class="mb-0 list-unstyled">
           <li
             v-for="link of flattenLinks(links)"
