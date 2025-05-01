@@ -62,7 +62,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxtjs/critters',
-    '@vite-pwa/nuxt',
     'nuxt-og-image'
   ],
 
@@ -83,22 +82,6 @@ export default defineNuxtConfig({
     families: [
       { name: 'Rubik', weights: [300, 400, 500, 600, 700] }
     ]
-  },
-
-  pwa: {
-    manifest: {
-      name: 'Dan Mutombo',
-      start_url: '/',
-      short_name: 'Dan M.',
-      lang: 'en',
-      display: 'fullscreen',
-      background_color: '#1c2125',
-      theme_color: '#92a4b8'
-    },
-    pwaAssets: {
-      config: true
-    },
-    disable: true
   },
 
   scripts: {

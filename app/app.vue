@@ -53,8 +53,6 @@ defineOgImageComponent('Page')
 
 <template>
   <div>
-    <NuxtPwaAssets />
-
     <Header />
 
     <NuxtPage />
