@@ -66,7 +66,8 @@ export default defineNuxtConfig({
           preload: ['js', 'ts', 'bash']
         }
       }
-    }
+    },
+    experimental: { nativeSqlite: true }
   },
 
   future: {
