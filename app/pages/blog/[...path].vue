@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: article } = await useAsyncData('article', () => queryCollection('blog').path(route.path).first())
+const { data: article } = await useAsyncData('article',
+  () => queryCollection('blog').path(route.path).first(),
+  {
+    deep: false
+  }
+)
 
 if (!article.value) {
   throw createError({ statusCode: 404, message: 'The article you are looking for couldn\'t be found.' })
@@ -21,11 +26,10 @@ const articleContent = article.value.body.value.map((item: string | string[]) =>
   return ''
 }).join(' ')
 
-
 const calculateReadingTime = (text: string) => {
   const wordsPerMinute = 120
   const words = text.split(/\s+/).length
-  const minutes = Math.ceil(words / wordsPerMinute);
+  const minutes = Math.ceil(words / wordsPerMinute)
   return minutes > 1 ? `${minutes} minutes` : `${minutes} minute`
 }
 
@@ -51,7 +55,10 @@ onMounted(() => {
 
 <template>
   <main class="container pt-12 pb-4">
-    <NuxtLink to="/blog" class="d-inline-flex align-items-center text-decoration-underline link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-10 link-underline-opacity-75-hover mb-4 mb-md-6 mb-lg-8 ps-0">
+    <NuxtLink
+      to="/blog"
+      class="d-inline-flex align-items-center text-decoration-underline link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-10 link-underline-opacity-75-hover mb-4 mb-md-6 mb-lg-8 ps-0"
+    >
       <Icon
         name="ph:terminal"
         class="me-3"
@@ -70,7 +77,10 @@ onMounted(() => {
 
       <div class="row justify-content-between fs-6">
         <div class="col-auto">
-          <div v-if="article.date" class="d-inline-flex align-items-center py-1 text-body-secondary me-2">
+          <div
+            v-if="article.date"
+            class="d-inline-flex align-items-center py-1 text-body-secondary me-2"
+          >
             {{ articleDate }}
           </div>
 
@@ -81,7 +91,10 @@ onMounted(() => {
         </div>
 
         <div class="col-auto">
-          <div v-if="article.tags" class="d-inline-flex align-items-center py-1 text-body-secondary">
+          <div
+            v-if="article.tags"
+            class="d-inline-flex align-items-center py-1 text-body-secondary"
+          >
             <Icon
               name="solar:hashtag-square-bold-duotone"
               class="me-2"
