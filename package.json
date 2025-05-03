@@ -12,7 +12,8 @@
   },
   "author": "Dan Mutombo",
   "dependencies": {
-    "bootstrap": "5.3.5"
+    "bootstrap": "5.3.5",
+    "motion-v": "^1.0.1"
   },
   "devDependencies": {
     "@nuxt/content": "^3.5.1",

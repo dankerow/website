@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxtjs/critters',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'motion-v/nuxt'
   ],
 
   $development: {
