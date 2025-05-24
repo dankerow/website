@@ -53,7 +53,7 @@ $colors: (
 	"gray-dark":  $gray-900
 ) !default;
 
-$primary:       rgb(146, 164, 184) !default;
+$primary:       rgb(255, 255, 255) !default;
 $secondary:     $gray-400 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -115,7 +115,7 @@ $spacers: (
 // Body
 
 $body-color:                   rgb(180, 180, 180) !default;
-$body-bg:                      rgb(12, 12, 12) !default;
+$body-bg:                      rgb(11, 11, 11) !default;
 $body-secondary-color:         rgba($body-color, .75) !default;
 $body-secondary-bg:            $gray-800 !default;
 $body-tertiary-color:          rgba($body-color, .5) !default;
@@ -130,22 +130,16 @@ $link-shade-percentage:                   20% !default;
 $link-color:                   tint-color($primary, 40%) !default;
 $link-hover-color:             shift-color($link-color, -$link-shade-percentage) !default;
 
-// Paragraphs
-
-$paragraph-margin-bottom:   .675rem !default;
-
 // Components
 
 $border-width:                1px !default;
 
-$border-color:                 $gray-900  !default;
+$border-color:                 $gray-800  !default;
 $border-color-translucent:     rgba($white, .05) !default;
 
-$border-color:                $gray-300 !default;
-
-$border-radius:               .25rem !default;
-$border-radius-sm:            .2rem !default;
-$border-radius-lg:            .3rem !default;
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .4rem !default;
 
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
@@ -176,7 +170,7 @@ $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
 
-$hr-border-color:             $gray-900 !default;
+$hr-border-color:             $gray-800 !default;
 $hr-opacity:                  .9 !default;
 
 // Buttons + Forms
@@ -224,6 +218,9 @@ $accordion-icon-active-color-dark:  $primary-text-emphasis !default;
 
 $accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
 $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+
+// Cards
+$card-border-radius:            		 0.75rem !default;
 
 // Modals
 
