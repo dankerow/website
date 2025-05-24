@@ -115,8 +115,8 @@ const hasImage = computed(() => !!image)
 
       <div class="tags d-flex flex-wrap gap-2">
         <span
-          v-for="(tag, index) in tags"
-          :key="index"
+          v-for="(tag, tagIndex) in tags"
+          :key="tagIndex"
           class="tag"
         >
           {{ tag }}
