@@ -48,12 +48,11 @@ useScriptNpm({
   version: '5.3.5'
 })
 
-useScriptPlausibleAnalytics({
+useScriptRybbitAnalytics({
   scriptInput: {
-    'src': 'https://plausible.vtower.me/js/script.js',
-    'data-api': 'https://plausible.vtower.me/api/event'
+    src: 'https://rybbit.vtower.me/api/script.js'
   },
-  domain: 'danmutombo.com'
+  siteId: '1'
 })
 
 defineOgImageComponent('Page')
