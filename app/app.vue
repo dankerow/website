@@ -45,7 +45,7 @@ useHead({
 useScriptNpm({
   packageName: 'bootstrap',
   file: 'dist/js/bootstrap.min.js',
-  version: '5.3.6'
+  version: '5.3.7'
 })
 
 useScriptRybbitAnalytics({
