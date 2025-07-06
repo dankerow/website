@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxtjs/critters',
+    '@nuxtjs/seo',
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
@@ -14,12 +15,6 @@ export default defineNuxtConfig({
   $development: {
     sourcemap: true,
     debug: true,
-  },
-
-  $production: {
-    modules: [
-      '@nuxtjs/sitemap'
-    ]
   },
 
   devtools: {
@@ -53,7 +48,6 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: process.env.BASE_URL,
     name: 'danker'
   },
 

@@ -12,6 +12,7 @@
   },
   "author": "Dan Mutombo",
   "dependencies": {
+    "@nuxtjs/seo": "^3.1.0",
     "bootstrap": "5.3.7",
     "motion-v": "^1.4.0"
   },
@@ -23,7 +24,6 @@
     "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "^0.11.8",
     "@nuxtjs/critters": "^0.9.0",
-    "@nuxtjs/sitemap": "^7.4.3",
     "@types/node": "^22.16.0",
     "eslint": "9.30.1",
     "nuxt": "^3.17.6",
