@@ -1,13 +1,13 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxtjs/critters',
-    '@nuxtjs/seo',
     'nuxt-og-image',
     'motion-v/nuxt'
   ],
