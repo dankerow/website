@@ -77,7 +77,7 @@ const hasImage = computed(() => !!image)
       once: true,
       amount: 0.5
     }"
-    :transition="{ duration: 0.25, delay: 0.45 + index * 0.1 }"
+    :transition="{ duration: 0.25, delay: 0.15 + index * 0.1 }"
   >
     <div class="position-relative overflow-hidden">
       <NuxtImg
