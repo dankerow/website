@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
+import { NuxtLink } from '#components'
+
+const MotionNuxtLink = motion.create(NuxtLink)
 
 const { getFeaturedProjects } = useProjects()
 const isLinkHovered = ref(false)
@@ -67,36 +70,30 @@ const isLinkHovered = ref(false)
         </div>
       </div>
 
-      <AnimatePresence>
-        <Motion
-          as-child
-          :initial="{ opacity: 0, x: -10 }"
-          :in-view="{ opacity: 1, x: 0 }"
-          :in-view-options="{
-            once: true,
-            amount: 0.5
-          }"
-          :transition="{ duration: 0.5, delay: 0.55 }"
-          :animate="isLinkHovered ? { scale: 1.05 } : {}"
-        >
-          <NuxtLink
-            to="/projects"
-            class="d-inline-flex align-items-center btn btn-link link-body-emphasis link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover mt-4 ps-0"
-            style="text-decoration: underline;"
+      <MotionNuxtLink
+        to="/projects"
+        :initial="{ opacity: 0, x: -10 }"
+        :in-view="{ opacity: 1, x: 0 }"
+        :in-view-options="{
+          once: true,
+          amount: 0.5
+        }"
+        :transition="{ duration: 0.25 }"
+        :animate="isLinkHovered ? { scale: 1.05 } : {}"
+        class="d-inline-flex align-items-center btn btn-link link-body-emphasis link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover mt-4 ps-0"
+        style="text-decoration: underline;"
 
-            @mouseenter="isLinkHovered = true"
-            @mouseleave="isLinkHovered = false"
-          >
-            View all projects
+        @mouseenter="isLinkHovered = true"
+        @mouseleave="isLinkHovered = false"
+      >
+        View all projects
 
-            <Icon
-              name="ph:arrow-right-light"
-              class="ms-2"
-              size="1.25em"
-            />
-          </NuxtLink>
-        </Motion>
-      </AnimatePresence>
+        <Icon
+          name="ph:arrow-right-light"
+          class="ms-2"
+          size="1.25em"
+        />
+      </MotionNuxtLink>
     </div>
   </div>
 </template>

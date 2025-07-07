@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { motion, AnimatePresence } from 'motion-v'
+import { motion } from 'motion-v'
+import { NuxtLink } from '#components'
 
 interface SpotifyData {
   listening: boolean
@@ -11,6 +12,8 @@ const { onLoaded: onGradientLoaded } = useScript({
   src: '/js/gradient.min.js',
   defer: true
 })
+
+const MotionNuxtLink = motion.create(NuxtLink)
 
 const mainTechs = [
   {
@@ -309,35 +312,31 @@ onUnmounted(() => {
 
           <div class="col-md-8">
             <div class="social-row d-flex flex-wrap justify-content-md-end gap-2">
-              <Motion
-                as-child
+              <MotionNuxtLink
+                v-for="(link, index) in socialLinks"
+                :key="index"
                 :initial="{ opacity: 0, y: -20 }"
                 :in-view="{ opacity: 1, y: 0 }"
                 :in-view-options="{
                   once: true,
                   margin: '0px 0px -20px 0px',
                 }"
-                :transition="{ duration: 0.5, delay: 0.45 }"
+                :transition="{ duration: 0.25, delay: 0.45 + index * 0.1 }"
+                :href="link.url"
+                class="social-pill"
+                :aria-label="link.name"
+                :rel="link.name === 'Email' ? undefined : 'noopener'"
+                :target="link.name === 'Email' ? undefined : '_blank'"
               >
-                <NuxtLink
-                  v-for="(link, index) in socialLinks"
-                  :key="index"
-                  :href="link.url"
-                  class="social-pill"
-                  :aria-label="link.name"
-                  :rel="link.name === 'Email' ? undefined : 'noopener'"
-                  :target="link.name === 'Email' ? undefined : '_blank'"
-                >
-                  <Icon
-                    :name="link.icon"
-                    size="1.25em"
-                  />
+                <Icon
+                  :name="link.icon"
+                  size="1.25em"
+                />
 
-                  <span class="d-none d-sm-inline ms-2">
-                    {{ link.name }}
-                  </span>
-                </NuxtLink>
-              </Motion>
+                <span class="d-none d-sm-inline ms-2">
+                  {{ link.name }}
+                </span>
+              </MotionNuxtLink>
             </div>
           </div>
         </div>
