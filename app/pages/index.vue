@@ -7,35 +7,6 @@ interface SpotifyData {
   artist: string
 }
 
-definePageMeta({
-  script: [
-    {
-      type: 'application/ld+json',
-      json: {
-        '@context': 'https://schema.org/',
-        '@type': 'Person',
-        'name': 'Dan Mutombo',
-        'jobTitle': 'Software Developer',
-        'sameAs': [
-          'https://github.com/dankerow',
-          'https://www.linkedin.com/in/dan-mutombo/',
-          'https://x.com/dankerow'
-        ],
-        'url': 'https://danmutombo.com/'
-      },
-    },
-    {
-      type: 'application/ld+json',
-      json: {
-        '@context': 'https://schema.org/',
-        '@type': 'WebSite',
-        'url': 'https://danmutombo.com/',
-        'name': 'Dan Mutombo'
-      }
-    }
-  ]
-})
-
 const { onLoaded: onGradientLoaded } = useScript({
   src: '/js/gradient.min.js',
   defer: true

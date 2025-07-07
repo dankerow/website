@@ -56,6 +56,20 @@ useScriptRybbitAnalytics({
 })
 
 defineOgImageComponent('Page')
+
+useSchemaOrg(
+  definePerson({
+    name: 'Dan Mutombo',
+    url: 'https://danmutombo.com',
+    image: 'https://danmutombo.com/icon.png',
+    jobTitle: 'Software Developer',
+    sameAs: [
+      'https://github.com/dankerow',
+      'https://www.linkedin.com/in/dan-mutombo/',
+      'https://x.com/dankerow'
+    ]
+  })
+)
 </script>
 
 <template>
