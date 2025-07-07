@@ -123,7 +123,7 @@ const getRelatedProjects = (job: Job): Project[] => {
             once: true,
             amount: 0.5
           }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.25, delay: 0.2 }"
         >
           Work Experiences
         </motion.h2>
@@ -136,7 +136,7 @@ const getRelatedProjects = (job: Job): Project[] => {
             once: true,
             amount: 0.1
           }"
-          :transition="{ duration: 0.5, delay: 0.35 }"
+          :transition="{ duration: 0.25, delay: 0.35 }"
         />
       </div>
 
@@ -169,7 +169,7 @@ const getRelatedProjects = (job: Job): Project[] => {
                   once: true,
                   amount: 0.5
                 }"
-                :transition="{ duration: 0.5, delay: 0.2 + index * 0.1 }"
+                :transition="{ duration: 0.25 }"
               />
             </div>
 
@@ -182,7 +182,7 @@ const getRelatedProjects = (job: Job): Project[] => {
                   once: true,
                   amount: 0.5
                 }"
-                :transition="{ duration: 0.5, delay: 0.2 + index * 0.1 }"
+                :transition="{ duration: 0.25 }"
               >
                 <div class="experience-header">
                   <div>
