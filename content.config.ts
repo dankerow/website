@@ -1,10 +1,10 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
-import { asOgImageCollection } from 'nuxt-og-image/content'
+import { asSeoCollection } from '@nuxtjs/seo/content'
 
 export default defineContentConfig({
   collections: {
     blog: defineCollection(
-      asOgImageCollection({
+      asSeoCollection({
         type: 'page',
         source: 'blog/**/*.md',
         schema: z.object({
