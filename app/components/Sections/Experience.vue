@@ -231,9 +231,9 @@ const getRelatedProjects = (job: Job): Project[] => {
                   <button
                     class="btn btn-link btn-link-related d-flex align-items-center border-0 bg-transparent p-0"
                     data-bs-toggle="collapse"
-                    href="#collapseExample"
+                    :href="`#collapse-${work.organizationName.replace(/\s+/g, '').toLowerCase()}`"
                     role="button"
-                    aria-controls="collapseExample"
+                    :aria-controls="`collapse-${work.organizationName.replace(/\s+/g, '').toLowerCase()}`"
                     :aria-expanded="expandedJobs.includes(work.organizationName)"
                     @mouseenter="isButtonHovered = true"
                     @mouseleave="isButtonHovered = false"
@@ -261,7 +261,7 @@ const getRelatedProjects = (job: Job): Project[] => {
                   </button>
 
                   <div
-                    id="collapseExample"
+                    :id="`collapse-${work.organizationName.replace(/\s+/g, '').toLowerCase()}`"
                     class="collapse"
                   >
                     <div class="mt-3 pt-2">
