@@ -36,9 +36,6 @@ export default defineNuxtConfig({
           name: 'twitter:creator',
           content: '@dankerow'
         },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   },
