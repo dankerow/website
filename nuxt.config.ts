@@ -71,7 +71,8 @@ export default defineNuxtConfig({
 
   experimental: {
     buildCache: true,
-    typedPages: true
+    typedPages: true,
+    writeEarlyHints: true
   },
 
   compatibilityDate: '2025-01-31',
