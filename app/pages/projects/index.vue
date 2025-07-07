@@ -5,6 +5,7 @@ interface Repository {
   stargazers_count: number
   description: string
   html_url: string
+  fork: boolean
 }
 
 definePageMeta({
@@ -26,9 +27,10 @@ const { data: repos, status } = await useAsyncData<Repository[]>('repos',
           language: repo.language,
           stargazers_count: repo.stargazers_count,
           description: repo.description,
-          html_url: repo.html_url
+          html_url: repo.html_url,
+          fork: repo.fork
         }))
-        .filter(repo => !projectRepoNames.includes(repo.name))
+        .filter(repo => !projectRepoNames.includes(repo.name) && !repo.fork)
         .sort((a, b) => b?.stargazers_count - a?.stargazers_count)
     }
   })
