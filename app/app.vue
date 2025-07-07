@@ -7,6 +7,26 @@ const description = computed(() => route.meta.description as string ?? 'Software
 useHead({
   title: () => route.meta.title as string || '',
   titleTemplate: title => (title ? `${title} - Dan Mutombo` : 'Dan Mutombo'),
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/favicon.svg'
+    },
+    {
+      rel: 'shortcut icon',
+      href: '/favicon.ico'
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      href: '/apple-touch-icon.png'
+    },
+    {
+      rel: 'manifest',
+      href: '/site.webmanifest'
+    }
+  ],
   meta: [
     {
       name: 'description',
