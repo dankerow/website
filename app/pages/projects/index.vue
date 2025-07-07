@@ -9,7 +9,8 @@ interface Repository {
 }
 
 definePageMeta({
-  title: 'Projects'
+  title: 'Projects',
+  description: 'Some of the projects I\'ve worked on.'
 })
 
 const { projects, getProjectRepoNames } = useProjects()
