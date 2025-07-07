@@ -126,7 +126,7 @@ onUnmounted(() => {
           :in-view-options="{
             once: true
           }"
-          :transition="{ duration: 0.8, delay: 0.35 }"
+          :transition="{ duration: 0.25, delay: 0.35 }"
         >
           Dan Mutombo
         </motion.h1>
@@ -138,7 +138,7 @@ onUnmounted(() => {
           :in-view-options="{
             once: true
           }"
-          :transition="{ duration: 0.7, delay: 0.4 }"
+          :transition="{ duration: 0.25, delay: 0.4 }"
         >
           Software developer, building whatever in my bed.
         </motion.p>
@@ -151,7 +151,7 @@ onUnmounted(() => {
           :in-view-options="{
             once: true
           }"
-          :transition="{ duration: 0.6, delay: 0.45 }"
+          :transition="{ duration: 0.25, delay: 0.45 }"
         >
           <div class="spotify-icon-pulse d-flex align-items-center justify-content-center position-relative me-3">
             <Icon
@@ -199,7 +199,7 @@ onUnmounted(() => {
                 margin: '0px 0px -20px 0px',
                 amount: 0.1
               }"
-              :transition="{ duration: 0.6, delay: 0.35 }"
+              :transition="{ duration: 0.25, delay: 0.35 }"
             >
               About
             </motion.h2>
@@ -213,7 +213,7 @@ onUnmounted(() => {
                 margin: '0px 0px -20px 0px',
                 amount: 0.1
               }"
-              :transition="{ duration: 0.5, delay: 0.35 }"
+              :transition="{ duration: 0.25, delay: 0.35 }"
             />
           </div>
 
@@ -225,7 +225,7 @@ onUnmounted(() => {
               :in-view-options="{
                 once: true
               }"
-              :transition="{ duration: 0.8, delay: 0.4 }"
+              :transition="{ duration: 0.25, delay: 0.4 }"
             >
               I'm a software developer, currently studying for a bachelor's degree in computer science, majoring in cyber security.
             </motion.p>
@@ -237,7 +237,7 @@ onUnmounted(() => {
               :in-view-options="{
                 once: true
               }"
-              :transition="{ duration: 0.8, delay: 0.45 }"
+              :transition="{ duration: 0.25, delay: 0.45 }"
             >
               My primary area of interest is web development, because I love experimenting with new things and expressing my imagination.
               You can go through my
@@ -255,7 +255,7 @@ onUnmounted(() => {
               :in-view-options="{
                 once: true
               }"
-              :transition="{ duration: 0.8, delay: 0.5 }"
+              :transition="{ duration: 0.25, delay: 0.5 }"
             >
               When I'm not on my computer, I often listen to music. I love playing games whenever I have free time. And I also enjoy photography and dancing.
             </motion.p>
@@ -263,27 +263,25 @@ onUnmounted(() => {
         </div>
 
         <div class="my-2 d-flex flex-wrap gap-3 align-items-center">
-          <AnimatePresence>
-            <motion.span
-              v-for="(tech, index) in mainTechs"
-              :key="index"
-              :initial="{ opacity: 0, y: 20 }"
-              :in-view="{ opacity: 1, y: 0 }"
-              :in-view-options="{
-                once: true,
-                margin: '0px 0px -20px 0px',
-              }"
-              :transition="{ duration: 0.5, delay: 0.45 + index * 0.1 }"
-              class="tag"
-            >
-              <Icon
-                :name="tech.icon"
-                size="1.25em"
-                class="me-2"
-              />
-              {{ tech.name }}
-            </motion.span>
-          </AnimatePresence>
+          <motion.span
+            v-for="(tech, index) in mainTechs"
+            :key="index"
+            :initial="{ opacity: 0, y: 20 }"
+            :in-view="{ opacity: 1, y: 0 }"
+            :in-view-options="{
+              once: true,
+              margin: '0px 0px -20px 0px',
+            }"
+            :transition="{ duration: 0.25, delay: 0.45 + index * 0.1 }"
+            class="tag"
+          >
+            <Icon
+              :name="tech.icon"
+              size="1.25em"
+              class="me-2"
+            />
+            {{ tech.name }}
+          </motion.span>
         </div>
 
         <div class="row align-items-center mt-5">
@@ -294,7 +292,7 @@ onUnmounted(() => {
             :in-view-options="{
               once: true
             }"
-            :transition="{ duration: 0.6, delay: 0.7 }"
+            :transition="{ duration: 0.25, delay: 0.7 }"
           >
             <NuxtLink
               href="/files/Resume.pdf"

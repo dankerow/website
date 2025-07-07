@@ -21,7 +21,7 @@ const isLinkHovered = ref(false)
             margin: '0px 0px -20px 0px',
             amount: 0.1
           }"
-          :transition="{ duration: 0.5, delay: 0.35 }"
+          :transition="{ duration: 0.25, delay: 0.3 }"
         >
           Projects
         </motion.h2>
@@ -35,7 +35,7 @@ const isLinkHovered = ref(false)
             margin: '0px 0px -20px 0px',
             amount: 0.1
           }"
-          :transition="{ duration: 0.5, delay: 0.35 }"
+          :transition="{ duration: 0.25, delay: 0.3 }"
         />
       </div>
 
@@ -48,7 +48,7 @@ const isLinkHovered = ref(false)
           margin: '0px 0px -20px 0px',
           amount: 0.1
         }"
-        :transition="{ duration: 0.5, delay: 0.4 }"
+        :transition="{ duration: 0.25, delay: 0.35 }"
       >
         Some of the projects I've worked on.
       </motion.p>

@@ -10,7 +10,7 @@ import { motion } from 'motion-v'
     :in-view-options="{
       once: true
     }"
-    :transition="{ duration: 0.5, delay: 0.2 }"
+    :transition="{ duration: 0.25, delay: 0.2 }"
   >
     <nav class="navbar navbar-dark navbar-expand-md">
       <div class="container">
