@@ -61,14 +61,6 @@ export default defineNuxtConfig({
     experimental: { nativeSqlite: true }
   },
 
-  future: {
-    compatibilityVersion: 4,
-  },
-
-  features: {
-    inlineStyles: false
-  },
-
   experimental: {
     buildCache: true,
     typedPages: true,
