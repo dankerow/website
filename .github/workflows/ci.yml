@@ -30,7 +30,7 @@ jobs:
           echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - run: corepack enable
       - uses: pnpm/action-setup@v4.1.0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
@@ -63,7 +63,7 @@ jobs:
           echo BASE_URL=${{ secrets.BASE_URL }} >> .env
       - run: corepack enable
       - uses: pnpm/action-setup@v4.1.0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
