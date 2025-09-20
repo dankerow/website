@@ -13,23 +13,23 @@
   "author": "Dan Mutombo",
   "dependencies": {
     "@nuxt/ui": "4.0.0-alpha.2",
-    "@nuxtjs/seo": "^3.1.0",
-    "motion-v": "^1.6.1"
+    "@nuxtjs/seo": "^3.2.2",
+    "motion-v": "^1.7.1"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.6.3",
-    "@nuxt/eslint": "^1.7.1",
+    "@nuxt/content": "^3.7.1",
+    "@nuxt/eslint": "^1.9.0",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/icon": "^1.15.0",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/scripts": "^0.11.10",
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/scripts": "^0.11.13",
     "@nuxtjs/critters": "^0.9.0",
-    "@types/node": "^22.16.5",
-    "eslint": "9.32.0",
+    "@types/node": "^22.18.6",
+    "eslint": "9.36.0",
     "nuxt": "^4.1.2",
-    "nuxt-og-image": "^5.1.9",
-    "sass": "^1.89.2",
-    "typescript": "^5.8.3"
+    "nuxt-og-image": "^5.1.11",
+    "sass": "^1.93.0",
+    "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.17.0"
 }
