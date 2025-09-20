@@ -1,7 +1,0 @@
-@import "bootstrap/scss/mixins";
-
-@mixin bg-gradient-variant($state, $color) {
-	.bg-gradient-#{$state} {
-		background: linear-gradient(87deg, $color 0, adjust-hue($color, 15deg) 100%) !important;
-	}
-}

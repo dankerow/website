@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: Rubik, sans-serif;
+}
+
+:root {
+  --ui-primary: var(--color-primary-100);
+  --ui-secondary: var(--color-primary-400);
+
+  --ui-bg: rgb(11, 11, 11);
+}
+
+* {
+  scrollbar-color: hsl(240 3.7% 15.9%) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(240 3.7% 15.9%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+	@apply bg-primary/10 text-primary;
+}
+
+@layer base {
+  h1, .h1 {
+    @apply text-2xl font-semibold;
+  }
+
+  h2, .h2 {
+    @apply text-xl font-medium;
+  }
+
+  h3, .h3 {
+    @apply text-lg font-medium;
+  }
+
+  h4, .h4 {
+    @apply text-base;
+  }
+  h5, .h5 {
+    @apply text-sm;
+  }
+
+  h6, .h6 {
+    @apply text-xs;
+  }
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    @apply mb-4;
+  }
+
+  .lead {
+    @apply text-xl font-light text-gray-500 dark:text-gray-300;
+  }
+
+  p {
+    @apply mb-3;
+  }
+}

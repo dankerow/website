@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/ui',
     '@nuxt/eslint',
     '@nuxtjs/seo',
     '@nuxt/content',
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '@/assets/scss/bedrock.scss'
+    '@/assets/css/main.css'
   ],
 
   site: {
