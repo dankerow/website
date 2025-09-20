@@ -23,7 +23,7 @@ jobs:
 
     name: (Lint) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: create env file
         run: |
           touch .env
@@ -56,7 +56,7 @@ jobs:
 
     name: (Build) Node ${{ matrix.node_version }} - ${{ matrix.architecture }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: create env file
         run: |
           touch .env
