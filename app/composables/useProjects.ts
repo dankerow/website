@@ -1,12 +1,12 @@
 export interface Project {
   name: string
   description: string
+  slug?: string
   url?: string
   image?: string
   tags: string[]
   githubRepo?: string
   hasInternalPage?: boolean
-  slug?: string
   featured?: boolean
 }
 
@@ -15,6 +15,7 @@ export const useProjects = () => {
     {
       name: 'DisQ',
       description: 'A Discord bots directory.',
+      slug: 'disq',
       url: 'https://disq.ink',
       image: 'disq.svg',
       tags: ['Vue', 'Nuxt', 'TypeScript', 'PostgreSQL'],
@@ -39,8 +40,8 @@ export const useProjects = () => {
     {
       name: 'MIA Gospel',
       description: 'A website for a Gospel ministry.',
-      url: 'https://miagospel.org',
       slug: 'miagospel',
+      url: 'https://miagospel.org',
       image: 'miagospel.webp',
       tags: ['Vue', 'Nuxt']
     }
