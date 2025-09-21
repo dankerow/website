@@ -93,11 +93,11 @@ useSchemaOrg(
 </script>
 
 <template>
-  <div>
+  <UApp>
     <Header />
 
     <NuxtPage />
 
     <LazyFooter />
-  </div>
+  </UApp>
 </template>
