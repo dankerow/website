@@ -68,8 +68,6 @@ export default defineNuxtConfig({
     writeEarlyHints: true
   },
 
-  compatibilityDate: '2025-01-31',
-
   nitro: {
     minify: true,
     compressPublicAssets: true,
