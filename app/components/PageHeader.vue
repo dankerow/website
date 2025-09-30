@@ -18,13 +18,14 @@ const {
 </script>
 
 <template>
-  <div class="page-hero pt-18 pb-10 position-relative overflow-hidden">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-7">
-          <h1 class="display-4 text-white fw-bolder mb-3">
+  <div class="bg-[rgba(18,18,18,0.4)] backdrop-blur-3xl border-b border-white/3 pt-30 pb-15 relative overflow-hidden">
+    <UContainer>
+      <div class="grid grid-cols-1 lg:grid-cols-3 items-center">
+        <div class="lg:col-span-2">
+          <h1 class="text-4xl text-white font-medium mb-3">
             {{ title }}
           </h1>
+
           <p
             v-if="subtitle"
             class="lead mb-0"
@@ -37,20 +38,20 @@ const {
 
         <div
           v-if="!hideDecoration"
-          class="col-lg-5 d-none d-lg-block"
+          class="hidden lg:block"
         >
-          <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="flex justify-center items-center h-full">
             <slot name="decoration">
               <Icon
                 :name="icon"
                 :size="iconSize"
-                class="hero-icon"
+                class="text-white/10 animate-[float_6s_ease-in-out_infinite]"
               />
             </slot>
           </div>
         </div>
       </div>
-    </div>
+    </UContainer>
 
     <div
       v-if="gradientBlobs"
@@ -65,18 +66,21 @@ const {
   </div>
 </template>
 
-<style lang="scss" scoped>
-.page-hero {
-  background-color: rgba(18, 18, 18, 0.4);
-  backdrop-filter: blur(80px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+<style>
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
+</style>
 
-.hero-icon {
-  color: rgba(255, 255, 255, 0.1);
-  animation: float 6s ease-in-out infinite;
-}
-
+<style scoped>
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -99,17 +103,5 @@ const {
   height: 400px;
   bottom: -200px;
   left: -100px;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
 }
 </style>
