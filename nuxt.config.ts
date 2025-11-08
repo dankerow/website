@@ -52,6 +52,12 @@ export default defineNuxtConfig({
     experimental: { nativeSqlite: true }
   },
 
+  ui: {
+    experimental: {
+      componentDetection: true
+    }
+  },
+
   experimental: {
     buildCache: true,
     typedPages: true,
