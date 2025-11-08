@@ -27,17 +27,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
         dir: 'ltr'
-      },
-      meta: [
-        {
-          name: 'twitter:site',
-          content: '@dankerow'
-        },
-        {
-          name: 'twitter:creator',
-          content: '@dankerow'
-        },
-      ]
+      }
     }
   },
 
