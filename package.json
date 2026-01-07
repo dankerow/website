@@ -12,24 +12,24 @@
   },
   "author": "Dan Mutombo",
   "dependencies": {
-    "@nuxt/content": "^3.8.0",
-    "@nuxt/eslint": "^1.10.0",
+    "@nuxt/content": "^3.10.0",
+    "@nuxt/eslint": "^1.12.1",
     "@nuxt/fonts": "^0.12.1",
-    "@nuxt/icon": "^2.1.0",
+    "@nuxt/icon": "^2.2.0",
     "@nuxt/image": "^1.11.0",
-    "@nuxt/scripts": "^0.13.0",
-    "@nuxt/ui": "4.1.0",
+    "@nuxt/scripts": "^0.13.2",
+    "@nuxt/ui": "4.3.0",
     "@nuxtjs/critters": "^0.9.0",
-    "@nuxtjs/seo": "^3.2.2",
-    "motion-v": "^1.7.4",
+    "@nuxtjs/seo": "^3.3.0",
+    "motion-v": "^1.7.6",
     "nuxt": "^4.2.1",
-    "nuxt-og-image": "^5.1.12",
-    "sass": "^1.93.3"
+    "nuxt-og-image": "^5.1.13",
+    "sass": "^1.97.2"
   },
   "devDependencies": {
-    "@types/node": "^24.10.0",
-    "eslint": "9.39.1",
+    "@types/node": "^24.10.4",
+    "eslint": "9.39.2",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.20.0"
+  "packageManager": "pnpm@10.27.0"
 }
