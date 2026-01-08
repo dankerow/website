@@ -44,11 +44,6 @@ const socialLinks = [
     url: 'https://github.com/dankerow'
   },
   {
-    name: 'Twitter',
-    icon: 'ph:x-logo',
-    url: 'https://twitter.com/dankerow'
-  },
-  {
     name: 'LinkedIn',
     icon: 'ph:linkedin-logo-duotone',
     url: 'https://www.linkedin.com/in/dan-mutombo/'
