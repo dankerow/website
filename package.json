@@ -16,7 +16,7 @@
     "@nuxt/eslint": "^1.12.1",
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/icon": "^2.2.0",
-    "@nuxt/image": "^1.11.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxt/scripts": "^0.13.2",
     "@nuxt/ui": "4.3.0",
     "@nuxtjs/critters": "^0.9.0",
