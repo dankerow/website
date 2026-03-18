@@ -56,9 +56,6 @@ useHead({
       name: 'og:description',
       content: description
     }
-  ],
-  link: [
-    { rel: 'canonical', href: `https://danmutombo.com${route.path}` }
   ]
 })
 
