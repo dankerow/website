@@ -85,8 +85,7 @@ useSchemaOrg(
     jobTitle: 'Software Developer',
     sameAs: [
       'https://github.com/dankerow',
-      'https://www.linkedin.com/in/dan-mutombo/',
-      'https://x.com/dankerow'
+      'https://www.linkedin.com/in/dan-mutombo/'
     ]
   })
 )
