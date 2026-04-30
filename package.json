@@ -22,7 +22,7 @@
     "@nuxtjs/critters": "^0.9.0",
     "@nuxtjs/seo": "^3.4.0",
     "motion-v": "^1.10.3",
-    "nuxt": "^4.4.2",
+    "nuxt": "^4.4.4",
     "nuxt-og-image": "^5.1.13",
     "sass": "^1.98.0"
   },
