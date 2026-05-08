@@ -61,7 +61,7 @@ useHead({
 
 useScriptRybbitAnalytics({
   scriptInput: {
-    src: 'https://rybbit.vtower.me/api/script.js'
+    src: 'https://rybbit.vtower.fyi/api/script.js'
   },
   siteId: '1'
 })
