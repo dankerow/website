@@ -2,6 +2,7 @@
   "name": "danmutombo.com",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
