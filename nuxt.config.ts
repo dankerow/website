@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
   $development: {
     sourcemap: true,
-    debug: true,
+    debug: true
   },
 
   devtools: {

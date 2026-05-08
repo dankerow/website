@@ -10,7 +10,7 @@ const props = defineProps({
 })
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 const siteConfig = useSiteConfig()

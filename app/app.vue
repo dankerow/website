@@ -68,7 +68,7 @@ useScriptRybbitAnalytics({
 
 defineOgImage('Page', {
   title: title.value,
-  description: description.value,
+  description: description.value
 })
 
 useSchemaOrg(
