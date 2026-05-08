@@ -3,18 +3,6 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt(
   {
     rules: {
-      '@stylistic/comma-dangle': 'off',
-      '@stylistic/brace-style': [
-        'error',
-        '1tbs',
-        {
-          allowSingleLine: true
-        }
-      ]
-    }
-  },
-  {
-    rules: {
       'vue/no-v-html': 'off',
       'vue/require-prop-types': 'off',
       'vue/require-default-prop': 'off',
