@@ -66,7 +66,10 @@ useScriptRybbitAnalytics({
   siteId: '1'
 })
 
-defineOgImageComponent('Page')
+defineOgImage('Page', {
+  title: title.value,
+  description: description.value,
+})
 
 useSchemaOrg(
   definePerson({

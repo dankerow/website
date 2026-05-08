@@ -35,8 +35,9 @@ const calculateReadingTime = (text: string) => {
 
 const readingTime = calculateReadingTime(articleContent)
 
-defineOgImageComponent('Blog', {
-  ...(article.value.ogImage ?? []),
+defineOgImage('Blog', {
+  title: article.value.title,
+  description: article.value.description,
   minRead: readingTime,
 })
 
