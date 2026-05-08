@@ -13,10 +13,10 @@ export default withNuxt(
       'vue/component-options-name-casing': ['error', 'PascalCase'],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
       'vue/define-macros-order': ['error', {
-        order: ['defineProps', 'defineEmits'],
+        order: ['defineProps', 'defineEmits']
       }],
       'vue/html-comment-content-spacing': ['error', 'always', {
-        exceptions: ['-'],
+        exceptions: ['-']
       }],
       'vue/no-restricted-v-bind': ['error', '/^v-/'],
       'vue/no-useless-v-bind': 'error',
@@ -47,7 +47,7 @@ export default withNuxt(
         'error',
         'DebuggerStatement',
         'LabeledStatement',
-        'WithStatement',
+        'WithStatement'
       ],
       'vue/no-sparse-arrays': 'error',
       'vue/object-curly-newline': ['error', { multiline: true, consistent: true }],
@@ -58,8 +58,8 @@ export default withNuxt(
         'always',
         {
           ignoreConstructors: false,
-          avoidQuotes: true,
-        },
+          avoidQuotes: true
+        }
       ],
       'vue/operator-linebreak': ['error', 'before'],
       'vue/prefer-template': 'error',
