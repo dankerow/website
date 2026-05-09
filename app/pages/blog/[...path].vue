@@ -15,7 +15,6 @@ route.meta.title = article.value.title
 route.meta.description = article.value.description
 
 const articleDate = formatDate(article.value.date)
-const { onLoaded } = useNuxtApp().$scripts['bootstrap-npm']
 
 const articleContent = article.value.body.value.map((item: string | string[]) => {
   if (typeof item === 'string') {
