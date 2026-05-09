@@ -39,8 +39,8 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2
       motion-v:
-        specifier: ^1.10.3
-        version: 1.10.3(@vueuse/core@14.3.0(vue@3.5.30(typescript@5.9.3)))(vue@3.5.30(typescript@5.9.3))
+        specifier: ^2.2.1
+        version: 2.2.1(@vueuse/core@14.3.0(vue@3.5.30(typescript@5.9.3)))(vue@3.5.30(typescript@5.9.3))
       nuxt:
         specifier: ^4.4.2
         version: 4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.27.1(@babel/core@7.29.0))(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@parcel/watcher@2.5.1)(@types/node@24.12.3)(@vue/compiler-sfc@3.5.34)(cac@6.7.14)(db0@0.3.4)(eslint@9.39.4(jiti@2.6.1))(ioredis@5.10.0)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@6.0.5(rollup@4.55.1))(rollup@4.55.1)(sass@1.99.0)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.1(@types/node@24.12.3)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.44.1)(yaml@2.8.2))(yaml@2.8.2)
@@ -5003,12 +5003,6 @@ packages:
 
   motion-utils@12.36.0:
     resolution: {integrity: sha512-eHWisygbiwVvf6PZ1vhaHCLamvkSbPIeAYxWUuL3a2PD/TROgE7FvfHWTIH4vMl798QLfMw15nRqIaRDXTlYRg==}
-
-  motion-v@1.10.3:
-    resolution: {integrity: sha512-9Ewo/wwGv7FO3PqYJpllBF/Efc7tbeM1iinVrM73s0RUQrnXHwMZCaRX98u4lu0PQCrZghPPfCsQ14pWKIEbnQ==}
-    peerDependencies:
-      '@vueuse/core': '>=10.0.0'
-      vue: '>=3.0.0'
 
   motion-v@2.2.1:
     resolution: {integrity: sha512-BYbABe1Ep/u33dHOrK+8SoVU2MuiQqT94JOYsgrge8QbrwkKf2lS6rHW2QyzP6t89wcyBvzZeLQQwfrx76dj9A==}
@@ -12176,18 +12170,6 @@ snapshots:
       motion-utils: 12.36.0
 
   motion-utils@12.36.0: {}
-
-  motion-v@1.10.3(@vueuse/core@14.3.0(vue@3.5.30(typescript@5.9.3)))(vue@3.5.30(typescript@5.9.3)):
-    dependencies:
-      '@vueuse/core': 14.3.0(vue@3.5.30(typescript@5.9.3))
-      framer-motion: 12.38.0
-      hey-listen: 1.0.8
-      motion-dom: 12.38.0
-      vue: 3.5.30(typescript@5.9.3)
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - react
-      - react-dom
 
   motion-v@2.2.1(@vueuse/core@14.3.0(vue@3.5.30(typescript@5.9.3)))(vue@3.5.30(typescript@5.9.3)):
     dependencies:
