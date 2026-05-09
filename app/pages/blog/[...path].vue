@@ -38,19 +38,7 @@ const readingTime = calculateReadingTime(articleContent)
 defineOgImage('Blog', {
   title: article.value.title,
   description: article.value.description,
-  minRead: readingTime,
-})
-
-onMounted(() => {
-  onLoaded(() => {
-    const scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance('#__nuxt', {
-      target: '#table-of-content',
-      smoothScroll: true,
-      offset: 0
-    })
-
-    scrollSpy.refresh()
-  })
+  minRead: readingTime
 })
 </script>
 
