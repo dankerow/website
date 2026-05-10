@@ -87,7 +87,6 @@ export default defineNuxtConfig({
   },
 
   fonts: {
-    processCSSVariables: true,
     families: [
       { name: 'Rubik', weights: [300, 400, 500, 600, 700] }
     ]
