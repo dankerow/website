@@ -35,7 +35,8 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    name: 'danker'
+    name: 'Dan Mutombo',
+    url: 'https://danmutombo.com'
   },
 
   content: {
