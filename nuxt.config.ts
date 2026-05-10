@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxtjs/critters',
     'nuxt-og-image',
     'motion-v/nuxt'
   ],

@@ -29,9 +29,6 @@ importers:
       '@nuxt/ui':
         specifier: 4.7.1
         version: 4.7.1(@internationalized/date@3.12.0)(@internationalized/number@3.6.5)(@nuxt/content@3.13.0(@valibot/to-json-schema@1.7.0(valibot@1.4.0(typescript@5.9.3)))(magicast@0.5.2)(valibot@1.4.0(typescript@5.9.3)))(@tiptap/extensions@3.22.5(@tiptap/core@3.22.5(@tiptap/pm@3.22.5))(@tiptap/pm@3.22.5))(@tiptap/y-tiptap@3.0.1(prosemirror-model@1.25.4)(prosemirror-state@1.4.4)(prosemirror-view@1.41.4)(y-protocols@1.0.7(yjs@13.6.29))(yjs@13.6.29))(change-case@5.4.4)(db0@0.3.4)(embla-carousel@8.6.0)(ioredis@5.10.0)(magicast@0.5.2)(tailwindcss@4.2.4)(typescript@5.9.3)(valibot@1.4.0(typescript@5.9.3))(vite@7.3.1(@types/node@24.12.3)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.99.0)(terser@5.44.1)(yaml@2.8.2))(vue-router@5.0.3(@vue/compiler-sfc@3.5.34)(vue@3.5.30(typescript@5.9.3)))(vue@3.5.30(typescript@5.9.3))(yjs@13.6.29)(zod@3.25.76)
-      '@nuxtjs/critters':
-        specifier: ^0.9.0
-        version: 0.9.0(magicast@0.5.2)
       '@nuxtjs/seo':
         specifier: ^5.1.3
         version: 5.1.3(6762e4ec322972d98ae0b3c0ba33467c)
@@ -966,9 +963,6 @@ packages:
 
   '@nuxtjs/color-mode@3.5.2':
     resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
-
-  '@nuxtjs/critters@0.9.0':
-    resolution: {integrity: sha512-XFspmZajsQPbgOWcMERKxQrTd/6ze4L4QOuNv1fM8YOCD3YeCyYpJ/n96Riakv3rsL6biayL3WwYSxGUO3CYOA==}
 
   '@nuxtjs/mdc@0.21.1':
     resolution: {integrity: sha512-DIeUD7IahWVUSoZExysxH9dX51Io6hcQYgGJODq0cMTGqaoDD32lRfHBJxYUmy+sUCV1+1hfa2ixspgJgEd2GA==}
@@ -3256,10 +3250,6 @@ packages:
     resolution: {integrity: sha512-Mij6Lij93pTAIsSYy5cyBQ975Qh9uLEc5rwGTpomiZeXZL9yIS6uORJakb3ScHgfs0serMMfIbXzokPMuEiRyw==}
     hasBin: true
 
-  beasties@0.3.5:
-    resolution: {integrity: sha512-NaWu+f4YrJxEttJSm16AzMIFtVldCvaJ68b1L098KpqXmxt9xOLtKoLkKxb8ekhOrLqEJAbvT6n6SEvB/sac7A==}
-    engines: {node: '>=14.0.0'}
-
   bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
 
@@ -3519,9 +3509,6 @@ packages:
   css-select@5.2.2:
     resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
 
-  css-select@6.0.0:
-    resolution: {integrity: sha512-rZZVSLle8v0+EY8QAkDWrKhpgt6SA5OtHsgBnsj6ZaLb5dmDVOWUDtQitd9ydxxvEjhewNudS6eTVU7uOyzvXw==}
-
   css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
@@ -3532,10 +3519,6 @@ packages:
 
   css-what@6.2.2:
     resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
-    engines: {node: '>= 6'}
-
-  css-what@7.0.0:
-    resolution: {integrity: sha512-wD5oz5xibMOPHzy13CyGmogB3phdvcDaB5t0W/Nr5Z2O/agcB8YwOz6e2Lsp10pNDzBoDO9nVa3RGs/2BttpHQ==}
     engines: {node: '>= 6'}
 
   cssesc@3.0.0:
@@ -4354,9 +4337,6 @@ packages:
 
   html-whitespace-sensitive-tag-names@3.0.1:
     resolution: {integrity: sha512-q+310vW8zmymYHALr1da4HyXUQ0zgiIwIicEfotYPWGN0OJVEN/58IJ3A4GBYcEq3LGAZqKb+ugvP0GNB9CEAA==}
-
-  htmlparser2@10.0.0:
-    resolution: {integrity: sha512-TwAZM+zE5Tq3lrEHvOlvwgj1XLWQCtaaibSN11Q+gGBAS7Y1uZSWwXXRe4iF6OXnaq1riyQAPFOBtYc77Mxq0g==}
 
   http-errors@2.0.1:
     resolution: {integrity: sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==}
@@ -5481,9 +5461,6 @@ packages:
     engines: {node: ^18.12.0 || ^20.9.0 || >=22.0}
     peerDependencies:
       postcss: ^8.4.32
-
-  postcss-media-query-parser@0.2.3:
-    resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
 
   postcss-merge-longhand@7.0.5:
     resolution: {integrity: sha512-Kpu5v4Ys6QI59FxmxtNB/iHUVDn9Y9sYw66D6+SZoIk4QTz1prC4aYkhIESu+ieG1iylod1f8MILMs1Em3mmIw==}
@@ -8160,15 +8137,6 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxtjs/critters@0.9.0(magicast@0.5.2)':
-    dependencies:
-      '@nuxt/kit': 3.20.2(magicast@0.5.2)
-      beasties: 0.3.5
-      pathe: 2.0.3
-      ufo: 1.6.4
-    transitivePeerDependencies:
-      - magicast
-
   '@nuxtjs/mdc@0.21.1(magicast@0.5.2)':
     dependencies:
       '@nuxt/kit': 4.4.4(magicast@0.5.2)
@@ -10096,17 +10064,6 @@ snapshots:
 
   baseline-browser-mapping@2.9.12: {}
 
-  beasties@0.3.5:
-    dependencies:
-      css-select: 6.0.0
-      css-what: 7.0.0
-      dom-serializer: 2.0.0
-      domhandler: 5.0.3
-      htmlparser2: 10.0.0
-      picocolors: 1.1.1
-      postcss: 8.5.14
-      postcss-media-query-parser: 0.2.3
-
   bindings@1.5.0:
     dependencies:
       file-uri-to-path: 1.0.0
@@ -10358,14 +10315,6 @@ snapshots:
       domutils: 3.2.2
       nth-check: 2.1.1
 
-  css-select@6.0.0:
-    dependencies:
-      boolbase: 1.0.0
-      css-what: 7.0.0
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      nth-check: 2.1.1
-
   css-tree@2.2.1:
     dependencies:
       mdn-data: 2.0.28
@@ -10377,8 +10326,6 @@ snapshots:
       source-map-js: 1.2.1
 
   css-what@6.2.2: {}
-
-  css-what@7.0.0: {}
 
   cssesc@3.0.0: {}
 
@@ -11352,13 +11299,6 @@ snapshots:
   html-void-elements@3.0.0: {}
 
   html-whitespace-sensitive-tag-names@3.0.1: {}
-
-  htmlparser2@10.0.0:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      entities: 6.0.1
 
   http-errors@2.0.1:
     dependencies:
@@ -13221,8 +13161,6 @@ snapshots:
   postcss-discard-overridden@7.0.1(postcss@8.5.14):
     dependencies:
       postcss: 8.5.14
-
-  postcss-media-query-parser@0.2.3: {}
 
   postcss-merge-longhand@7.0.5(postcss@8.5.14):
     dependencies:
