@@ -96,5 +96,9 @@ export default defineNuxtConfig({
     defaultScriptOptions: {
       bundle: true
     }
+  },
+
+  sitemap: {
+    zeroRuntime: true
   }
 })
