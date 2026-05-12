@@ -28,7 +28,7 @@
     "sass": "^1.99.0"
   },
   "devDependencies": {
-    "@types/node": "^24.12.3",
+    "@types/node": "^24.12.4",
     "eslint": "10.3.0",
     "typescript": "^6.0.3"
   },
