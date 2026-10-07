@@ -114,7 +114,7 @@ You can find more information about X2Go on their [documentation](https://wiki.x
         exec dbus-launch --exit-with-session startplasma-x11
         ```
 
-        Save and exit (<kbd>Ctrl</kbd>+<kbd>X</kbd>, then <kbd>Y</kbd>, then <kbd>Enter</kbd>).  
+        Save and exit (:kbd{value="ctrl"} + :kbd{value="X"}, then :kbd{value="Y"}, then :kbd{value="Enter"}).  
    
 3. Restart X2go server:  
     ```bash
