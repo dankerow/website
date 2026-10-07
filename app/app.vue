@@ -60,10 +60,11 @@ useHead({
 })
 
 useScriptRybbitAnalytics({
-  scriptInput: {
-    src: 'https://rybbit.vtower.fyi/api/script.js'
-  },
-  siteId: '1'
+  analyticsHost: 'https://rybbit.vtower.fyi/api',
+  siteId: '1',
+  scriptOptions: {
+    bundle: false
+  }
 })
 
 defineOgImage('Page', {
