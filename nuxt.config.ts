@@ -61,6 +61,7 @@ export default defineNuxtConfig({
   experimental: {
     buildCache: true,
     typedPages: true,
+    typescriptPlugin: true,
     writeEarlyHints: true
   },
 
