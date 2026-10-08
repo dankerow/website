@@ -5,7 +5,6 @@ const title = computed(() => route.meta.title as string ? `${route.meta.title} -
 const description = computed(() => route.meta.description as string ?? 'Software developer, building whatever in my bed')
 
 useHead({
-  title: () => route.meta.title as string || '',
   titleTemplate: title => (title ? `${title} - Dan Mutombo` : 'Dan Mutombo'),
   link: [
     {
@@ -26,37 +25,19 @@ useHead({
       rel: 'manifest',
       href: '/site.webmanifest'
     }
-  ],
-  meta: [
-    {
-      name: 'description',
-      content: description
-    },
-    {
-      name: 'twitter:title',
-      content: title
-    },
-    {
-      name: 'twitter:description',
-      content: description
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary'
-    },
-    {
-      name: 'og:title',
-      content: title
-    },
-    {
-      name: 'og:url',
-      content: `https://danmutombo.com${route.path}`
-    },
-    {
-      name: 'og:description',
-      content: description
-    }
   ]
+})
+
+useSeoMeta({
+  title: () => (route.meta.title as string) || null,
+  description: () => description.value,
+  ogTitle: () => title.value,
+  ogDescription: () => description.value,
+  twitterCard: 'summary_large_image',
+  twitterSite: 'DisQ',
+  twitterCreator: '@disqink',
+  twitterTitle: () => title.value,
+  twitterDescription: () => description.value
 })
 
 useScriptRybbitAnalytics({
