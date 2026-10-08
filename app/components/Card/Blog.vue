@@ -12,23 +12,26 @@ const postDate = formatDate(props.post.date)
 </script>
 
 <template>
-  <div class="card hoverable shadow-sm">
-    <div class="card-body min-vh-50">
-      <div class="card-title text-truncate text-white mb-4">
-        {{ post.title }}
-      </div>
+  <UCard
+    class="shadow-sm"
+    :ui="{
+      body: 'p-4 sm:p-4 relative',
+    }"
+  >
+    <div class="truncate text-white mb-4">
+      {{ post.title }}
+    </div>
 
-      <p class="card-text text-truncate mb-3">
-        {{ post.description }}
-      </p>
+    <p class="truncate text-white/85">
+      {{ post.description }}
+    </p>
 
-      <div class="small text-body-secondary d-inline-flex align-items-center">
-        <Icon
-          name="ph:calendar-light"
-          class="me-1"
-        />
-        {{ postDate }}
-      </div>
+    <div class="text-sm text-muted inline-flex items-center">
+      <Icon
+        name="ph:calendar-light"
+        class="me-1"
+      />
+      {{ postDate }}
     </div>
 
     <NuxtLink
@@ -36,5 +39,16 @@ const postDate = formatDate(props.post.date)
       :to="post.path"
       class="stretched-link"
     />
-  </div>
+
+    <ULink
+      :to="post.path"
+      class="focus:outline-none"
+      raw
+    >
+      <span
+        class="absolute inset-0"
+        aria-hidden="true"
+      />
+    </ULink>
+  </UCard>
 </template>
