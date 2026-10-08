@@ -1,106 +1,44 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import { NuxtLink } from '#components'
-
-const MotionNuxtLink = motion.create(NuxtLink)
-
 const { getFeaturedProjects } = useProjects()
-const isLinkHovered = ref(false)
 </script>
 
 <template>
-  <div
+  <section
     id="projects"
-    class="py-10"
+    class="py-15 scroll-m-12"
   >
-    <div class="container">
-      <div class="d-flex align-items-center">
-        <motion.h2
-          class="text-white h3 mb-0 me-3"
-          :initial="{ opacity: 0, y: -20 }"
-          :in-view="{ opacity: 1, y: 0 }"
-          :in-view-options="{
-            once: true,
-            margin: '0px 0px -20px 0px',
-            amount: 0.1
-          }"
-          :transition="{ duration: 0.25, delay: 0.3 }"
-        >
+    <UContainer>
+      <div class="flex items-center">
+        <h2 class="text-white text-4xl mb-1 me-4">
           Projects
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          class="heading-line flex-grow-1"
-          :initial="{ scaleX: 0 }"
-          :in-view="{ scaleX: 1 }"
-          :in-view-options="{
-            once: true,
-            margin: '0px 0px -20px 0px',
-            amount: 0.1
-          }"
-          :transition="{ duration: 0.25, delay: 0.3 }"
-        />
+        <div class="heading-line grow" />
       </div>
 
-      <motion.p
-        class="mb-5 lead"
-        :initial="{ opacity: 0, y: -10 }"
-        :in-view="{ opacity: 1, y: 0 }"
-        :in-view-options="{
-          once: true,
-          margin: '0px 0px -20px 0px',
-          amount: 0.1
-        }"
-        :transition="{ duration: 0.25, delay: 0.35 }"
-      >
+      <p class="mb-12 lead">
         Some of the projects I've worked on.
-      </motion.p>
+      </p>
 
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
-        <div
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <CardProject
           v-for="(project, index) in getFeaturedProjects()"
           :key="`project-${index}`"
-          class="col"
-        >
-          <CardProject
-            v-bind="project"
-            :index="index"
-            class="h-100"
-          />
-        </div>
+          v-bind="project"
+          :index="index"
+          class="h-full"
+        />
       </div>
 
-      <MotionNuxtLink
+      <UButton
         to="/projects"
-        :initial="{ opacity: 0, x: -10 }"
-        :in-view="{ opacity: 1, x: 0 }"
-        :in-view-options="{
-          once: true,
-          amount: 0.5
-        }"
-        :transition="{ duration: 0.25 }"
-        :animate="isLinkHovered ? { scale: 1.05 } : {}"
-        class="d-inline-flex align-items-center btn btn-link link-body-emphasis link-offset-3 link-underline-opacity-25 link-underline-opacity-75-hover mt-4 ps-0"
-        style="text-decoration: underline;"
-
-        @mouseenter="isLinkHovered = true"
-        @mouseleave="isLinkHovered = false"
+        variant="ghost"
+        size="lg"
+        class="mt-6"
+        trailing-icon="ph:arrow-right-light"
       >
         View all projects
-
-        <Icon
-          name="ph:arrow-right-light"
-          class="ms-2"
-          size="1.25em"
-        />
-      </MotionNuxtLink>
-    </div>
-  </div>
+      </UButton>
+    </UContainer>
+  </section>
 </template>
-
-<style scoped>
-#projects {
-  scroll-margin-top: 3rem;
-  will-change: transform;
-}
-</style>
