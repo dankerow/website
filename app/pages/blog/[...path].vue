@@ -42,76 +42,114 @@ defineOgImage('Blog', {
 </script>
 
 <template>
-  <main class="container pt-12 pb-4">
-    <NuxtLink
-      to="/blog"
-      class="d-inline-flex align-items-center text-decoration-underline link-opacity-75 link-opacity-100-hover link-offset-2 link-offset-3-hover link-underline link-underline-opacity-10 link-underline-opacity-75-hover mb-4 mb-md-6 mb-lg-8 ps-0"
-    >
-      <Icon
-        name="ph:terminal"
-        class="me-3"
-      />
-      cd ..
-    </NuxtLink>
-
-    <div class="t">
-      <h1 class="text-white">
-        {{ article.title }}
-      </h1>
-
-      <p class="mb-5">
-        {{ article.description }}
-      </p>
-
-      <div class="row justify-content-between fs-6">
-        <div class="col-auto">
-          <div
-            v-if="article.date"
-            class="d-inline-flex align-items-center py-1 text-body-secondary me-2"
+  <main class="pt-20">
+    <UContainer>
+      <UPage v-if="article">
+        <UPageHeader>
+          <UButton
+            to="/blog"
+            icon="ph:terminal"
+            variant="link"
+            class="underline decoration-2 decoration-white/15 hover:decoration-white/75 underline-offset-8 mb-8 ps-0"
           >
-            {{ articleDate }}
+            cd ..
+          </UButton>
+
+          <h1 class="text-white">
+            {{ article.title }}
+          </h1>
+
+          <p class="mb-5">
+            {{ article.description }}
+          </p>
+
+          <div class="flex flex-row justify-between text-sm">
+            <div>
+              <div
+                v-if="article.date"
+                class="inline-flex items-center py-1 text-secondary me-2"
+              >
+                {{ articleDate }}
+              </div>
+
+              <div class="inline-flex items-center py-1 text-secondary">
+                ·
+                {{ readingTime }}
+              </div>
+            </div>
+
+            <div
+              v-if="article.tags"
+              class="inline-flex items-center gap-1 py-1 text-secondary"
+            >
+              <Icon
+                name="ph:hash-bold"
+              />
+
+              {{ article.tags.join(', ') }}
+            </div>
           </div>
+        </UPageHeader>
 
-          <div class="d-inline-flex align-items-center py-1 text-body-secondary">
-            ·
-            {{ readingTime }}
-          </div>
-        </div>
-
-        <div class="col-auto">
-          <div
-            v-if="article.tags"
-            class="d-inline-flex align-items-center py-1 text-body-secondary"
-          >
-            <Icon
-              name="solar:hashtag-square-bold-duotone"
-              class="me-2"
-            />
-
-            {{ article.tags.join(', ') }}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <article>
-      <div
-        class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 justify-content-center py-5"
-      >
-        <div class="col col-lg-9 order-2 order-lg-1 markdown-body">
+        <UPageBody>
           <ContentRenderer :value="article">
             <template #empty>
               <p>No content found.</p>
             </template>
           </ContentRenderer>
-        </div>
+        </UPageBody>
 
-        <div class="col col-lg-3 order-1 order-lg-2">
-          <BlogToc :links="article.body.toc.links" />
-        </div>
-      </div>
-    </article>
+        <template
+          v-if="article?.body?.toc?.links?.length"
+          #right
+        >
+          <UContentToc
+            highlight
+            highlight-color="neutral"
+            :links="article?.body.toc.links"
+          />
+        </template>
+      </UPage>
+    </UContainer>
   </main>
 </template>
+
+<style scoped>
+:deep(h1),
+:deep(h2),
+:deep(h3),
+:deep(h4),
+:deep(h5),
+:deep(h6) {
+  color: white;
+}
+
+:deep(.anchor) {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: .25rem;
+}
+
+:deep(.octicon) {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+:deep(.octicon-link) {
+  color: #f0f6fc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+:deep(h1:hover .anchor .octicon-link),
+:deep(h2:hover .anchor .octicon-link),
+:deep(h3:hover .anchor .octicon-link),
+:deep(h4:hover .anchor .octicon-link),
+:deep(h5:hover .anchor .octicon-link),
+:deep(h6:hover .anchor .octicon-link) {
+  visibility: visible;
+}
+</style>
