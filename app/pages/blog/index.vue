@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { TabsItem } from '@nuxt/ui'
+
 definePageMeta({
   title: 'Blog',
-  description: 'A collection of my thoughts and ideas'
+  description: 'A collection of my thoughts and ideas.'
 })
 
 const selectedTag = ref<string | null>()
@@ -49,6 +51,17 @@ const getMostUsedTags = computed(() => {
   }))
 })
 
+const items = computed<TabsItem[]>(() => [
+  {
+    label: 'All',
+    value: 'all'
+  },
+  ...getMostUsedTags.value.map(tag => ({
+    label: tag.name,
+    value: tag.name
+  }))
+])
+
 const selectTag = (tag: string) => {
   if (selectedTag.value === tag) {
     selectedTag.value = null
@@ -66,80 +79,56 @@ const selectTag = (tag: string) => {
 
 <template>
   <main>
-    <Hero
+    <PageHeader
       title="Blog"
       subtitle="A collection of my thoughts and ideas."
       icon="ph:book-open-bold"
     />
 
-    <div class="container pt-12 pb-4">
-      <div class="nav-scroller py-1 mb-3 border-bottom">
-        <nav class="nav nav-underline">
-          <button
-            class="nav-item nav-link link-body-emphasis"
-            :class="{ active: !selectedTag }"
-            @click="selectTag('all')"
-          >
-            All
-          </button>
-
-          <button
-            v-for="tag in getMostUsedTags"
-            :key="tag.name"
-            class="nav-item nav-link link-body-emphasis text-capitalize"
-            :class="{ active: selectedTag === tag.name }"
-            @click="selectTag(tag.name)"
-          >
-            {{ tag.name }}
-          </button>
-        </nav>
-      </div>
+    <UContainer class="min-h-[50vh] pt-12 pb-4">
+      <UTabs
+        :items="items"
+        variant="link"
+        default-value="all"
+        :content="false"
+        :ui="{ trigger: 'grow' }"
+        class="gap-4 w-full mb-8"
+        @update:model-value="(value) => selectTag(value)"
+      />
 
       <div
         v-if="status === 'pending'"
-        class="loading-container"
+        class="min-h-[50vh] flex items-center justify-center"
       >
-        <div class="loading-posts">
-          <div class="spinner-container">
-            <div
-              class="spinner-border text-light"
-              role="status"
-            >
-              <span class="visually-hidden">Loading posts...</span>
-            </div>
-          </div>
-
-          <div class="loading-text mt-3">
+        <div class="flex flex-col items-center justify-center">
+          <div class="text-[#a4a4a4] mt-3">
             Loading posts...
           </div>
         </div>
       </div>
 
       <div
-        v-else-if="posts && posts.length > 0"
-        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5"
+        v-else-if="posts.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-5"
       >
-        <div
+        <CardBlog
           v-for="(post, index) in posts"
           :key="`latest-${index}`"
-          class="col"
-        >
-          <CardBlog
-            :post="post"
-          />
-        </div>
+          :post="post"
+        />
       </div>
 
       <div
         v-else
-        class="no-posts"
+        class="bg-white/1 border border-white/1 rounded-lg"
       >
         <div class="text-center py-5">
           <Icon
             name="ph:article-medium"
             size="4em"
-            class="mb-3 text-muted"
+            class="mb-4 text-muted"
           />
+
           <h3 class="h4 text-white mb-2">
             No posts found
           </h3>
@@ -149,12 +138,13 @@ const selectTag = (tag: string) => {
             class="text-muted"
           >
             No posts with the tag "{{ selectedTag }}" were found.
-            <button
-              class="btn btn-link p-0 d-inline"
+            <UButton
+              class="p-0"
+              variant="soft"
               @click="selectTag('all')"
             >
               View all posts
-            </button>
+            </UButton>
           </p>
 
           <p
@@ -165,44 +155,6 @@ const selectTag = (tag: string) => {
           </p>
         </div>
       </div>
-    </div>
+    </UContainer>
   </main>
 </template>
-
-<style lang="scss" scoped>
-.loading-container {
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loading-posts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.spinner-container {
-  position: relative;
-}
-
-.spinner-border {
-  width: 3rem;
-  height: 3rem;
-  border-width: 0.25rem;
-}
-
-.loading-text {
-  color: #a4a4a4;
-  font-size: 1rem;
-}
-
-.no-posts {
-  background-color: rgba(255, 255, 255, 0.01);
-  border-radius: 0.75rem;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
-}
-</style>
